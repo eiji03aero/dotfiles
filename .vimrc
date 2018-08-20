@@ -19,9 +19,6 @@ if dein#load_state('/Users/eijiosakabe/.vim/dein')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/neocomplete.vim')
   call dein#add('Shougo/dein.vim')
-  " call dein#add('Shougo/neocomplcache.vim')
-  " call dein#add('Shougo/neocomplcache-rsense.vim')
-  " call dein#add('Shougo/unite.vim')
   call dein#add('scrooloose/nerdtree')
   call dein#add('tpope/vim-fugitive')
   call dein#add('tpope/vim-endwise')
@@ -452,39 +449,6 @@ if !exists('g:neocomplete#keyword_patterns')
   let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns._ = '\h\w*'
-" inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-"----------------------------------------
-" Unite & ag
-"----------------------------------------
-" let g:unite_source_history_yank_enable=1
-" let g:unite_enable_ignore_case=1
-" let g:unite_enable_smart_case=1
-" let g:unite_enable_start_insert=1
-" nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-" nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
-" nnoremap <silent> ,dg :<C-u>Unite grep -buffer-name=search-buffer<CR>
-" nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
-" nnoremap <silent> ,fl :<C-u>Unite -force-redraw file<CR>
-" nnoremap <silent> ,fr :<C-u>Unite -force-redraw file_rec/async<CR>
-" nnoremap <silent> ,h :<C-u>Unite history/unite<CR>
-" nnoremap <silent> ,t :<C-u>Unite tab<CR>
-" let g:unite_source_rec_async_command=['ag', '--nocolor', '--nogroup', '-g', '']
-" let s:unite_ignore_file_rec_patterns=
-"       \ ''
-"       \ .'vendor/bundle\|.bundle/\|\.sass-cache/\|'
-"       \ .'build/\|dist/\|'
-"       \ .'node_modules/\|bower_components/\|'
-"       \ .'\.\(bmp\|gif\|jpe\?g\|png\|webp\|ai\|psd\)"\?$'
-" call unite#custom#source(
-"       \ 'grep,file_rec/async,file_rec/git',
-"       \ 'ignore_pattern',
-"       \ s:unite_ignore_file_rec_patterns)
-" if executable('ag')
-"   let g:unite_source_grep_command='ag'
-"   let g:unite_source_grep_default_opts='--nogroup --nocolor --column'
-"   let g:unite_source_grep_recursive_opt=''
-" endif
 "----------------------------------------
 " easymotion
 "----------------------------------------
