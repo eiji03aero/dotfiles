@@ -1,0 +1,32 @@
+# alias
+alias ls='ls -G'
+
+alias vimrc='vim ~/.vimrc'
+alias authc='cd auth-conciergeu'
+alias dia='cd dialog_api'
+alias cuw='cd cu_webplugin'
+alias lenga='cd lenga_app'
+
+alias gis='git status'
+alias girh='git reset --hard'
+alias gilg='git log --graph'
+alias gilgp='git log --graph -p'
+alias gia='git add .'
+alias gicm='git commit -m'
+alias gib='git branch'
+alias gic='git checkout'
+alias gicb='git checkout -b'
+alias gim='git merge'
+alias gip='git push'
+alias gipl='git pull'
+alias giplom='git pull origin master'
+
+alias tm='tmux'
+alias tma='tmux a -t'
+alias tmn='tmux new -s'
+alias tmkss='tmux kill-session'
+alias tmksr='tmux kill-server'
+alias tmslmv='tmux split-window -h & tmux resize-pane -R 40'
+alias tmr='tmuxinator'
+
+alias syi='sudo yarn install'
