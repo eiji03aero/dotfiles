@@ -133,12 +133,12 @@ inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
 inoremap `<Enter> ``<Left><CR><ESC><S-o>
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-inoremap ` ``<LEFT>
+inoremap <C-f>{ {}<LEFT>
+inoremap <C-f>[ []<LEFT>
+inoremap <C-f>( ()<LEFT>
+inoremap <C-f>" ""<LEFT>
+inoremap <C-f>' ''<LEFT>
+inoremap <C-f>` ``<LEFT>
 inoremap <C-f>^ <%  %><LEFT><LEFT><LEFT>
 inoremap <C-f>- <%-  %><LEFT><LEFT><LEFT>
 inoremap <C-f>= <%=  %><LEFT><LEFT><LEFT>
@@ -388,6 +388,7 @@ call NERDTreeHighlightFile('jsx',    'yellow',       'none', '#ffa500', '#151515
 call NERDTreeHighlightFile('coffee', '208',          'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('ts',     '208',          'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('tsx',    '208',          'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('vue',    'green',        'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php',    'Magenta',      'none', '#ff00ff', '#151515')
 "----------------------------------------
 " airline
@@ -522,4 +523,4 @@ let howm_fileformat      = 'unix'
 "----------------------------------------
 " vim2hs
 "----------------------------------------
-let g:haskell_conceal_enumerations = 1
+let g:haskell_conceal_enumerations = 0

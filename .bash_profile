@@ -69,14 +69,16 @@ else
     start_agent;
 fi
 
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # enhancd
 source /Users/eijiosakabe/share/enhancd/init.sh
 ENHANCD_FILTER=fzf:peco
 ENHANCD_USE_FUZZY_MATCH=fzf:peco
 ENHANCD_HOOK_AFTER_CD=ls
 
-# fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 # option config
 stty stop undef # to enable history back on [reverse-i-search]
+
+function mkdircd () { mkdir -p "$@" && cd "$_"; }
