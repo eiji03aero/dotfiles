@@ -9,6 +9,14 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
 ln -sf ~/dotfiles/.inputrc ~/.inputrc
 
-ln -sf ~/dotfiles/.vim/ ~/.vim
+if [ ! -e "~/.vim" ]; then mkdir ~/.vim ; fi
+
+for dirPath in `\find ~/dotfiles/.vim -maxdepth 1 -type d`; do
+  dirname=`basename ${dirPath}`
+  if [ ${dirname} != ".vim" ]; then
+    ln -sf ~/dotfiles/.vim/${dirname} ~/.vim/${dirname}
+  fi
+done
+
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf

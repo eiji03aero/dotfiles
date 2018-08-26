@@ -82,3 +82,4 @@ ENHANCD_HOOK_AFTER_CD=ls
 stty stop undef # to enable history back on [reverse-i-search]
 
 function mkdircd () { mkdir -p "$@" && cd "$_"; }
+function psgrep () { ps aux | grep "$@"; }
