@@ -9,5 +9,28 @@ sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
 sudo apt install vim
 
+# For tmux https://qiita.com/koara-local/items/7e8391b837fb6f834cb9
+sudo apt-get install automake
+sudo apt-get install libevent-dev libncurses5-dev
+sudo apt-get install xsel
+# #!/bin/bash -xeu
+# 
+# if [ ! -d tmux ]; then
+#     git clone https://github.com/tmux/tmux.git
+# fi
+# 
+# cd tmux
+# 
+# # checkout latest tag
+# git checkout $(git tag | sort -V | tail -n 1)
+# 
+# sh autogen.sh
+# 
+# ./configure
+# 
+# make -j4
+# 
+# sudo make install
+
 # Install tmux
 sudo apt install tmux

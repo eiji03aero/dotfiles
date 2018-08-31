@@ -157,6 +157,15 @@ inoremap <C-f>o <C-o>o
 inoremap <expr><C-i> neocomplete#complete_common_string()
 " Visual mode ----------------------------------------
 vnoremap n %
+" Fold function ----------------------------------------
+nnoremap <Leader>hi zi
+nnoremap <Leader>hf zf
+nnoremap <Leader>ha za
+nnoremap <Leader>hA zA
+nnoremap <Leader>hd zd
+nnoremap <Leader>hR zR
+nnoremap <Leader>hM zM
+vnoremap <Leader>hf zf
 " Terminal mode ----------------------------------------
 tnoremap <C-w>q <C-w>:quit!<CR>
 tnoremap <C-w>d <C-w>:hide<CR>
