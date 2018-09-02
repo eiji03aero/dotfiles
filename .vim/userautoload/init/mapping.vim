@@ -8,7 +8,7 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
 nnoremap # #zz
-nnoremap <Leader>ta :Terminal<CR>source $HOME/.bash_profile<CR>
+nnoremap <Leader>ta :ter<CR>source $HOME/.bash_profile<CR>
 nnoremap <Leader>wb :sp<CR>
 nnoremap <Leader>wv :vsp<CR>
 nnoremap <Leader>wn :vnew<CR>
@@ -72,7 +72,9 @@ tnoremap <C-w>q <C-w>:quit!<CR>
 tnoremap <C-w>d <C-w>:hide<CR>
 tnoremap <Esc> <C-w><S-n>
 " File-related shortcuts ----------------------------------------
-nnoremap <Leader>mv :e ~/.vim<CR>
+nnoremap <Leader>mvv :e ~/.vim<CR>
+nnoremap <Leader>mvr :e ~/.vimrc<CR>
+nnoremap <Leader>mvm :e ~/.vim/userautoload/init/mapping.vim<CR>
 nnoremap <Leader>mh :e ~/.hyper.js<CR>
 nnoremap <Leader>mt :e ~/.tmux.conf<CR>
 nnoremap <Leader>mbp :e ~/.bash_profile<CR>
