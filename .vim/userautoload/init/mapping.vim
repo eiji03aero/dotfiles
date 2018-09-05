@@ -34,12 +34,18 @@ inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
 inoremap `<Enter> ``<Left><CR><ESC><S-o>
-inoremap <C-f>{ {}<LEFT>
-inoremap <C-f>[ []<LEFT>
-inoremap <C-f>( ()<LEFT>
-inoremap <C-f>" ""<LEFT>
-inoremap <C-f>' ''<LEFT>
-inoremap <C-f>` ``<LEFT>
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+inoremap ` ``<LEFT>
+inoremap <C-f>{ {
+inoremap <C-f>[ [
+inoremap <C-f>( (
+inoremap <C-f>" "
+inoremap <C-f>' '
+inoremap <C-f>` `
 inoremap <C-f>^ <%  %><LEFT><LEFT><LEFT>
 inoremap <C-f>- <%-  %><LEFT><LEFT><LEFT>
 inoremap <C-f>= <%=  %><LEFT><LEFT><LEFT>
@@ -55,7 +61,6 @@ inoremap <C-f>a &
 inoremap <C-f>p %
 inoremap <C-f>l <C-o>$
 inoremap <C-f>o <C-o>o
-inoremap <expr><C-i> neocomplete#complete_common_string()
 " Visual mode ----------------------------------------
 vnoremap n %
 " Fold function ----------------------------------------
@@ -107,9 +112,9 @@ nnoremap <Leader>rti :Eintegrationtest<Space>
 nnoremap <Leader>rtu :Eunittest<Space>
 nnoremap <Leader>ra :A<CR>
 nnoremap <Leader>rr :R<CR>
-" Vim-splash ----------------------------------------
-nnoremap <Leader>vsi :Splash ~/.vim/splash/vim_intro.txt<CR>
-nnoremap <Leader>vsc :Splash ~/.vim/splash/conciergeu_logo.txt<CR>
+" " Vim-splash ----------------------------------------
+" nnoremap <Leader>vsi :Splash ~/.vim/splash/vim_intro.txt<CR>
+" nnoremap <Leader>vsc :Splash ~/.vim/splash/conciergeu_logo.txt<CR>
 " NERD-tree ----------------------------------------
 nnoremap <C-n> :NERDTreeToggle<CR>
 " EasyMotion ----------------------------------------
@@ -122,3 +127,6 @@ vmap ga <Plug>(EasyAlign)
 " OpenBrowser ----------------------------------------
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+" Neocomplete ----------------------------------------
+inoremap <expr><C-i> neocomplete#complete_common_string()
+inoremap <expr><C-g> neocomplete#undo_completion()

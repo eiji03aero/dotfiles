@@ -82,4 +82,5 @@ ENHANCD_HOOK_AFTER_CD=ls
 stty stop undef # to enable history back on [reverse-i-search]
 
 function mkdircd () { mkdir -p "$@" && cd "$_"; }
-function psgrep () { ps aux | grep "$@"; }
+function psgrep () { ps aux | grep "$1"; }
+function gbgrep () { git branch | grep "$1" | xargs git checkout ; }

@@ -3,7 +3,6 @@
 "----------------------------------------
 let g:jsx_ext_required = 0
 let g:vim_json_syntax_conceal = 0
-let g:splash#path = "~/.vim/splash/conciergeu_logo.txt"
 packadd termdebug
 "----------------------------------------
 " Custom Functions
@@ -51,13 +50,3 @@ augroup custom_augroup
   autocmd FileType vim setlocal foldmethod=indent
   " autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 augroup END
-"----------------------------------------
-" neocomplete
-"----------------------------------------
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_ignore_case = 1
-let g:neocomplete#enable_smart_case = 1
-if !exists('g:neocomplete#keyword_patterns')
-  let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns._ = '\h\w*'
