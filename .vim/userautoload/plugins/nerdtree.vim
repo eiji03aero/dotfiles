@@ -22,6 +22,7 @@ endfunction
 call NERDTreeHighlightFile('hs',     '208',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('py',     'yellow',       'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('go',     '250',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('vim',    '250',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('md',     'darkblue',     'none', '#3366FF', '#151515')
 call NERDTreeHighlightFile('yml',    'yellow',       'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('config', 'yellow',       'none', 'yellow',  '#151515')

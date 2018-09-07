@@ -19,7 +19,9 @@ nnoremap <Leader>wc :tabc<CR>
 nnoremap <Leader>wo :tabe<CR>
 nnoremap <Leader>wy :tabo<CR>
 nnoremap <Leader>we :e .<CR>
-nnoremap <Leader>wv gg<S-v><S-g> .<CR>
+nnoremap <Leader>w- <C-w><Bar><C-w>_
+nnoremap <Leader>w= <C-w>=
+nnoremap <Leader>wv gg<S-v><S-g><CR>
 nnoremap <Leader>wl $
 nnoremap <Leader>wh 0
 nnoremap <Leader>wp %
@@ -90,7 +92,7 @@ nnoremap <Leader>st :source ~/.tmux.conf<CR>
 " fzf ----------------------------------------
 nnoremap <Leader>fb :Buffers<CR>
 nnoremap <Leader>ff :Files<CR>
-nnoremap <Leader>fg :Ag<space>
+nnoremap <Leader>fg :Ag<CR>
 nnoremap <Leader>fc :Commits<CR>
 nnoremap <Leader>fs :GFiles?<CR>
 " Git ----------------------------------------
@@ -124,9 +126,6 @@ nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
 " EasyAlign ----------------------------------------
 vmap ga <Plug>(EasyAlign)
-" OpenBrowser ----------------------------------------
-nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
 " Neocomplete ----------------------------------------
 inoremap <expr><C-i> neocomplete#complete_common_string()
 inoremap <expr><C-g> neocomplete#undo_completion()
