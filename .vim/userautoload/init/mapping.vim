@@ -19,9 +19,10 @@ nnoremap <Leader>wc :tabc<CR>
 nnoremap <Leader>wo :tabe<CR>
 nnoremap <Leader>wy :tabo<CR>
 nnoremap <Leader>we :e .<CR>
+nnoremap <Leader>wE :e!<CR>
 nnoremap <Leader>w- <C-w><Bar><C-w>_
 nnoremap <Leader>w= <C-w>=
-nnoremap <Leader>wv gg<S-v><S-g><CR>
+nnoremap <Leader>wa gg<S-v><S-g><CR>
 nnoremap <Leader>wl $
 nnoremap <Leader>wh 0
 nnoremap <Leader>wp %
@@ -73,6 +74,8 @@ nnoremap <Leader>hA zA
 nnoremap <Leader>hd zd
 nnoremap <Leader>hR zR
 nnoremap <Leader>hM zM
+nnoremap <Leader>ht vit zf
+nnoremap <Leader>ht vip zf
 vnoremap <Leader>hf zf
 " Terminal mode ----------------------------------------
 tnoremap <C-w>q <C-w>:quit!<CR>
@@ -129,3 +132,10 @@ vmap ga <Plug>(EasyAlign)
 " Neocomplete ----------------------------------------
 inoremap <expr><C-i> neocomplete#complete_common_string()
 inoremap <expr><C-g> neocomplete#undo_completion()
+" Ale ----------------------------------------
+nmap <Leader>at :ALEToggle<CR>
+nmap <Leader>ad :ALEDetail<CR>
+nmap <Leader>an :ALENextWrap<CR>
+nmap <Leader>ap :ALEPreviousWrap<CR>
+nmap <Leader>ag :ALEGoToDefinition<CR>
+nmap <Leader>af :ALEFindReferences<CR>

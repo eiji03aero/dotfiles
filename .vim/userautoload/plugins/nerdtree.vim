@@ -3,7 +3,7 @@
 "----------------------------------------
 let g:NERDTreeShowBookmarks=1
 let NERDTreeShowHidden = 1
-let g:NERDTreeWinSize = 40
+let g:NERDTreeWinSize = 50
 let g:NERDTreeIndicatorMapCustom = {
   \ "Modified"  : "✹",
   \ "Staged"    : "✚",
@@ -35,6 +35,7 @@ call NERDTreeHighlightFile('styl',   'blue',         'none', 'cyan',    '#151515
 call NERDTreeHighlightFile('css',    '208',          'none', 'cyan',    '#151515')
 call NERDTreeHighlightFile('scss',   'lightmagenta', 'none', 'cyan',    '#151515')
 call NERDTreeHighlightFile('rb',     'red',          'none', 'red',     '#151515')
+call NERDTreeHighlightFile('ru',     'red',          'none', 'red',     '#151515')
 call NERDTreeHighlightFile('js',     'yellow',       'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('jsx',    'yellow',       'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('coffee', '208',          'none', '#ffa500', '#151515')

@@ -71,16 +71,18 @@ fi
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_OPTS='--height 40% --reverse'
 
 # enhancd
-source /Users/eijiosakabe/share/enhancd/init.sh
-ENHANCD_FILTER=fzf:peco
-ENHANCD_USE_FUZZY_MATCH=fzf:peco
-ENHANCD_HOOK_AFTER_CD=ls
+export ENHANCD_FILTER=fzf:peco
+export ENHANCD_USE_FUZZY_MATCH=fzf:peco
+export ENHANCD_HOOK_AFTER_CD=ls
+export ENHANCD_HYPHEN_NUM=50
+source /Users/eijiosakabe/enhancd/init.sh
 
 # option config
 stty stop undef # to enable history back on [reverse-i-search]
 
 function mkdircd () { mkdir -p "$@" && cd "$_"; }
 function psgrep () { ps aux | grep "$1"; }
-function gbgrep () { git branch | grep "$1" | xargs git checkout ; }
+function gbgrep () { git branch | grep "$1" | head -n 1 | xargs git checkout ; }

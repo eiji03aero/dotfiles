@@ -61,6 +61,8 @@ set cursorline
 set synmaxcol=3000
 " rtp related--------------------
 set rtp+=/usr/local/opt/fzf
+" dictionary--------------------
+set dictionary=/usr/share/dict/words
 
 augroup MyXML
   autocmd!
