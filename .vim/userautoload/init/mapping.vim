@@ -98,6 +98,8 @@ nnoremap <Leader>ff :Files<CR>
 nnoremap <Leader>fg :Ag<CR>
 nnoremap <Leader>fc :Commits<CR>
 nnoremap <Leader>fs :GFiles?<CR>
+" Gundo ----------------------------------------
+nnoremap <Leader>fu :GundoToggle<CR>
 " Git ----------------------------------------
 nnoremap <Leader>gis :Gstatus<CR>
 nnoremap <Leader>gia :Gwrite<CR>
@@ -133,9 +135,9 @@ vmap ga <Plug>(EasyAlign)
 inoremap <expr><C-i> neocomplete#complete_common_string()
 inoremap <expr><C-g> neocomplete#undo_completion()
 " Ale ----------------------------------------
-nmap <Leader>at :ALEToggle<CR>
-nmap <Leader>ad :ALEDetail<CR>
-nmap <Leader>an :ALENextWrap<CR>
-nmap <Leader>ap :ALEPreviousWrap<CR>
-nmap <Leader>ag :ALEGoToDefinition<CR>
-nmap <Leader>af :ALEFindReferences<CR>
+nnoremap <Leader>at :ALEToggle<CR>
+nnoremap <Leader>ad :ALEDetail<CR>
+nnoremap <Leader>an :ALENextWrap<CR>
+nnoremap <Leader>ap :ALEPreviousWrap<CR>
+nnoremap <Leader>ag :ALEGoToDefinition<CR>
+nnoremap <Leader>af :ALEFindReferences<CR>

@@ -34,6 +34,7 @@ if dein#load_state('~/.vim/dein')
   call dein#add('tyru/caw.vim')
   call dein#add('tpope/vim-surround')
   call dein#add('w0rp/ale')
+  call dein#add('sjl/gundo.vim')
   " Display--------------------
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')

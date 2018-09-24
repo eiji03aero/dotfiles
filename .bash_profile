@@ -10,7 +10,6 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH=$PATH:./node_modules/.bin
 export PATH=/usr/local/bin:$PATH
-export PATH=/Users/eijiosakabe/Documents/data/my_pg/bin:$PATH
 
 # tmuxinator
 export EDITOR="vim"
