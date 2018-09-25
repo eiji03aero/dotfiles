@@ -124,6 +124,9 @@ nnoremap <Leader>rr :R<CR>
 " nnoremap <Leader>vsc :Splash ~/.vim/splash/conciergeu_logo.txt<CR>
 " NERD-tree ----------------------------------------
 nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<Space>
+" Tagbar ----------------------------------------
+nnoremap <C-m> :TagbarToggle<CR>
 " EasyMotion ----------------------------------------
 noremap <Leader> <Plug>(easymotion-prefix)
 " nmap <Leader>s <Plug>(easymotion-overwin-f2)
@@ -141,3 +144,5 @@ nnoremap <Leader>an :ALENextWrap<CR>
 nnoremap <Leader>ap :ALEPreviousWrap<CR>
 nnoremap <Leader>ag :ALEGoToDefinition<CR>
 nnoremap <Leader>af :ALEFindReferences<CR>
+" ctags ----------------------------------------
+nnoremap <C-]> g<C-]>

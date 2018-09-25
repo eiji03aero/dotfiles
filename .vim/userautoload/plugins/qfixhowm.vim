@@ -1,6 +1,3 @@
-"----------------------------------------
-" qfixhowm
-"----------------------------------------
 set runtimepath+=~/qfixhowm
 let QFixHowm_Key = 'g'
 let QFixHowm_FileType = 'qfix_memo'

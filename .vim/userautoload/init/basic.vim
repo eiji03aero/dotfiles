@@ -12,6 +12,7 @@ set nowritebackup
 set nobackup
 set belloff=all
 set ttyfast
+set updatetime=1000
 "----------------------------------------
 " Search
 "----------------------------------------
@@ -69,4 +70,3 @@ augroup MyXML
   autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
 augroup END
-

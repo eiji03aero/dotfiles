@@ -1,9 +1,7 @@
-"----------------------------------------
-" NERDTree
-"----------------------------------------
 let g:NERDTreeShowBookmarks=1
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 50
+let g:NERDTreeCascadeSingleChildDir = 0
 let g:NERDTreeIndicatorMapCustom = {
   \ "Modified"  : "✹",
   \ "Staged"    : "✚",
