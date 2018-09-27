@@ -126,7 +126,10 @@ nnoremap <Leader>rr :R<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<Space>
 " Tagbar ----------------------------------------
-nnoremap <C-m> :TagbarToggle<CR>
+nnoremap <C-t>t :TagbarToggle<CR>
+nnoremap <C-t>f :TagbarShowTag<CR>
+" ctags ----------------------------------------
+nnoremap <C-]> g<C-]>
 " EasyMotion ----------------------------------------
 noremap <Leader> <Plug>(easymotion-prefix)
 " nmap <Leader>s <Plug>(easymotion-overwin-f2)
@@ -137,6 +140,12 @@ vmap ga <Plug>(EasyAlign)
 " Neocomplete ----------------------------------------
 inoremap <expr><C-i> neocomplete#complete_common_string()
 inoremap <expr><C-g> neocomplete#undo_completion()
+" Neosnippets ----------------------------------------
+imap <C-s> <Plug>(neosnippet_expand_or_jump)
+smap <C-s> <Plug>(neosnippet_expand_or_jump)
+xmap <C-s> <Plug>(neosnippet_expand_target)
+imap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 " Ale ----------------------------------------
 nnoremap <Leader>at :ALEToggle<CR>
 nnoremap <Leader>ad :ALEDetail<CR>
@@ -144,5 +153,3 @@ nnoremap <Leader>an :ALENextWrap<CR>
 nnoremap <Leader>ap :ALEPreviousWrap<CR>
 nnoremap <Leader>ag :ALEGoToDefinition<CR>
 nnoremap <Leader>af :ALEFindReferences<CR>
-" ctags ----------------------------------------
-nnoremap <C-]> g<C-]>

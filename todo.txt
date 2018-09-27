@@ -1,0 +1,5 @@
+- need init dependencies script
+  - universal-ctags
+  - tmux
+  - fzf
+

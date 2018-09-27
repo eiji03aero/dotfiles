@@ -19,6 +19,7 @@ if dein#load_state('~/.vim/dein')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/neocomplete.vim')
   call dein#add('Shougo/neco-vim')
+  call dein#add('ujihisa/neco-look')
   call dein#add('Shougo/dein.vim')
   " call dein#add('Shougo/vimproc.vim', {'build': 'make'})
   " operaionals-------------------- 
@@ -59,6 +60,7 @@ if dein#load_state('~/.vim/dein')
   call dein#add('elzr/vim-json')
   call dein#add('mattn/webapi-vim')
   call dein#add('tell-k/vim-browsereload-mac')
+
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 

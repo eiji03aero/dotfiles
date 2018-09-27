@@ -1,6 +1,6 @@
 let g:NERDTreeShowBookmarks=1
 let NERDTreeShowHidden = 1
-let g:NERDTreeWinSize = 50
+let g:NERDTreeWinSize = 45
 let g:NERDTreeCascadeSingleChildDir = 0
 let g:NERDTreeIndicatorMapCustom = {
   \ "Modified"  : "✹",
