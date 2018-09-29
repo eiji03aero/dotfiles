@@ -28,7 +28,6 @@ nnoremap <Leader>wh 0
 nnoremap <Leader>wp %
 nnoremap <Leader>n :cn<CR>
 nnoremap <Leader>p :cp<CR>
-nnoremap <Leader>s :%s/
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 nnoremap <Leader>y :call YankPathToClip()<CR>
 " Insert mode ----------------------------------------
@@ -146,6 +145,7 @@ smap <C-s> <Plug>(neosnippet_expand_or_jump)
 xmap <C-s> <Plug>(neosnippet_expand_target)
 imap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+nnoremap <Leader>st :set completeopt=preview!<CR>
 " Ale ----------------------------------------
 nnoremap <Leader>at :ALEToggle<CR>
 nnoremap <Leader>ad :ALEDetail<CR>

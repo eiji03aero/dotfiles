@@ -36,6 +36,7 @@ if dein#load_state('~/.vim/dein')
   call dein#add('sjl/gundo.vim')
   call dein#add('tpope/vim-endwise')
   call dein#add('majutsushi/tagbar')
+  call dein#add('t9md/vim-textmanip')
   " Display--------------------
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')

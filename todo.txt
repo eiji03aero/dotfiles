@@ -3,3 +3,5 @@
   - tmux
   - fzf
 
+- write vimscript
+  -toggle function for set completeopt-=preview

@@ -1,10 +1,12 @@
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#auto_completion_start_length = 3
+let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#enable_underbar_completion = 1
 let g:neocomplete#enable_camel_case_completion  =  1
 let g:neocomplete#enable_ignore_case = 1
 let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#enable_auto_select = 0
+let g:neocomplete#disable_auto_complete = 1
 
 if !exists('g:neocomplete#keyword_patterns')
   let g:neocomplete#keyword_patterns = {}
