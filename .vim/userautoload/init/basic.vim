@@ -12,7 +12,7 @@ set nowritebackup
 set nobackup
 set belloff=all
 set ttyfast
-set updatetime=1000
+set updatetime=500
 "----------------------------------------
 " Search
 "----------------------------------------

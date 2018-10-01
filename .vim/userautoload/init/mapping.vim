@@ -92,13 +92,13 @@ nnoremap <Leader>me :e ~/.enhancd/enhancd.log<CR>
 nnoremap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <Leader>st :source ~/.tmux.conf<CR>
 " fzf ----------------------------------------
-nnoremap <Leader>fb :Buffers<CR>
-nnoremap <Leader>ff :Files<CR>
-nnoremap <Leader>fg :Ag<CR>
-nnoremap <Leader>fc :Commits<CR>
-nnoremap <Leader>fs :GFiles?<CR>
+nnoremap ,m :Buffers<CR>
+nnoremap ,, :Files<CR>
+nnoremap ,. :Ag<CR>
+nnoremap ,c :Commits<CR>
+nnoremap ,s :GFiles?<CR>
 " Gundo ----------------------------------------
-nnoremap <Leader>fu :GundoToggle<CR>
+nnoremap ,u :GundoToggle<CR>
 " Git ----------------------------------------
 nnoremap <Leader>gis :Gstatus<CR>
 nnoremap <Leader>gia :Gwrite<CR>
@@ -122,8 +122,9 @@ nnoremap <Leader>rr :R<CR>
 " nnoremap <Leader>vsi :Splash ~/.vim/splash/vim_intro.txt<CR>
 " nnoremap <Leader>vsc :Splash ~/.vim/splash/conciergeu_logo.txt<CR>
 " NERD-tree ----------------------------------------
-nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<Space>
+nnoremap <C-n>n :NERDTreeToggle<CR>
+nnoremap <C-n>f :NERDTreeFind<Space>
+nnoremap <C-n>c :NERDTreeCWD<Space>
 " Tagbar ----------------------------------------
 nnoremap <C-t>t :TagbarToggle<CR>
 nnoremap <C-t>f :TagbarShowTag<CR>
@@ -143,8 +144,8 @@ inoremap <expr><C-g> neocomplete#undo_completion()
 imap <C-s> <Plug>(neosnippet_expand_or_jump)
 smap <C-s> <Plug>(neosnippet_expand_or_jump)
 xmap <C-s> <Plug>(neosnippet_expand_target)
-imap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+inoremap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+snoremap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 nnoremap <Leader>st :set completeopt=preview!<CR>
 " Ale ----------------------------------------
 nnoremap <Leader>at :ALEToggle<CR>

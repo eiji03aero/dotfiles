@@ -34,3 +34,5 @@ alias tmkss='tmux kill-session'
 alias tmksr='tmux kill-server'
 alias tmslmv='tmux split-window -h & tmux resize-pane -R 40'
 alias tmr='tmuxinator'
+
+alias vg='vagrant'
