@@ -1,0 +1,13 @@
+snippet async_snippet
+abbr    (async () => )();
+  (async () => {
+    ${0:TARGET}
+  })();
+
+snippet doc_function
+abbr    /* @doc_comment */
+  /**
+   * ${1:description}
+   * @param {${2:@param_type}} ${3:param_name}
+   * @return {${4:@return_type}}
+   */

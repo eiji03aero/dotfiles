@@ -13,6 +13,7 @@ set nobackup
 set belloff=all
 set ttyfast
 set updatetime=500
+set completeopt=menu,noselect
 "----------------------------------------
 " Search
 "----------------------------------------
@@ -60,13 +61,8 @@ set mouse=a
 set backspace=indent,eol,start
 set cursorline
 set synmaxcol=3000
+set splitright
 " rtp related--------------------
 set rtp+=/usr/local/opt/fzf
 " dictionary--------------------
 set dictionary=/usr/share/dict/words
-
-augroup MyXML
-  autocmd!
-  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
-  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
-augroup END

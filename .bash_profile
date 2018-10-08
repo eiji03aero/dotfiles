@@ -2,7 +2,7 @@ source ~/.bashrc
 source ~/.inputrc
 
 # Prompt template
-export PS1='\h\[\033[34m\]:\W\[\033[36m\]$(__git_ps1 [%s])\[\033[00m\]\n\$ '
+export PS1='\n\h\[\033[34m\]:\W\[\033[36m\]$(__git_ps1 [%s])\[\033[00m\]\n\$ '
 
 # bin paths
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"

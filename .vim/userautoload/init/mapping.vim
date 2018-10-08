@@ -3,7 +3,6 @@
 "----------------------------------------
 " Basics ----------------------------------------
 let mapleader = "\<Space>"
-let g:user_emmet_expandabbr_key = '<c-e>'
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
@@ -28,8 +27,9 @@ nnoremap <Leader>wh 0
 nnoremap <Leader>wp %
 nnoremap <Leader>n :cn<CR>
 nnoremap <Leader>p :cp<CR>
-nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 nnoremap <Leader>y :call YankPathToClip()<CR>
+nnoremap <Leader>ct :! ctags -R<CR>
+nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 " Insert mode ----------------------------------------
 inoremap <C-C> <ESC>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
@@ -92,9 +92,9 @@ nnoremap <Leader>me :e ~/.enhancd/enhancd.log<CR>
 nnoremap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <Leader>st :source ~/.tmux.conf<CR>
 " fzf ----------------------------------------
-nnoremap ,m :Buffers<CR>
-nnoremap ,, :Files<CR>
-nnoremap ,. :Ag<CR>
+nnoremap ,b :Buffers<CR>
+nnoremap ,f :Files<CR>
+nnoremap ,g :Ag<CR>
 nnoremap ,c :Commits<CR>
 nnoremap ,s :GFiles?<CR>
 " Gundo ----------------------------------------
@@ -106,16 +106,19 @@ nnoremap <Leader>gir :Gread<CR>
 nnoremap <Leader>gic :Gcommit<CR>
 nnoremap <Leader>gib :Gblame<CR>
 nnoremap <Leader>gid :Gdiff<CR>
+" Gitgutter ----------------------------------------
+nnoremap <Leader>gig :GitGutterAll<CR>
 " Vim-rails ----------------------------------------
-nnoremap <Leader>rc :Econtroller<Space>
-nnoremap <Leader>re :Eenvironment<Space>
+nnoremap <Leader>rc :Econtroller<CR>
+nnoremap <Leader>re :Eenvironment<CR>
 nnoremap <Leader>ri :Einitializer<CR>
-nnoremap <Leader>rh :Ehelper<Space>
-nnoremap <Leader>rmi :Emigration<Space>
-nnoremap <Leader>rmo :Emodel<Space>
-nnoremap <Leader>rtf :Efunctionaltest<Space>
-nnoremap <Leader>rti :Eintegrationtest<Space>
-nnoremap <Leader>rtu :Eunittest<Space>
+nnoremap <Leader>rh :Ehelper<CR>
+nnoremap <Leader>rmi :Emigration<CR>
+nnoremap <Leader>rmo :Emodel<CR>
+nnoremap <Leader>rtf :Efunctionaltest<CR>
+nnoremap <Leader>rti :Eintegrationtest<CR>
+nnoremap <Leader>rtu :Eunittest<CR>
+nnoremap <Leader>rv :Eview<CR>
 nnoremap <Leader>ra :A<CR>
 nnoremap <Leader>rr :R<CR>
 " " Vim-splash ----------------------------------------
@@ -144,9 +147,7 @@ inoremap <expr><C-g> neocomplete#undo_completion()
 imap <C-s> <Plug>(neosnippet_expand_or_jump)
 smap <C-s> <Plug>(neosnippet_expand_or_jump)
 xmap <C-s> <Plug>(neosnippet_expand_target)
-inoremap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-snoremap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-nnoremap <Leader>st :set completeopt=preview!<CR>
+nnoremap <Leader>pse :NeoSnippetEdit<CR>
 " Ale ----------------------------------------
 nnoremap <Leader>at :ALEToggle<CR>
 nnoremap <Leader>ad :ALEDetail<CR>

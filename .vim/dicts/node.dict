@@ -404,3 +404,4 @@ writeUInt16LE
 writeUInt32BE
 writeUInt32LE
 writeUInt8
+puppeteer
