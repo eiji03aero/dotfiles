@@ -12,7 +12,7 @@ set nowritebackup
 set nobackup
 set belloff=all
 set ttyfast
-set updatetime=500
+set updatetime=2000
 set completeopt=menu,noselect
 "----------------------------------------
 " Search
@@ -61,7 +61,6 @@ set mouse=a
 set backspace=indent,eol,start
 set cursorline
 set synmaxcol=3000
-set splitright
 " rtp related--------------------
 set rtp+=/usr/local/opt/fzf
 " dictionary--------------------

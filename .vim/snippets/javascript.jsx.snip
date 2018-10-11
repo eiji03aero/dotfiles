@@ -1,13 +1,50 @@
 snippet async_snippet
-abbr    (async () => )();
+abbr (async () => )();
   (async () => {
     ${0:TARGET}
   })();
 
+snippet bind
+abbr this.[method] = this.[method].bind(this);
+  this.${0:method} = this.$0.bind(this);
+
+snippet method
+abbr class method
+  ${1:#:methodName} (${2:#:args}) {
+    ${0:TARGET}
+  }
+
+snippet class_React
+abbr class extends React.Component
+alias class
+  class ${1:className} extends React.Component {
+    constructor (props) {
+      super(props);
+    }
+  }
+
+snippet export_class_React
+abbr export class extends React.Component
+alias class
+  export class ${1:className} extends React.Component {
+    constructor (props) {
+      super(props);
+    }
+  }
+
+snippet render_React
+abbr React class render method
+  render () {
+    return (
+      ${0:target}
+    );
+  }
+
 snippet doc_function
-abbr    /* @doc_comment */
+abbr /* @doc_comment */
   /**
    * ${1:description}
-   * @param {${2:@param_type}} ${3:param_name}
-   * @return {${4:@return_type}}
+   * @param {${2:string param_type}} ${3:name param_name}
+   * @return {${4:type return_type}}
    */
+

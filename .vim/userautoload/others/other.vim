@@ -39,6 +39,20 @@ augroup my-terminal
   autocmd BufNew * call timer_start(0, { -> s:bufnew() })
   autocmd FileType terminal call s:filetype()
 augroup END
+
+" NERDTree custom function
+command! -nargs=? -complete=dir -bang CD  call s:ChangeCurrentDir('<args>', '<bang>')
+function! s:ChangeCurrentDir(directory, bang)
+    if a:directory == ''
+        lcd %:p:h
+    else
+        execute 'lcd' . a:directory
+    endif
+
+    if a:bang == ''
+        pwd
+    endif
+endfunction
 "----------------------------------------
 " Custom AutoGroups
 "----------------------------------------

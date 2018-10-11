@@ -7,4 +7,13 @@
   - fzf
 
 - write vimscript
-  -toggle function for set completeopt-=preview
+
+- write vim-plugin
+  - display current path
+  - save the current input string to register
+  - move b/w windows like tmux
+
+- write bash function
+  - grep git branch
+    - input keyword and displays the candidates
+    - make it sub module of dotfiles

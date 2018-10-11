@@ -126,6 +126,8 @@ nnoremap <Leader>rr :R<CR>
 " nnoremap <Leader>vsc :Splash ~/.vim/splash/conciergeu_logo.txt<CR>
 " NERD-tree ----------------------------------------
 nnoremap <C-n>n :NERDTreeToggle<CR>
+nnoremap <C-n>m :CD<CR>:NERDTree<CR>
+nnoremap <C-n>g :NERDTreeFocus<CR>
 nnoremap <C-n>f :NERDTreeFind<Space>
 nnoremap <C-n>c :NERDTreeCWD<Space>
 " Tagbar ----------------------------------------
