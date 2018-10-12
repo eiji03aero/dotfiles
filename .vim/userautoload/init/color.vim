@@ -6,7 +6,7 @@ hi SpecialKey   ctermfg = 235
 hi Directory    ctermfg = blue
 hi Search       ctermfg = black       ctermbg = yellow
 hi IncSearch    ctermfg = white       ctermbg = darkblue
-hi LineNr       ctermfg = grey
+hi LineNr       ctermfg = darkgrey
 hi CursorLine   cterm   = underline   ctermfg = none ctermbg = none
 hi CursorLineNr ctermfg = darkblue
 hi StatusLine   ctermfg = black       ctermbg = grey
