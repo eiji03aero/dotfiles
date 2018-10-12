@@ -1,19 +1,30 @@
+# ==================== Basic ====================
 snippet async_snippet
 abbr (async () => )();
   (async () => {
     ${0:TARGET}
   })();
 
-snippet bind
-abbr this.[method] = this.[method].bind(this);
-  this.${0:method} = this.$0.bind(this);
-
-snippet method
+snippet classMethod
 abbr class method
+alias method
   ${1:#:methodName} (${2:#:args}) {
     ${0:TARGET}
   }
 
+snippet exportFrom
+abbr export {...} from "..."
+alias export
+  export { ${1:#:member} } from "${0:TARGET}";
+
+
+# ==================== Method ====================
+snippet bind
+abbr this.[method] = this.[method].bind(this);
+  this.${0:method} = this.$0.bind(this);
+
+
+# ==================== React ====================
 snippet class_React
 abbr class extends React.Component
 alias class
@@ -30,16 +41,28 @@ alias class
     constructor (props) {
       super(props);
     }
+
+    render () {
+      return (
+        ${0:TARGET}
+      );
+    }
   }
 
 snippet render_React
 abbr React class render method
   render () {
     return (
-      ${0:target}
+      ${0:TARGET}
     );
   }
 
+snippet getDerivedStateFromProps
+  static getDerivedStateFromProps (nextProps, prevState) {
+    ${0:TARGET}
+  }
+
+# ==================== Extras ====================
 snippet doc_function
 abbr /* @doc_comment */
   /**
