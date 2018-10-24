@@ -29,6 +29,7 @@ nnoremap <Leader>n :cn<CR>
 nnoremap <Leader>p :cp<CR>
 nnoremap <Leader>y :call YankPathToClip()<CR>
 nnoremap <Leader>ct :! ctags -R<CR>
+nnoremap <Leader>cc :ccl<CR>
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 " Insert mode ----------------------------------------
 inoremap <C-C> <ESC>
@@ -65,6 +66,8 @@ inoremap <C-f>l <C-o>$
 inoremap <C-f>o <C-o>o
 " Visual mode ----------------------------------------
 vnoremap n %
+" Operator ----------------------------------------
+onoremap in( :<c-u>normal! f(vi(<CR><LEFT><CR>
 " Fold function ----------------------------------------
 nnoremap <Leader>hi zi
 nnoremap <Leader>hf zf
@@ -94,6 +97,7 @@ nnoremap <Leader>st :source ~/.tmux.conf<CR>
 " fzf ----------------------------------------
 nnoremap ,b :Buffers<CR>
 nnoremap ,f :Files<CR>
+nnoremap ,t :Tags<CR>
 nnoremap ,g :Ag<CR>
 nnoremap ,c :Commits<CR>
 nnoremap ,s :GFiles?<CR>
@@ -157,3 +161,8 @@ nnoremap <Leader>an :ALENextWrap<CR>
 nnoremap <Leader>ap :ALEPreviousWrap<CR>
 nnoremap <Leader>ag :ALEGoToDefinition<CR>
 nnoremap <Leader>af :ALEFindReferences<CR>
+" Dart ----------------------------------------
+nnoremap <Leader>df :DartFmt<CR>
+nnoremap <Leader>da :DartAnalyzer<CR>
+nnoremap <Leader>dj :Dart2Js<CR>
+

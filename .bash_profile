@@ -42,6 +42,9 @@ export PATH="~/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
+# flutter
+export PATH="$HOME/flutter/bin:$PATH"
+
 # PostgreSQL
 export PKG_CONFIG_PATH="/usr/local/Cellar/imagemagick/7.0.5-0/lib/pkgconfig:$PKG_CONFIG_PATH"
 

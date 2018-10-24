@@ -9,7 +9,12 @@
 - write vimscript
 
 - write vim-plugin
-  - display current path
+  - append character at the end of sentence and move back to current position
+  - improve <operator>in( mapping
+    - should work both on the brackets in one-line and multi-lines. now only works for multi-lines
+  - display some info in preview
+    - current file path
+    - git branch
   - save the current input string to register
   - move b/w windows like tmux
 

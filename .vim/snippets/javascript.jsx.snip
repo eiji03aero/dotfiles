@@ -57,12 +57,27 @@ abbr React class render method
     );
   }
 
+snippet shouldComponentUpdate
+  shouldComponentUpdate (nextProps, nextState) {
+    ${0:TARGET}
+  }
+
+snippet componentDidUpdate
+  componentDidUpdate (prevProps, prevState, snapshot) {
+    ${0:TARGET}
+  }
+
 snippet getDerivedStateFromProps
   static getDerivedStateFromProps (nextProps, prevState) {
     ${0:TARGET}
   }
 
 # ==================== Extras ====================
+snippet separator
+abbr /* ----- this is ----- */
+  /* -------------------- ${0:TARGET} -------------------- */
+
+
 snippet doc_function
 abbr /* @doc_comment */
   /**

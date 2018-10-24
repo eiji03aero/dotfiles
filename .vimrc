@@ -52,6 +52,8 @@ if dein#load_state('~/.vim/dein')
   call dein#add('wavded/vim-stylus')
   call dein#add('othree/yajs.vim')
   call dein#add('othree/es.next.syntax.vim')
+  call dein#add('dart-lang/dart-vim-plugin')
+  call dein#add('reisub0/hot-reload.vim') " hot-reload for flutter
   call dein#add('leafgarland/typescript-vim')
   call dein#add('slim-template/vim-slim')
   call dein#add('digitaltoad/vim-pug')
@@ -61,9 +63,6 @@ if dein#load_state('~/.vim/dein')
   call dein#add('elzr/vim-json')
 
   call dein#add('tpope/vim-endwise')
-
-  " You can specify revision/branch/tag.
-  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
   " Required:
   call dein#end()
@@ -85,6 +84,4 @@ endif
 " autoload
 " ---------------------------------------
 set runtimepath+=~/.vim/
-runtime! userautoload/init/*vim
-runtime! userautoload/plugins/*vim
-runtime! userautoload/others/*vim
+runtime! userautoload/*/*vim
