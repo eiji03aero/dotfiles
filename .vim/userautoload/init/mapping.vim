@@ -1,7 +1,7 @@
 "----------------------------------------
 " Custom commands
 "----------------------------------------
-" Basics ----------------------------------------
+" Normal mode ----------------------------------------
 let mapleader = "\<Space>"
 nnoremap n nzz
 nnoremap N Nzz
@@ -31,6 +31,9 @@ nnoremap <Leader>y :call YankPathToClip()<CR>
 nnoremap <Leader>ct :! ctags -R<CR>
 nnoremap <Leader>cc :ccl<CR>
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
+nnoremap <Leader>, :call JustAppend(',')<CR>
+nnoremap <Leader>; :call JustAppend(';')<CR>
+nnoremap <Leader>x :call JustTrimTail()<CR>
 " Insert mode ----------------------------------------
 inoremap <C-C> <ESC>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
@@ -165,4 +168,3 @@ nnoremap <Leader>af :ALEFindReferences<CR>
 nnoremap <Leader>df :DartFmt<CR>
 nnoremap <Leader>da :DartAnalyzer<CR>
 nnoremap <Leader>dj :Dart2Js<CR>
-

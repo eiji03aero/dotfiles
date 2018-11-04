@@ -1,31 +1,38 @@
 # ==================== Flutter ====================
+snippet import_dart
+  import 'dart:${0:TARGET}';
+
+snippet import_package
+  import 'package:${0:TARGET}';
+
+# ==================== Flutter ====================
 snippet stless
 abbr class extends StatelessWidget
   class ${1:#:class_name} extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
-      return new ${0:TARGET}
+      return ${0:TARGET};
     }
   }
 
-snippet stfull
-abbr class extends StatelessWidget
+snippet stful
+abbr class extends StatefulWidget
   class ${1:#:class_name} extends StatefulWidget {
     @override
-    ${2:#:state_class_name} createState() => new $2();
+    _$1State createState() => new _$1State();
   }
 
-  class $2 extends State<$1> {
+  class _$1State extends State<$1> {
     @override
     Widget build(BuildContext context) {
-      return new Container();
+      return ${0:TARGET};
     }
   }
 
 snippet initState
   @override
   void initState() {
-    super.initState();
+    ${0:TARGET}
   }
 
 snippet setState
@@ -33,5 +40,35 @@ snippet setState
     ${0:TARGET}
   });
 
-snippet raised_button
-  RaisedButton(onPressed: ${1:null}, child: ${0:TAGET})
+snippet dispose
+options head
+  @override
+  void dispose() {
+    ${0:TARGET}
+    super.dispose();
+  }
+
+# ==================== Flutter - Properties ====================
+snippet EdgeInsets
+  EdgeInsets
+
+# ==================== Flutter - Widgets ====================
+snippet RaisedButton
+  RaisedButton(
+    onPressed: ${1:null},
+    child: ${0:TAGET},
+  )
+
+snippet Checkbox
+    Checkbox(value: ${1},
+    onChanged: ${0:TARGET},
+  )
+
+snippet Radio
+    Radio(value: ${1},
+    groupValue: ${2},
+    onChanged: ${0:TARGET},
+  )
+
+snippet CircularProgressIndicator
+  CirculartProgressIndicator()

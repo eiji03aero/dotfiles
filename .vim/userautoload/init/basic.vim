@@ -60,7 +60,7 @@ set whichwrap=b,s,h,l,<,>,[,],~
 set mouse=a
 set backspace=indent,eol,start
 set cursorline
-set synmaxcol=300
+set synmaxcol=500
 " rtp related--------------------
 set rtp+=/usr/local/opt/fzf
 " dictionary--------------------
