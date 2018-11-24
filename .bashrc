@@ -1,10 +1,3 @@
-function mkdircd () { mkdir -p "$@" && cd "$_"; }
-function psgrep () { ps aux | grep "$1"; }
-function gigrep () { git branch | grep "$1" | head -n 1 | xargs git checkout ; }
-function girb () { git rebase -i HEAD~"$1"; }
-function ct () { ctags -R ; }
-
-# alias
 alias ls='ls -G'
 
 alias vimrc='vim ~/.vimrc'

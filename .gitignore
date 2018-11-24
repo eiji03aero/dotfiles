@@ -1,3 +1,4 @@
+*.local
 .vim/dein/
 examples/
 .netrwhist
