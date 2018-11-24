@@ -12,11 +12,9 @@ alias method
     ${0:TARGET}
   }
 
-snippet exportFrom
-abbr export {...} from "..."
-alias export
-  export { ${1:#:member} } from "${0:TARGET}";
-
+snippet export_from
+abbr export { member } from './path'
+  export { ${1:member} } from "${0:TARGET}";
 
 # ==================== Method ====================
 snippet bind
@@ -26,17 +24,10 @@ abbr this.[method] = this.[method].bind(this);
 
 # ==================== React ====================
 snippet class_React
-abbr class extends React.Component
-alias class
-  class ${1:className} extends React.Component {
-    constructor (props) {
-      super(props);
-    }
-  }
-
-snippet export_class_React
 abbr export class extends React.Component
 alias class
+  import React from 'react';
+
   export class ${1:className} extends React.Component {
     constructor (props) {
       super(props);
@@ -49,12 +40,36 @@ alias class
     }
   }
 
+snippet functional_React
+abbr export const Component = () => {};
+alias class
+  import React from 'react';
+
+  export const ${1:#:ComponentName} = ({
+    ${2:children}
+  }) => {
+    return (
+      ${0:TARGET}
+    );
+  };
+
+snippet React.Fragment
+abbr <React.Fragment/>
+  <React.Fragment>
+    ${0:TAGET}
+  </React.Fragment>
+
 snippet render_React
-abbr React class render method
+abbr render () { return ( <Component /> ) }
   render () {
     return (
       ${0:TARGET}
     );
+  }
+
+snippet componentDidMount
+  componentDidUpdate () {
+    ${0:TARGET}
   }
 
 snippet shouldComponentUpdate
@@ -71,6 +86,50 @@ snippet getDerivedStateFromProps
   static getDerivedStateFromProps (nextProps, prevState) {
     ${0:TARGET}
   }
+
+snippet component_single
+abbr <Component />
+  <${1:component_name}
+    ${0:TARGET:props}
+  />
+
+snippet component_nested
+abbr <Component />
+  <${1:component_name}>
+    ${0:TARGET}
+  </$1>
+
+snippet commentout_jsx
+options indent
+  {/*
+  ${0:TARGET}
+  */}
+
+snippet return_component
+  return (
+    ${0:TARGET}
+  );
+
+# ==================== Redux ====================
+snippet reducks_template
+  /* -------------------- Constants -------------------- */
+
+  /* -------------------- Actions -------------------- */
+
+  /* -------------------- Initial state -------------------- */
+  const initialState = {
+
+  };
+
+  /* -------------------- Reducers -------------------- */
+
+  export const ${0:TARGET} = (state = initialState, action) => {
+    switch (action.type) {
+
+      default:
+        return state;
+    }
+  };
 
 # ==================== Extras ====================
 snippet separator

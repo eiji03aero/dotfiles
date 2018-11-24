@@ -2,7 +2,7 @@
 " Colorscheme
 "----------------------------------------
 " Basics--------------------
-hi SpecialKey   ctermfg = blue
+hi SpecialKey   ctermfg = darkgrey
 hi Directory    ctermfg = blue
 hi Search       ctermfg = black       ctermbg = yellow
 hi IncSearch    ctermfg = white       ctermbg = darkblue

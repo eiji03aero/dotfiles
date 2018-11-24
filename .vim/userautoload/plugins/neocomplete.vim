@@ -13,6 +13,12 @@ if !exists('g:neocomplete#force_omni_input_patterns')
   let g:neocomplete#force_omni_input_patterns = {}
 endif
 let g:neocomplete#force_omni_input_patterns.typescript = '[^. *\t]\.\w*\|\h\w*::'
+let g:neocomplete#force_omni_input_patterns.go = '\h\w\.\w*'
+
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.go = '\h\w\.\w*'
 
 let s:neco_dicts_dir = $HOME . '/.vim/dicts'
 if isdirectory(s:neco_dicts_dir)
@@ -26,7 +32,8 @@ endif
 
 let g:neocomplete#delimiter_patterns = {
 \    'javascript': ['.'],
-\    'ruby':       ['::']
+\    'ruby':       ['::'],
+\    'go': ['.'],
 \}
 
 " autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS

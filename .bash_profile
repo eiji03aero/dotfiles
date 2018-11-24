@@ -2,7 +2,7 @@ source ~/.bashrc
 source ~/.inputrc
 
 # Prompt template
-export PS1='\n\h\[\033[34m\]:\W\[\033[36m\]$(__git_ps1 [%s])\[\033[00m\]\n\$ '
+export PS1='\n\h\[\033[34m\]:\w\[\033[36m\]$(__git_ps1 [%s])\[\033[00m\]\n\$ '
 
 # bin paths
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
@@ -31,11 +31,10 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:/Users/eijiosakabe/Library/Python/2.7/bin
 
 # go env
-export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME/go:$HOME/go/src/github.com/eiji03aero
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 [[ -s "/Users/eijiosakabe/.gvm/scripts/gvm" ]] && source "/Users/eijiosakabe/.gvm/scripts/gvm"
-# export GO15VENDOREXPERIMENT=1 # Maybe you can delete this one
+export GOROOT=${GOROOT:-/usr/local/opt/go/libexec}
+export GOPATH=$GOPATH:$HOME/go:$HOME/go/src/github.com/eiji03aero
+export PATH=$PATH:$GOROOT/bin:$HOME/go/bin
 
 # rbenv
 export PATH="~/.rbenv/bin:$PATH"
@@ -84,3 +83,22 @@ source /Users/eijiosakabe/enhancd/init.sh
 
 # option config
 stty stop undef # to enable history back on [reverse-i-search]
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/eijiosakabe/.sdkman"
+[[ -s "/Users/eijiosakabe/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/eijiosakabe/.sdkman/bin/sdkman-init.sh"
+export PATH="/Users/eijiosakabe/Library/Android/sdk/platform-tools:$PATH"
+
+function gigrep () {
+  if !(type "git" > /dev/null 2>&1); then
+    echo "Ain't gonna get done without git"
+    return 1
+  fi
+
+  read -p "Input phrase to grep branch: " branch_name
+
+  select branch in $(git branch | grep $branch_name); do
+    git checkout $branch
+    break
+  done
+}

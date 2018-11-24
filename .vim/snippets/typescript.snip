@@ -5,3 +5,14 @@ abbr    /* @doc_comment */
    * @param {${2:@param_type}} ${3:param_name}
    * @return {${4:@return_type}}
    */
+
+snippet surround_component
+abbr <Comp>${0:TARGET}</Comp
+  <${1:Component:component_name}>
+    ${0:TARGET}
+  </$1>
+
+snippet imports_react_test
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
+  import * as TestUtils from 'react-dom/test-utils';

@@ -14,10 +14,9 @@ nnoremap <Leader>wn :vnew<CR>
 nnoremap <Leader>wm :new<CR>
 nnoremap <Leader>wi :tabn<CR>
 nnoremap <Leader>wu :tabN<CR>
-nnoremap <Leader>wc :tabc<CR>
+nnoremap <Leader>we :tabc<CR>
 nnoremap <Leader>wo :tabe<CR>
 nnoremap <Leader>wy :tabo<CR>
-nnoremap <Leader>we :e .<CR>
 nnoremap <Leader>wE :e!<CR>
 nnoremap <Leader>w- <C-w><Bar><C-w>_
 nnoremap <Leader>w= <C-w>=
@@ -34,6 +33,7 @@ nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 nnoremap <Leader>, :call JustAppend(',')<CR>
 nnoremap <Leader>; :call JustAppend(';')<CR>
 nnoremap <Leader>x :call JustTrimTail()<CR>
+nnoremap ,d :call OpenDoc()<CR>
 " Insert mode ----------------------------------------
 inoremap <C-C> <ESC>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
@@ -46,6 +46,9 @@ inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap ` ``<LEFT>
+inoremap <expr> ) OmitDuplicateCharacter(")")
+inoremap <expr> } OmitDuplicateCharacter("}")
+inoremap <expr> ] OmitDuplicateCharacter("]")
 inoremap <C-f>{ {
 inoremap <C-f>[ [
 inoremap <C-f>( (
@@ -66,7 +69,7 @@ inoremap <C-f>u _
 inoremap <C-f>a &
 inoremap <C-f>p %
 inoremap <C-f>l <C-o>$
-inoremap <C-f>o <C-o>o
+inoremap <C-f>o <C-o>O
 " Visual mode ----------------------------------------
 vnoremap n %
 " Operator ----------------------------------------
@@ -82,10 +85,6 @@ nnoremap <Leader>hM zM
 nnoremap <Leader>ht vit zf
 nnoremap <Leader>ht vip zf
 vnoremap <Leader>hf zf
-" Terminal mode ----------------------------------------
-tnoremap <C-w>q <C-w>:quit!<CR>
-tnoremap <C-w>d <C-w>:hide<CR>
-tnoremap <Esc> <C-w><S-n>
 " File-related shortcuts ----------------------------------------
 nnoremap <Leader>mvv :e ~/.vim<CR>
 nnoremap <Leader>mvr :e ~/.vimrc<CR>
@@ -128,11 +127,16 @@ nnoremap <Leader>rtu :Eunittest<CR>
 nnoremap <Leader>rv :Eview<CR>
 nnoremap <Leader>ra :A<CR>
 nnoremap <Leader>rr :R<CR>
+" Vim-go ----------------------------------------
+nnoremap <Leader>goi :GoImport<Space>
+nnoremap <Leader>godr :GoDrop<Space>
+nnoremap <Leader>godc :GoDoc<Space>
+nnoremap <Leader>gol :GoLint<CR>
 " " Vim-splash ----------------------------------------
 " nnoremap <Leader>vsi :Splash ~/.vim/splash/vim_intro.txt<CR>
 " nnoremap <Leader>vsc :Splash ~/.vim/splash/conciergeu_logo.txt<CR>
 " NERD-tree ----------------------------------------
-nnoremap <C-n>n :NERDTreeToggle<CR>
+nnoremap <C-n>t :NERDTreeToggle<CR>
 nnoremap <C-n>m :CD<CR>:NERDTree<CR>
 nnoremap <C-n>g :NERDTreeFocus<CR>
 nnoremap <C-n>f :NERDTreeFind<Space>
@@ -142,11 +146,6 @@ nnoremap <C-t>t :TagbarToggle<CR>
 nnoremap <C-t>f :TagbarShowTag<CR>
 " ctags ----------------------------------------
 nnoremap <C-]> g<C-]>
-" EasyMotion ----------------------------------------
-noremap <Leader> <Plug>(easymotion-prefix)
-" nmap <Leader>s <Plug>(easymotion-overwin-f2)
-nmap <Leader>j <Plug>(easymotion-j)
-nmap <Leader>k <Plug>(easymotion-k)
 " EasyAlign ----------------------------------------
 vmap ga <Plug>(EasyAlign)
 " Neocomplete ----------------------------------------
