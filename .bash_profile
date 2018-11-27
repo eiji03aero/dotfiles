@@ -1,7 +1,7 @@
 source ~/.bashrc
 source ~/.inputrc
-source ~/dotfiles/commands/bash.sh
 
+source ~/dotfiles/commands/index.sh
 if [ -e ~/dotfiles/.bash_profile.local ]; then
   source ~/dotfiles/.bash_profile.local
 fi
@@ -12,3 +12,5 @@ export EDITOR="vim"
 
 # option config
 stty stop undef # to enable history back on [reverse-i-search]
+
+# remove_duplicate_export_path

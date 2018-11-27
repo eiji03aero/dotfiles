@@ -1,8 +1,17 @@
+#! /bin/bash
+
+source ~/dotfiles/commands/remove_duplicate_export_path.sh
+
 function ct () { ctags -R ; }
+
 function mkdircd () { mkdir -p "$@" && cd "$_"; }
+
 function psgrep () { ps aux | grep "$1"; }
+
 function gigrep () { git branch | grep "$1" | head -n 1 | xargs git checkout ; }
+
 function girb () { git rebase -i HEAD~"$1"; }
+
 function gigrep () {
   if !(type "git" > /dev/null 2>&1); then
     echo "Ain't gonna get done without git"
