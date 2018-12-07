@@ -16,6 +16,10 @@ snippet export_from
 abbr export { member } from './path'
   export { ${1:member} } from "${0:TARGET}";
 
+snippet const_{ }_=_property;
+abbr const { } = property;
+  const { ${1} } = ${0:TARGET};
+
 # ==================== Method ====================
 snippet bind
 abbr this.[method] = this.[method].bind(this);
@@ -62,9 +66,7 @@ abbr <React.Fragment/>
 snippet render_React
 abbr render () { return ( <Component /> ) }
   render () {
-    return (
-      ${0:TARGET}
-    );
+    ${0:TARGET}
   }
 
 snippet componentDidMount

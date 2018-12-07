@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ -e ~/dotfiles/.bash_profile.local ]; then
+  touch ~/dotfiles/.bash_profile.local
+fi
+
 # Initialize dein package manager
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/dotfiles/.vim/dein

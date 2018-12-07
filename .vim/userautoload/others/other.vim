@@ -24,6 +24,9 @@ function! s:ChangeCurrentDir(directory, bang)
         pwd
     endif
 endfunction
+function! OmitDuplicateCharacter(character)
+  return strpart(getline('.'), col('.')-1, 1) == a:character ? "\<Right>" : a:character
+endfunction
 "----------------------------------------
 " Custom AutoGroups
 "----------------------------------------
