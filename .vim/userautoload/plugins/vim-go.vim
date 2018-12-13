@@ -5,3 +5,6 @@ let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 0
+
+let g:go_auto_type_info = 1
+let g:go_jump_to_error = 1

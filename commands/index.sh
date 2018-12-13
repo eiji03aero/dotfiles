@@ -16,7 +16,7 @@ function gigrep () {
     return 1
   fi
 
-  if [ $1 = '' ]; then
+  if [ $# -eq 0 ]; then
     read -p "Input phrase to grep branch: " branch_name
   else
     branch_name=$1

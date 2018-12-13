@@ -25,6 +25,18 @@ snippet bind
 abbr this.[method] = this.[method].bind(this);
   this.${0:method} = this.$0.bind(this);
 
+# ==================== imports ====================
+snippet import-ramda
+  import * as R from "ramda";
+
+snippet import-lodash
+  import _ from "lodash";
+
+snippet import-react
+  import React from "react";
+
+snippet import-prop-types
+  import PropTypes from "prop-types";
 
 # ==================== React ====================
 snippet class_React
@@ -111,6 +123,11 @@ snippet return_component
   return (
     ${0:TARGET}
   );
+
+snippet imports_react_test
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
+  import * as TestUtils from 'react-dom/test-utils';
 
 # ==================== Redux ====================
 snippet reducks_template
