@@ -17,6 +17,7 @@ call NERDTreeHighlightFile('config', 'yellow',       'none', 'yellow',  '#151515
 call NERDTreeHighlightFile('conf',   'yellow',       'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('lock',   '251',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('json',   '208',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('toml',   '251',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('html',   'white',        'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('slim',   'red',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('styl',   'blue',         'none', 'cyan',    '#151515')
