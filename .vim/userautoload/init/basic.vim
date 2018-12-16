@@ -26,7 +26,7 @@ set hlsearch
 " Display
 "----------------------------------------
 syntax on
-" statusline--------------------
+" statusline --------------------
 set statusline=%F
 set statusline+=%m
 set statusline+=%r
@@ -37,7 +37,7 @@ set statusline+=[ROW=%l/%L]
 set laststatus=2
 set showcmd
 set cmdheight=2
-" indent/space--------------------
+" indent/space --------------------
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
@@ -61,7 +61,17 @@ set mouse=a
 set backspace=indent,eol,start
 set cursorline
 set synmaxcol=500
-" rtp related--------------------
+" rtp related --------------------
 set rtp+=/usr/local/opt/fzf
-" dictionary--------------------
+" dictionary --------------------
 set dictionary=/usr/share/dict/words
+"----------------------------------------
+" Custom auro groups
+"----------------------------------------
+augroup custom_augroup
+  autocmd!
+  autocmd QuickFixCmdPost *grep* cwindow
+  " autocmd VimEnter * execute 'NERDTree'
+  autocmd FilterWritePre * if &diff | setlocal wrap< | endif
+  autocmd FileType vim setlocal foldmethod=indent
+augroup END

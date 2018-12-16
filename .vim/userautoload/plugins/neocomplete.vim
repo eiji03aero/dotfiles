@@ -15,11 +15,6 @@ endif
 let g:neocomplete#force_omni_input_patterns.typescript = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplete#force_omni_input_patterns.go = '\h\w\.\w*'
 
-call neocomplete#util#set_default_dictionary(
-  \ 'g:neocomplete#sources#omni#input_patterns',
-  \ 'elm',
-  \ '\.')
-
 let s:neco_dicts_dir = $HOME . '/.vim/dicts'
 if isdirectory(s:neco_dicts_dir)
   let g:neocomplete#sources#dictionary#dictionaries = {
