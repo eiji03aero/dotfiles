@@ -41,5 +41,25 @@ function giopen () {
     | awk '{print $2}' \
     | sed -E 's@^[^:]*:(.*)\.git$@https://github.com/\1@')
 
-  [ "$remote_url" ] && open $remote_url
+  [ ! "$remote_url" ] && exit 1;
+
+  while getopts np OPT
+  do
+    case $OPT in
+      n)
+        branch=$(git branch --contains | sed -E 's/^\*.(.*)/\1/')
+        name=$remote_url/pull/new/$branch
+        open $name
+        ;;
+      p)
+        branch=$(git branch --contains | sed -E 's/^\*.(.*)/\1/')
+        name=$remote_url/pull/$branch
+        open $name
+        ;;
+      *)
+        open $remote_url
+    esac
+  done
+
+  echo $name > ~/Desktop/domo.txt
 }

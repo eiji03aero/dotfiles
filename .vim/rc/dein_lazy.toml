@@ -14,15 +14,19 @@ on_source = ['neocomplete.vim']
 # ==================== javascript ====================
 [[plugins]]
 repo = 'othree/yajs.vim'
-on_ft = ['javascript']
+on_ft = ['javascript', 'typescript', 'html']
 
 [[plugins]]
 repo = 'othree/es.next.syntax.vim'
-on_ft = ['javascript']
+on_ft = ['javascript', 'typescript']
 
 [[plugins]]
 repo = 'w0rp/ale'
-on_ft = ['javascript']
+on_ft = ['javascript', 'typescript']
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = ['javascript', 'typescript']
 
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'
@@ -33,8 +37,8 @@ repo = 'leafgarland/typescript-vim'
 on_ft = ['typescript']
 
 [[plugins]]
-repo = 'mxw/vim-jsx'
-on_ft = ['javascript', 'typescript']
+repo = 'Quramy/tsuquyomi'
+on_ft = ['typescript']
 
 [[plugins]]
 repo = 'elmcast/elm-vim'

@@ -124,10 +124,29 @@ snippet return_component
     ${0:TARGET}
   );
 
-snippet imports_react_test
-  import * as React from 'react';
-  import * as ReactDOM from 'react-dom';
-  import * as TestUtils from 'react-dom/test-utils';
+snippet import_react_test
+  import React from "react";
+  import { shallow } from "enzyme";
+  import toJson from "enzyme-to-json";
+
+snippet describe
+  describe("${1:test_name}", () => {
+    ${0:TARGET}
+  });
+
+snippet it_test
+  it("${1:test_name}", () => {
+    ${0:TARGET}
+  });
+
+snippet it_snapshot
+  it("matches snapshot", () => {
+    const wrapper = shallow(
+      ${0:TARGET}
+    );
+
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 
 # ==================== Redux ====================
 snippet reducks_template
