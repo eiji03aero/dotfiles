@@ -129,6 +129,26 @@ snippet imports_react_test
   import * as ReactDOM from 'react-dom';
   import * as TestUtils from 'react-dom/test-utils';
 
+snippet describe
+  describe("${1:test_name}", () => {
+    ${0:TARGET}
+  });
+
+snippet it
+  it("${1:test_name}", () => {
+    ${0:TARGET}
+  });
+
+snippet it_snapshot
+  it("matches snapshot", () => {
+    const wrapper = shallow(
+      ${0:TARGET}
+    );
+
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+
 # ==================== Redux ====================
 snippet reducks_template
   /* -------------------- Constants -------------------- */

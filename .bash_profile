@@ -6,7 +6,7 @@ source ~/dotfiles/commands/index.sh
 source ~/dotfiles/.bash_profile.local
 
 # Prompt template
-export PS1='\n\h\[\033[34m\]:\w\[\033[36m\]$(__git_ps1 [%s])\[\033[00m\]\n\$ '
+export PS1='\n\h\[\033[34m\] \w\[\033[36m\] $(__git_ps1 [%s])\[\033[00m\]\n\$ '
 export EDITOR="vim"
 
 # option config

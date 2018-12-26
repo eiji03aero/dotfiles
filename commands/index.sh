@@ -60,6 +60,4 @@ function giopen () {
         open $remote_url
     esac
   done
-
-  echo $name > ~/Desktop/domo.txt
 }

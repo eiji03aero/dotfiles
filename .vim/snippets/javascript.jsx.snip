@@ -126,7 +126,7 @@ snippet return_component
 
 snippet import_react_test
   import React from "react";
-  import { shallow } from "enzyme";
+  import { shallow, mount } from "enzyme";
   import toJson from "enzyme-to-json";
 
 snippet describe
@@ -134,7 +134,8 @@ snippet describe
     ${0:TARGET}
   });
 
-snippet it_test
+snippet it
+abbr it('should ...') {}
   it("${1:test_name}", () => {
     ${0:TARGET}
   });
@@ -144,7 +145,6 @@ snippet it_snapshot
     const wrapper = shallow(
       ${0:TARGET}
     );
-
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
@@ -183,3 +183,10 @@ abbr /* @doc_comment */
    * @return {${4:type return_type}}
    */
 
+
+snippet performance_start
+  var start = performance.now();
+
+snippet performance_end
+  var end = performance.now();
+  console.log(end - start);
