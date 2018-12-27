@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 source ~/dotfiles/commands/remove_duplicate_export_path.sh
 

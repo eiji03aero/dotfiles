@@ -48,3 +48,6 @@ repo = 'Yggdroot/indentLine'
 
 [[plugins]]
 repo = 'thinca/vim-splash'
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
