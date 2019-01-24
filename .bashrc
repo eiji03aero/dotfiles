@@ -20,6 +20,7 @@ alias gim='git merge'
 alias gip='git push'
 alias gipl='git pull'
 alias giplom='git pull origin master'
+alias girbc='git rebase --continue'
 
 alias tm='tmux new-session'
 alias tm2='tmux new-session \; new-window \; select-window -t 0'

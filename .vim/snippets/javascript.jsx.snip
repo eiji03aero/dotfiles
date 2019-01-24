@@ -16,9 +16,15 @@ snippet export_from
 abbr export { member } from './path'
   export { ${1:member} } from "${0:TARGET}";
 
-snippet const_{ }_=_property;
+snippet const{
 abbr const { } = property;
   const { ${1} } = ${0:TARGET};
+
+snippet const{n
+abbr const { nl } = property;
+  const {
+    ${1}
+  } = ${0:TARGET};
 
 # ==================== Method ====================
 snippet bind
@@ -37,6 +43,9 @@ snippet import-react
 
 snippet import-prop-types
   import PropTypes from "prop-types";
+
+snippet import-styled-components
+  import styled from "styled-components";
 
 # ==================== React ====================
 snippet class_React
@@ -123,6 +132,10 @@ snippet return_component
   return (
     ${0:TARGET}
   );
+
+snippet why-did-you-update
+  import { whyDidYouUpdate } from "why-did-you-update";
+  whyDidYouUpdate(React);
 
 snippet import_react_test
   import React from "react";

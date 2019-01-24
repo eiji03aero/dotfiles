@@ -20,7 +20,7 @@ hi PmenuSel     ctermfg = white       ctermbg = darkblue
 hi preProc      ctermfg = cyan
 hi Terminal     ctermbg = black    ctermfg = white
 " Syntax--------------------
-hi MatchParen ctermfg = yellow  ctermbg = darkgrey
+hi MatchParen ctermfg = yellow    ctermbg = darkgrey
 hi Comment    ctermfg = grey
 hi Constant   ctermfg = darkgreen
 hi Special    ctermfg = red
@@ -28,9 +28,9 @@ hi Identifier ctermfg = red
 hi Statement  ctermfg = yellow
 hi Type       ctermfg = darkblue
 hi Ignore     ctermfg = darkgrey
-hi DiffAdd    cterm   = bold  ctermfg = 10 ctermbg = 22
-hi DiffDelete cterm   = bold  ctermfg = 10 ctermbg = 52
-hi DiffChange cterm   = bold  ctermfg = 10 ctermbg = 17
-hi DiffText   cterm   = bold  ctermfg = 10 ctermbg = 21
-hi Folded     ctermfg = white ctermbg = darkblue
-hi FoldColumn ctermfg = white ctermbg = black
+hi DiffAdd    ctermfg = 10        ctermbg = 28 cterm = bold
+hi DiffDelete ctermfg = 10        ctermbg = 52
+hi DiffChange ctermfg = lightgrey ctermbg = 22
+hi DiffText   ctermfg = 10        ctermbg = 22 cterm = bold
+hi Folded     ctermfg = grey      ctermbg = none
+hi FoldColumn ctermfg = white     ctermbg = black

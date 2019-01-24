@@ -14,7 +14,7 @@ let g:fzf_colors =
   \ 'bg+':     ['fg', 'CursorLineNr'],
   \ 'hl+':     ['fg', 'Statement'],
   \ 'info':    ['fg', 'PreProc'],
-  \ 'prompt':  ['fg', 'StatusLine'],
+  \ 'prompt':  ['fg', 'Special'],
   \ 'pointer': ['fg', 'CursorLineNr'],
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],

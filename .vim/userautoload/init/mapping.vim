@@ -7,6 +7,7 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
 nnoremap # #zz
+nnoremap <C-]> g<C-]>
 nnoremap <Leader>ta :ter<CR>source $HOME/.bash_profile<CR>
 nnoremap <Leader>wb :sp<CR>
 nnoremap <Leader>wv :vsp<CR>
@@ -28,7 +29,8 @@ nnoremap <Leader>n :cn<CR>
 nnoremap <Leader>p :cp<CR>
 nnoremap <Leader>y :call YankPathToClip()<CR>
 nnoremap <Leader>ct :! ctags -R<CR>
-nnoremap <Leader>cc :ccl<CR>
+nnoremap <Leader>cp <C-w>}<CR>
+nnoremap <Leader>cc :pc<CR>
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 nnoremap <Leader>, :call JustAppend(',')<CR>
 nnoremap <Leader>; :call JustAppend(';')<CR>
@@ -62,14 +64,12 @@ inoremap <C-f>. ->
 inoremap <C-f>> =>
 inoremap <C-f>, <-
 inoremap <C-f>< <=
-inoremap <C-f>i <Bar>
 inoremap <C-f>d $
-inoremap <C-f>b \
-inoremap <C-f>u _
 inoremap <C-f>a &
 inoremap <C-f>p %
 inoremap <C-f>l <C-o>$
 inoremap <C-f>o <C-o>O
+inoremap <C-i> <C-x>
 " Visual mode ----------------------------------------
 vnoremap n %
 " Operator ----------------------------------------
@@ -94,6 +94,7 @@ nnoremap <Leader>mt :e ~/.tmux.conf<CR>
 nnoremap <Leader>mbp :e ~/.bash_profile<CR>
 nnoremap <Leader>mbr :e ~/.bashrc<CR>
 nnoremap <Leader>me :e ~/.enhancd/enhancd.log<CR>
+nnoremap <Leader>md :e ~/dotfiles<CR>
 nnoremap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <Leader>st :source ~/.tmux.conf<CR>
 " fzf ----------------------------------------
@@ -106,7 +107,7 @@ nnoremap ,s :GFiles?<CR>
 " Gundo ----------------------------------------
 nnoremap ,u :GundoToggle<CR>
 " Git ----------------------------------------
-nnoremap <Leader>gis :Gstatus<CR>
+nnoremap <Leader>gis :Gstatus!<CR>
 nnoremap <Leader>gia :Gwrite<CR>
 nnoremap <Leader>gir :Gread<CR>
 nnoremap <Leader>gic :Gcommit<CR>
@@ -143,13 +144,8 @@ nnoremap <C-n>c :NERDTreeCWD<Space>
 " Tagbar ----------------------------------------
 nnoremap <C-t>t :TagbarToggle<CR>
 nnoremap <C-t>f :TagbarShowTag<CR>
-" ctags ----------------------------------------
-nnoremap <C-]> g<C-]>
 " EasyAlign ----------------------------------------
 vmap ga <Plug>(EasyAlign)
-" Neocomplete ----------------------------------------
-inoremap <expr><C-i> neocomplete#complete_common_string()
-inoremap <expr><C-g> neocomplete#undo_completion()
 " Neosnippets ----------------------------------------
 imap <C-s> <Plug>(neosnippet_expand_or_jump)
 smap <C-s> <Plug>(neosnippet_expand_or_jump)

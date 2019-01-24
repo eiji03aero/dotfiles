@@ -79,4 +79,10 @@ augroup custom_augroup
   " autocmd VimEnter * execute 'NERDTree'
   autocmd FilterWritePre * if &diff | setlocal wrap< | endif
   autocmd FileType vim setlocal foldmethod=indent
+  autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 augroup END
+"----------------------------------------
+" Extra config
+"----------------------------------------
+let g:jsx_ext_required = 0
+let g:vim_json_syntax_conceal = 0

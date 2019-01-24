@@ -41,7 +41,7 @@ function giopen () {
     | awk '{print $2}' \
     | sed -E 's@^[^:]*:(.*)\.git$@https://github.com/\1@')
 
-  [ ! "$remote_url" ] && exit 1;
+  [ ! "$remote_url" ] && return 1;
 
   while getopts np OPT
   do
@@ -50,14 +50,16 @@ function giopen () {
         branch=$(git branch --contains | sed -E 's/^\*.(.*)/\1/')
         name=$remote_url/pull/new/$branch
         open $name
+        return 1
         ;;
       p)
         branch=$(git branch --contains | sed -E 's/^\*.(.*)/\1/')
         name=$remote_url/pull/$branch
         open $name
+        return 1
         ;;
-      *)
-        open $remote_url
     esac
   done
+
+  open $remote_url
 }
