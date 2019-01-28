@@ -69,7 +69,7 @@ inoremap <C-f>a &
 inoremap <C-f>p %
 inoremap <C-f>l <C-o>$
 inoremap <C-f>o <C-o>O
-inoremap <C-i> <C-x>
+inoremap <C-m> <C-x>
 " Visual mode ----------------------------------------
 vnoremap n %
 " Operator ----------------------------------------
@@ -104,8 +104,6 @@ nnoremap ,t :Tags<CR>
 nnoremap ,g :Ag<CR>
 nnoremap ,c :Commits<CR>
 nnoremap ,s :GFiles?<CR>
-" Gundo ----------------------------------------
-nnoremap ,u :GundoToggle<CR>
 " Git ----------------------------------------
 nnoremap <Leader>gis :Gstatus!<CR>
 nnoremap <Leader>gia :Gwrite<CR>

@@ -3,7 +3,6 @@
 repo = 'Shougo/deoplete.nvim'
 if = 'has("python3")'
 depends = ['roxma/nvim-yarpc', 'roxma/vim-hug-neovim-rpc']
-on_i = 1
 
 [[plugins]]
 repo = 'roxma/nvim-yarp'

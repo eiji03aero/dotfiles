@@ -35,11 +35,19 @@ function gigrep () {
   fi
 }
 
-function giopen () {
-  remote_url=$(git remote -v \
+function git_current_branch () {
+  echo $(git branch --contains | sed -E 's/^\*.(.*)/\1/')
+}
+
+function git_remote_url () {
+  echo $(git remote -v \
     | head -n 1 \
     | awk '{print $2}' \
     | sed -E 's@^[^:]*:(.*)\.git$@https://github.com/\1@')
+}
+
+function giopen () {
+  remote_url=$(git_remote_url)
 
   [ ! "$remote_url" ] && return 1;
 
@@ -47,19 +55,35 @@ function giopen () {
   do
     case $OPT in
       n)
-        branch=$(git branch --contains | sed -E 's/^\*.(.*)/\1/')
-        name=$remote_url/pull/new/$branch
-        open $name
+        open $remote_url/pull/new/$(git_current_branch)
         return 1
         ;;
       p)
-        branch=$(git branch --contains | sed -E 's/^\*.(.*)/\1/')
-        name=$remote_url/pull/$branch
-        open $name
+        open $remote_url/pull/$(git_current_branch)
         return 1
         ;;
     esac
   done
 
   open $remote_url
+}
+
+function gifin () {
+  git push origin $(git_current_branch)
+  giopen -n
+}
+
+function girbmaster () {
+  branch=$(git_current_branch)
+  git checkout master
+  git pull origin master
+  git checkout $branch
+  git rebase master
+}
+
+function tmes () {
+  tmux new-session \; \
+    split-window -h -l 60 \; \
+    select-pane -L \; \
+    send-keys 'vim' Enter
 }

@@ -10,8 +10,8 @@ repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
 repo = 'Shougo/neco-vim'
 
-[[plugins]]
-repo = 'ujihisa/neco-look'
+# [[plugins]]
+# repo = 'ujihisa/neco-look'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'

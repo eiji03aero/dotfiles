@@ -16,11 +16,11 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(expand('~/.vim/rc/dein.toml'),      {'lazy': 0})
   call dein#load_toml(expand('~/.vim/rc/dein_lazy.toml'), {'lazy': 1})
 
-  " if v:version > 800
-  "   call dein#load_toml(expand('~/.vim/rc/dein_v8.toml'))
-  " else
+  if v:version > 800
+    call dein#load_toml(expand('~/.vim/rc/dein_v8.toml'))
+  else
     call dein#load_toml(expand('~/.vim/rc/dein_v7.toml'))
-  " endif
+  endif
 
   call dein#end()
   call dein#save_state()
