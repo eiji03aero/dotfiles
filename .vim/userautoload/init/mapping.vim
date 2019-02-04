@@ -12,6 +12,7 @@ nnoremap <Leader>ta :ter<CR>source $HOME/.bash_profile<CR>
 nnoremap <Leader>wb :sp<CR>
 nnoremap <Leader>wv :vsp<CR>
 nnoremap <Leader>wn :vnew<CR>
+nnoremap <Leader>wN :call SplitWindowRight()<CR>
 nnoremap <Leader>wm :new<CR>
 nnoremap <Leader>wi :tabn<CR>
 nnoremap <Leader>wu :tabN<CR>
@@ -144,6 +145,8 @@ nnoremap <C-t>t :TagbarToggle<CR>
 nnoremap <C-t>f :TagbarShowTag<CR>
 " EasyAlign ----------------------------------------
 vmap ga <Plug>(EasyAlign)
+" Deoplete ----------------------------------------
+" inoremap <expr><C-m> deoplete#refresh()
 " Neosnippets ----------------------------------------
 imap <C-s> <Plug>(neosnippet_expand_or_jump)
 smap <C-s> <Plug>(neosnippet_expand_or_jump)

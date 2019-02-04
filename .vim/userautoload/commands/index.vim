@@ -23,3 +23,9 @@ function! YankPathToClip ()
   echo "Yanked the path to clipboard: " expand('%:p')
   let @+ = expand('%:p')
 endfunction
+
+function! SplitWindowRight ()
+  setlocal splitright
+  vnew
+  setlocal nosplitright
+endfunction

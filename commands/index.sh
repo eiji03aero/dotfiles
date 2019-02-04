@@ -83,7 +83,7 @@ function girbmaster () {
 
 function tmes () {
   tmux new-session \; \
-    split-window -h -l 60 \; \
+    split-window -h -l 45 \; \
     select-pane -L \; \
     send-keys 'vim' Enter
 }
