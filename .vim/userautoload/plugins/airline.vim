@@ -1,4 +1,4 @@
-let g:airline_theme                             = 'wombat'
+let g:airline_theme                             = 'behelit'
 " 'angr'
 " 'behelit'
 " 'bubblegum'

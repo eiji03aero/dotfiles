@@ -8,17 +8,12 @@ nnoremap N Nzz
 nnoremap * *zz
 nnoremap # #zz
 nnoremap <C-]> g<C-]>
-nnoremap <Leader>ta :ter<CR>source $HOME/.bash_profile<CR>
+" window
 nnoremap <Leader>wb :sp<CR>
 nnoremap <Leader>wv :vsp<CR>
 nnoremap <Leader>wn :vnew<CR>
 nnoremap <Leader>wN :call SplitWindowRight()<CR>
 nnoremap <Leader>wm :new<CR>
-nnoremap <Leader>wi :tabn<CR>
-nnoremap <Leader>wu :tabN<CR>
-nnoremap <Leader>we :tabc<CR>
-nnoremap <Leader>wo :tabe<CR>
-nnoremap <Leader>wy :tabo<CR>
 nnoremap <Leader>wE :e!<CR>
 nnoremap <Leader>w- <C-w><Bar><C-w>_
 nnoremap <Leader>w= <C-w>=
@@ -26,6 +21,16 @@ nnoremap <Leader>wa gg<S-v><S-g><CR>
 nnoremap <Leader>wl $
 nnoremap <Leader>wh 0
 nnoremap <Leader>wp %
+" tab
+nnoremap <Leader>tn :tabn<CR>
+nnoremap <Leader>tp :tabN<CR>
+nnoremap <Leader>ts :tab split<CR>
+nnoremap <Leader>te :tabe<CR>
+nnoremap <Leader>tc :tabc<CR>
+" buffer
+nnoremap <Leader>bn :bn<CR>
+nnoremap <Leader>bp :bp<CR>
+nnoremap <Leader>bl :ls<CR>
 nnoremap <Leader>n :cn<CR>
 nnoremap <Leader>p :cp<CR>
 nnoremap <Leader>y :call YankPathToClip()<CR>
@@ -70,9 +75,10 @@ inoremap <C-f>a &
 inoremap <C-f>p %
 inoremap <C-f>l <C-o>$
 inoremap <C-f>o <C-o>O
-inoremap <C-m> <C-x>
 " Visual mode ----------------------------------------
 vnoremap n %
+vnoremap z/ y/<C-r>"<CR>
+vnoremap z? y?<C-r>"<CR>
 " Operator ----------------------------------------
 onoremap in( :<c-u>normal! f(vi(<CR><LEFT><CR>
 " Fold function ----------------------------------------
@@ -103,6 +109,7 @@ nnoremap ,b :Buffers<CR>
 nnoremap ,f :Files<CR>
 nnoremap ,t :Tags<CR>
 nnoremap ,g :Ag<CR>
+nnoremap ,h :History<CR>
 nnoremap ,c :Commits<CR>
 nnoremap ,s :GFiles?<CR>
 " Git ----------------------------------------
@@ -142,7 +149,7 @@ nnoremap <C-n>f :NERDTreeFind<Space>
 nnoremap <C-n>c :NERDTreeCWD<Space>
 " Tagbar ----------------------------------------
 nnoremap <C-t>t :TagbarToggle<CR>
-nnoremap <C-t>f :TagbarShowTag<CR>
+nnoremap <C-t>s :TagbarShowTag<CR>
 " EasyAlign ----------------------------------------
 vmap ga <Plug>(EasyAlign)
 " Deoplete ----------------------------------------

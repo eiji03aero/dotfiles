@@ -8,6 +8,16 @@ function mkdircd () { mkdir -p "$@" && cd "$_"; }
 
 function psgrep () { ps aux | grep "$1"; }
 
+function gicb () {
+  if [ $# -eq 0 ]; then
+    read -p "Input name for new branch: " branch_name
+  else
+    branch_name=$1
+  fi
+
+  git checkout -b $branch_name
+}
+
 function girb () { git rebase -i HEAD~"$1"; }
 
 function gigrep () {

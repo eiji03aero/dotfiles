@@ -2,10 +2,12 @@ let g:NERDTreeShowBookmarks=1
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 45
 let g:NERDTreeCascadeSingleChildDir = 0
+
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
  exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
  exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
+
 call NERDTreeHighlightFile('hs',     '208',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('py',     'yellow',       'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('go',     '251',          'none', 'yellow',  '#151515')

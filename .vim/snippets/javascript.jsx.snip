@@ -1,5 +1,5 @@
 # ==================== Basic ====================
-snippet async_snippet
+snippet async-snippet
 abbr (async () => )();
   (async () => {
     ${0:TARGET}
@@ -12,7 +12,7 @@ alias method
     ${0:TARGET}
   }
 
-snippet export_from
+snippet export-from
 abbr export { member } from './path'
   export { ${1:member} } from "${0:TARGET}";
 
@@ -48,12 +48,10 @@ snippet import-styled-components
   import styled from "styled-components";
 
 # ==================== React ====================
-snippet class_React
-abbr export class extends React.Component
+snippet compnt-class
+abbr class extends React.Component
 alias class
-  import React from 'react';
-
-  export class ${1:className} extends React.Component {
+  ${1}class ${2:className} extends React.Component {
     constructor (props) {
       super(props);
     }
@@ -65,18 +63,28 @@ alias class
     }
   }
 
-snippet functional_React
-abbr export const Component = () => {};
+snippet compnt-func
+abbr const Component = () => {};
 alias class
-  import React from 'react';
-
-  export const ${1:#:ComponentName} = ({
-    ${2:children}
+  ${1}const ${2} = ({
+    ${3:children}
   }) => {
     return (
       ${0:TARGET}
     );
   };
+
+snippet compnt-single
+abbr <Component />
+  <${1:component-name}
+    ${0:TARGET:props}
+  />
+
+snippet compnt-nested
+abbr <Component />
+  <${1:component-name}>
+    ${0:TARGET}
+  </$1>
 
 snippet React.Fragment
 abbr <React.Fragment/>
@@ -84,7 +92,7 @@ abbr <React.Fragment/>
     ${0:TAGET}
   </React.Fragment>
 
-snippet render_React
+snippet render-React
 abbr render () { return ( <Component /> ) }
   render () {
     ${0:TARGET}
@@ -110,25 +118,13 @@ snippet getDerivedStateFromProps
     ${0:TARGET}
   }
 
-snippet component_single
-abbr <Component />
-  <${1:component_name}
-    ${0:TARGET:props}
-  />
-
-snippet component_nested
-abbr <Component />
-  <${1:component_name}>
-    ${0:TARGET}
-  </$1>
-
-snippet commentout_jsx
+snippet commentout-jsx
 options indent
   {/*
   ${0:TARGET}
   */}
 
-snippet return_component
+snippet return-component
   return (
     ${0:TARGET}
   );
@@ -137,23 +133,23 @@ snippet why-did-you-update
   import { whyDidYouUpdate } from "why-did-you-update";
   whyDidYouUpdate(React);
 
-snippet import_react_test
+snippet import-react-test
   import React from "react";
   import { shallow, mount } from "enzyme";
   import toJson from "enzyme-to-json";
 
 snippet describe
-  describe("${1:test_name}", () => {
+  describe("${1:test-name}", () => {
     ${0:TARGET}
   });
 
 snippet it
 abbr it('should ...') {}
-  it("${1:test_name}", () => {
+  it("${1:test-name}", () => {
     ${0:TARGET}
   });
 
-snippet it_snapshot
+snippet it-snapshot
   it("matches snapshot", () => {
     const wrapper = shallow(
       ${0:TARGET}
@@ -162,7 +158,7 @@ snippet it_snapshot
   });
 
 # ==================== Redux ====================
-snippet reducks_template
+snippet reducks-template
   /* -------------------- Constants -------------------- */
 
   /* -------------------- Actions -------------------- */
@@ -187,25 +183,26 @@ snippet separator
 abbr /* ----- this is ----- */
   /* -------------------- ${0:TARGET} -------------------- */
 
-snippet mark
+snippet separator-thick
 abbr === name ===
   // ========================================
   // ${0:TARGET}
   // ========================================
 
 
-snippet doc_function
-abbr /* @doc_comment */
+snippet doc-function
+abbr /* @doc-comment */
+options indent
   /**
    * ${1:description}
-   * @param {${2:string param_type}} ${3:name param_name}
-   * @return {${4:type return_type}}
+   * @param {${2:string param-type}} ${3:name param-name}
+   * @return {${0:type return-type}}
    */
 
 
-snippet performance_start
+snippet performance-start
   var start = performance.now();
 
-snippet performance_end
+snippet performance-end
   var end = performance.now();
   console.log(end - start);

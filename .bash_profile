@@ -14,5 +14,3 @@ export EDITOR="vim"
 stty stop undef # to enable history back on [reverse-i-search]
 
 remove_duplicate_export_path
-
-export PATH="$HOME/.cargo/bin:$PATH"
