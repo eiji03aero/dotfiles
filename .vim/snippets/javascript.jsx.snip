@@ -160,17 +160,20 @@ snippet it-snapshot
 # ==================== Redux ====================
 snippet reducks-template
   /* -------------------- Constants -------------------- */
+  ${0}
+
 
   /* -------------------- Actions -------------------- */
+
 
   /* -------------------- Initial state -------------------- */
   const initialState = {
 
   };
 
-  /* -------------------- Reducers -------------------- */
 
-  export const ${0:TARGET} = (state = initialState, action) => {
+  /* -------------------- Reducers -------------------- */
+  export default function (state = initialState, action) {
     switch (action.type) {
 
       default:
@@ -189,16 +192,9 @@ abbr === name ===
   // ${0:TARGET}
   // ========================================
 
-
-snippet doc-function
+snippet doc-comment
 abbr /* @doc-comment */
-options indent
-  /**
-   * ${1:description}
-   * @param {${2:string param-type}} ${3:name param-name}
-   * @return {${0:type return-type}}
-   */
-
+  /**${0}
 
 snippet performance-start
   var start = performance.now();

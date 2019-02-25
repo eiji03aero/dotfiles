@@ -14,7 +14,7 @@ nnoremap <Leader>wv :vsp<CR>
 nnoremap <Leader>wn :vnew<CR>
 nnoremap <Leader>wN :call SplitWindowRight()<CR>
 nnoremap <Leader>wm :new<CR>
-nnoremap <Leader>wE :e!<CR>
+nnoremap <Leader>we :e!<CR>
 nnoremap <Leader>w- <C-w><Bar><C-w>_
 nnoremap <Leader>w= <C-w>=
 nnoremap <Leader>wa gg<S-v><S-g><CR>
@@ -23,10 +23,12 @@ nnoremap <Leader>wh 0
 nnoremap <Leader>wp %
 " tab
 nnoremap <Leader>tn :tabn<CR>
-nnoremap <Leader>tp :tabN<CR>
+nnoremap <Leader>tp :tabp<CR>
 nnoremap <Leader>ts :tab split<CR>
 nnoremap <Leader>te :tabe<CR>
 nnoremap <Leader>tc :tabc<CR>
+nnoremap <Leader>to :tabo<CR>
+nnoremap <Leader>tl :tabs<CR>
 " buffer
 nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bp :bp<CR>

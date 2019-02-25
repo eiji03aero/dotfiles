@@ -37,8 +37,9 @@ repo = 'tyru/caw.vim'
 [[plugins]]
 repo = 'tpope/vim-surround'
 
-[[plugins]]
-repo = 'majutsushi/tagbar'
+# Stop tagbar for now, since it causes annoying bugs
+# [[plugins]]
+# repo = 'majutsushi/tagbar'
 
 [[plugins]]
 repo = 't9md/vim-textmanip'
