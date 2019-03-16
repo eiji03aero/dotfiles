@@ -111,7 +111,7 @@ nnoremap ,b :Buffers<CR>
 nnoremap ,f :Files<CR>
 nnoremap ,t :Tags<CR>
 nnoremap ,g :Ag<CR>
-nnoremap ,h :History<CR>
+nnoremap ,r :History<CR>
 nnoremap ,c :Commits<CR>
 nnoremap ,s :GFiles?<CR>
 " Git ----------------------------------------

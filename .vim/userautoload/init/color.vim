@@ -67,7 +67,7 @@ hi WildMenu     ctermfg = black     ctermbg = 214
 " Syntax--------------------
 hi Comment    ctermfg = grey
 hi Constant   ctermfg = 10
-hi Delimiter ctermfg = 9
+hi Delimiter  ctermfg = 9
 hi Identifier ctermfg = 214
 hi Ignore     ctermfg = darkgrey
 hi Keyword    ctermfg = 11
@@ -75,3 +75,4 @@ hi PreProc    ctermfg = 39
 hi Special    ctermfg = 9
 hi Statement  ctermfg = 11
 hi Type       ctermfg = 33
+hi Structure  ctermfg = 33

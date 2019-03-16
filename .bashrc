@@ -30,4 +30,7 @@ alias tmksr='tmux kill-server'
 alias tmslmv='tmux split-window -h & tmux resize-pane -R 40'
 alias tmr='tmuxinator'
 
+alias dkc='docker container'
+alias dkce='docker container exec -it'
+
 alias vg='vagrant'

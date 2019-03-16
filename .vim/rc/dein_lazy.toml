@@ -72,6 +72,10 @@ on_ft = ['stylus']
 [[plugins]]
 repo = 'dag/vim2hs'
 on_ft = ['haskell']
+hook_source = '''
+hi hsConceal ctermfg=214
+hi hsOperator ctermfg=214
+'''
 
 # ==================== go ====================
 [[plugins]]
