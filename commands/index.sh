@@ -8,6 +8,8 @@ function mkdircd () { mkdir -p "$@" && cd "$_"; }
 
 function psgrep () { ps aux | grep "$1"; }
 
+
+# -------------------- git --------------------
 function gicb () {
   if [ $# -eq 0 ]; then
     read -p "Input name for new branch: " branch_name
@@ -20,29 +22,36 @@ function gicb () {
 
 function girb () { git rebase -i HEAD~"$1"; }
 
-function gigrep () {
-  if !(type "git" > /dev/null 2>&1); then
-    echo "Ain't gonna get done without git"
-    return 1
-  fi
+# function gigrep () {
+#   if !(type "git" > /dev/null 2>&1); then
+#     echo "Ain't gonna get done without git"
+#     return 1
+#   fi
+#
+#   if [ $# -eq 0 ]; then
+#     read -p "Input phrase to grep branch: " branch_name
+#   else
+#     branch_name=$1
+#   fi
+#
+#   candidates=$(git branch | grep $branch_name)
+#   candidates_length=$(git branch | grep -c $branch_name)
+#
+#   if [ $candidates_length -eq 1 ]; then
+#     git checkout $candidates
+#   else
+#     select branch in $candidates; do
+#       git checkout $branch
+#       break
+#     done
+#   fi
+# }
 
-  if [ $# -eq 0 ]; then
-    read -p "Input phrase to grep branch: " branch_name
-  else
-    branch_name=$1
-  fi
-
-  candidates=$(git branch | grep $branch_name)
-  candidates_length=$(git branch | grep -c $branch_name)
-
-  if [ $candidates_length -eq 1 ]; then
-    git checkout $candidates
-  else
-    select branch in $candidates; do
-      git checkout $branch
-      break
-    done
-  fi
+gigrep() {
+  local branches branch
+  branches=$(git branch -vv) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
 function git_current_branch () {
@@ -91,9 +100,21 @@ function girbmaster () {
   git rebase master
 }
 
+# -------------------- tmux --------------------
 function tmes () {
   tmux new-session \; \
     split-window -h -l 45 \; \
     select-pane -L \; \
     send-keys 'vim' Enter
+}
+
+# -------------------- docker --------------------
+function dkservicefmt () {
+  read -p "Input manager container name: " manager_name
+  read -p "Input service name: " service_name
+
+  docker container exec -it $manager_name docker service ps $service_name \
+    --no-trunc \
+    --filter "desired-state=running" \
+    --format "docker container exec -it {{.Node}} docker container exec -it {{.Name}}.{{.ID}} bash"
 }

@@ -8,6 +8,7 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
  exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
+call NERDTreeHighlightFile('sh',     '251',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('hs',     '208',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('py',     'yellow',       'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('go',     '251',          'none', 'yellow',  '#151515')

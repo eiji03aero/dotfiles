@@ -30,7 +30,11 @@ alias tmksr='tmux kill-server'
 alias tmslmv='tmux split-window -h & tmux resize-pane -R 40'
 alias tmr='tmuxinator'
 
+alias dk='docker'
 alias dkc='docker container'
+alias dki='docker image'
 alias dkce='docker container exec -it'
+alias dkcom='docker-compose'
+alias dkcom-e='docker-compose -f .eiji03aero.local.docker-compose.yml'
 
 alias vg='vagrant'
