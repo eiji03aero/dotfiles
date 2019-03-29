@@ -47,11 +47,21 @@ function girb () { git rebase -i HEAD~"$1"; }
 #   fi
 # }
 
-gigrep() {
+gigrep () {
   local branches branch
   branches=$(git branch -vv) &&
   branch=$(echo "$branches" | fzf +m) &&
   git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
+
+gicborigin () {
+  if [ $# -eq 0 ]; then
+    read -p "Input name for new branch: " branch_name
+  else
+    branch_name=$1
+  fi
+
+  git checkout -b $branch_name origin/$branch_name
 }
 
 function git_current_branch () {

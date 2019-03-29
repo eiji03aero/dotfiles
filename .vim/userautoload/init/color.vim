@@ -42,10 +42,11 @@
 " Basics--------------------
 hi CursorLine   cterm   = underline ctermfg = none ctermbg = none
 hi CursorLineNr ctermfg = 214
-hi DiffAdd      ctermfg = 10        ctermbg = 22   cterm   = bold
-hi DiffChange   ctermfg = lightgrey ctermbg = 28
+hi ColorColumn  ctermbg = 238
+hi DiffAdd      ctermfg = 10        ctermbg = 28   cterm   = bold
+hi DiffChange   ctermfg = 10        ctermbg = 22   cterm   = bold
 hi DiffDelete   ctermfg = 10        ctermbg = 52
-hi DiffText     ctermfg = 10        ctermbg = 28   cterm   = bold
+hi DiffText     ctermfg = 10        ctermbg = 34   cterm   = bold
 hi Directory    ctermfg = 33
 hi FoldColumn   ctermfg = white     ctermbg = black
 hi Folded       ctermfg = grey      ctermbg = none
