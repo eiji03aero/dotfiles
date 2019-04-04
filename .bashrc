@@ -38,5 +38,7 @@ alias dki='docker image'
 alias dkce='docker container exec -it'
 alias dkcom='docker-compose'
 alias dkcom-e='docker-compose -f .eiji03aero.local.docker-compose.yml'
+alias dkcom-econ='docker-compose -f docker-compose1.0.yml  -f .eiji03aero.local.docker-compose1.0.yml'
+alias dkv='docker volume'
 
 alias vg='vagrant'

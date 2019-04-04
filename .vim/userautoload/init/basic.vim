@@ -15,10 +15,12 @@ set scrolloff=2
 set noswapfile
 set nowritebackup
 set nobackup
-set belloff=all
 set ttyfast
 set updatetime=2000
-set completeopt=menu,noselect
+if v:version > 800
+  set belloff=all
+  set completeopt=menu,noselect
+endif
 "----------------------------------------
 " Search
 "----------------------------------------
