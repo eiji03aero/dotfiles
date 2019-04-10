@@ -8,64 +8,32 @@ function mkdircd () { mkdir -p "$@" && cd "$_"; }
 
 function psgrep () { ps aux | grep "$1"; }
 
+function psgrep_kill () { psgrep $1 | awk '{print $2}' | xargs kill -9; }
 
 # -------------------- git --------------------
 function gicb () {
   if [ $# -eq 0 ]; then
-    read -p "Input name for new branch: " branch_name
+    branches=$(git branch -vv) &&
+    branch=$(echo "$branches" | fzf +m) &&
+    git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
   else
-    branch_name=$1
+    git checkout $1
   fi
+}
 
-  git checkout -b $branch_name
+gicb_origin () {
+  origin_branch_name=$(git branch -r | fzf)
+  branch_name=$(echo $origin_branch_name | sed -E "s@origin/(.*)@\1@")
+
+  git checkout -b $branch_name $origin_branch_name
 }
 
 function girb () { git rebase -i HEAD~"$1"; }
 
-# function gigrep () {
-#   if !(type "git" > /dev/null 2>&1); then
-#     echo "Ain't gonna get done without git"
-#     return 1
-#   fi
-#
-#   if [ $# -eq 0 ]; then
-#     read -p "Input phrase to grep branch: " branch_name
-#   else
-#     branch_name=$1
-#   fi
-#
-#   candidates=$(git branch | grep $branch_name)
-#   candidates_length=$(git branch | grep -c $branch_name)
-#
-#   if [ $candidates_length -eq 1 ]; then
-#     git checkout $candidates
-#   else
-#     select branch in $candidates; do
-#       git checkout $branch
-#       break
-#     done
-#   fi
-# }
-
-gigrep () {
-  local branches branch
-  branches=$(git branch -vv) &&
-  branch=$(echo "$branches" | fzf +m) &&
-  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
-}
-
-gicborigin () {
-  if [ $# -eq 0 ]; then
-    read -p "Input name for new branch: " branch_name
-  else
-    branch_name=$1
-  fi
-
-  git checkout -b $branch_name origin/$branch_name
-}
-
 function git_current_branch () {
-  echo $(git branch --contains | sed -E 's/^\*.(.*)/\1/')
+  echo $(git branch \
+    | grep -oE '^\* .*' \
+    | sed -E 's@\* (.*)@\1@')
 }
 
 function git_remote_url () {
@@ -85,11 +53,11 @@ function giopen () {
     case $OPT in
       n)
         open $remote_url/pull/new/$(git_current_branch)
-        return 1
+        return 0
         ;;
       p)
         open $remote_url/pull/$(git_current_branch)
-        return 1
+        return 0
         ;;
     esac
   done
@@ -127,4 +95,43 @@ function dkservicefmt () {
     --no-trunc \
     --filter "desired-state=running" \
     --format "docker container exec -it {{.Node}} docker container exec -it {{.Name}}.{{.ID}} bash"
+}
+
+function dkcom_exec () {
+  yml=$(find . | grep docker-compose.yml | fzf --prompt="Select the config > ")
+  echo "Use config: ${yml}"
+  echo
+  service_name=$(docker-compose -f $yml config --services | fzf --prompt="Select the service > ")
+  echo "Use container: ${service_name}"
+  echo
+  read -p "Input the command: " command_string
+  docker-compose -f $yml exec $service_name $command_string
+}
+
+# -------------------- ngrok --------------------
+function ngrok_init () {
+  if [ $# -ne 2 ]; then
+    cat <<- EOF
+    ngrok_init: error
+
+    You need to pass exactly two arguments
+      - 1: port you want to redirect to
+      - 2: port you want to use to inspect ngrok. incremental number
+EOF
+    return 1;
+  fi
+
+  port=${1}
+  ngrok_port=${2}
+  api_url="http://localhost:${ngrok_port}/api/tunnels"
+
+  ngrok http $port -log=stdout > /dev/null &
+
+  # need to wait a little bit before acquire url
+  sleep 3s
+
+  # return ngrok address to stdout
+  echo $(curl -s $api_url \
+    | grep -oE 'http://.{8}.ngrok.io')
+  return 0;
 }
