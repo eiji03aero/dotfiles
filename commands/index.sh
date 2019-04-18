@@ -11,7 +11,7 @@ function psgrep () { ps aux | grep "$1"; }
 function psgrep_kill () { psgrep $1 | awk '{print $2}' | xargs kill -9; }
 
 # -------------------- git --------------------
-function gicb () {
+function gic () {
   if [ $# -eq 0 ]; then
     branches=$(git branch -vv) &&
     branch=$(echo "$branches" | fzf +m) &&
@@ -21,7 +21,26 @@ function gicb () {
   fi
 }
 
-gicb_origin () {
+function gicb () {
+  if [ $# -eq 0 ]; then
+    echo "Error: You need to pass first argument for the name of new branch"
+    return 1
+  fi
+  git checkout -b $1
+}
+
+function gicb-child () {
+  if [ $# -eq 0 ]; then
+    echo "Error: You need to pass first argument to append the name of new branch"
+    return 1
+  fi
+
+  branch=$(git_current_branch \
+    | sed "s/parent$/${1}/")
+  git checkout -b $branch
+}
+
+gicb-origin () {
   origin_branch_name=$(git branch -r | fzf)
   branch_name=$(echo $origin_branch_name | sed -E "s@origin/(.*)@\1@")
 
@@ -97,12 +116,12 @@ function dkservicefmt () {
     --format "docker container exec -it {{.Node}} docker container exec -it {{.Name}}.{{.ID}} bash"
 }
 
-function dkcom_exec () {
-  yml=$(find . | grep docker-compose.yml | fzf --prompt="Select the config > ")
+function dkcom-exec () {
+  yml=$(find . | fzf --prompt="Select the config > " --query="'docker-compose")
   echo "Use config: ${yml}"
   echo
   service_name=$(docker-compose -f $yml config --services | fzf --prompt="Select the service > ")
-  echo "Use container: ${service_name}"
+  echo "Use service: ${service_name}"
   echo
   read -p "Input the command: " command_string
   docker-compose -f $yml exec $service_name $command_string
