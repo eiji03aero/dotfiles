@@ -22,6 +22,8 @@ if dein#load_state(s:dein_dir)
     call dein#load_toml(expand('~/.vim/rc/dein_v7.toml'))
   endif
 
+  call dein#local('~/projects', {}, ['qf-store'])
+
   call dein#end()
   call dein#save_state()
 endif

@@ -51,7 +51,7 @@ snippet import-styled-components
 snippet compnt-class
 abbr class extends React.Component
 alias class
-  ${1:export\  }class ${2:className} extends React.Component {
+  ${1:export\ }class ${2:className} extends React.Component {
     constructor (props) {
       super(props);
     }
@@ -65,8 +65,8 @@ alias class
 
 snippet compnt-func
 abbr const Component = () => {};
-alias class
-  ${1}const ${2} = ({
+alias const, export
+  ${1:export\ }const ${2} = ({
     ${3:children}
   }) => {
     return (
@@ -75,18 +75,21 @@ alias class
   };
 
 snippet compnt-single
+alias <
 abbr <Component />
   <${1:component-name}
     ${0:TARGET:props}
   />
 
 snippet compnt-nested
+alias <
 abbr <Component />
   <${1:component-name}>
     ${0:TARGET}
   </$1>
 
 snippet React.Fragment
+alias <
 abbr <React.Fragment/>
   <React.Fragment>
     ${0:TAGET}
