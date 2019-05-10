@@ -22,3 +22,9 @@
   - grep git branch
     - input keyword and displays the candidates
     - make it sub module of dotfiles
+- store the root directory when opened vim
+  - use that to reset NERDTree root
+- create fzf integration with NERDTree
+- organize files
+  - create color scheme directory
+  - create plugin directory

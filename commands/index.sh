@@ -21,23 +21,33 @@ function gic () {
   fi
 }
 
+function gic-parent () {
+  git checkout $(gib-parent)
+}
+
 function gicb () {
   if [ $# -eq 0 ]; then
-    echo "Error: You need to pass first argument for the name of new branch"
+    echo "error: You need to pass first argument for the name of new branch"
     return 1
   fi
   git checkout -b $1
 }
 
 function gicb-child () {
-  if [ $# -eq 0 ]; then
-    echo "Error: You need to pass first argument to append the name of new branch"
+  if [ $# -lt 1 ]; then
+    echo "error: You need to pass first argument to append the name of new branch"
     return 1
   fi
 
-  branch=$(git_current_branch \
+  branch=$(gib-current \
     | sed "s/parent$/${1}/")
   git checkout -b $branch
+}
+
+function gim-parent () {
+  parent_branch=$(gib-current \
+    | sed "s/\/[^/]*$/\/parent/")
+  git merge $parent_branch
 }
 
 gicb-origin () {
@@ -49,10 +59,27 @@ gicb-origin () {
 
 function girb () { git rebase -i HEAD~"$1"; }
 
-function git_current_branch () {
+function gib-current () {
   echo $(git branch \
     | grep -oE '^\* .*' \
     | sed -E 's@\* (.*)@\1@')
+}
+
+function gib-parent () {
+  echo $(gib-current \
+    | sed "s/\/[^/]*$/\/parent/")
+}
+
+function gips-current() {
+  git push origin $(gib-current)
+}
+
+function gipl-current() {
+  git pull origin $(gib-current)
+}
+
+function gipl-master() {
+  git pull origin master
 }
 
 function git_remote_url () {
@@ -67,30 +94,26 @@ function giopen () {
 
   [ ! "$remote_url" ] && return 1;
 
-  while getopts np OPT
-  do
-    case $OPT in
-      n)
-        open $remote_url/pull/new/$(git_current_branch)
-        return 0
-        ;;
-      p)
-        open $remote_url/pull/$(git_current_branch)
-        return 0
-        ;;
-    esac
-  done
-
-  open $remote_url
+  if [ $1 = 'new' ]; then
+    open $remote_url/pull/new/$(gib-current)
+  elif [ $1 = 'pr' ]; then
+    open $remote_url/pull/$(gib-current)
+  elif [ $1 = 'pr-parent' ]; then
+    open $remote_url/compare/$(gib-parent)...$(gib-current)?expand=1
+  else
+    open $remote_url
+  fi
 }
 
 function gifin () {
-  git push origin $(git_current_branch)
-  giopen -n
+  open_command=${1:-new}
+
+  git push origin $(gib-current)
+  giopen $open_command
 }
 
 function girbmaster () {
-  branch=$(git_current_branch)
+  branch=$(gib-current)
   git checkout master
   git pull origin master
   git checkout $branch

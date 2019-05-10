@@ -21,6 +21,7 @@ nnoremap <Leader>wa gg<S-v><S-g><CR>
 nnoremap <Leader>wl $
 nnoremap <Leader>wh 0
 nnoremap <Leader>wp %
+nnoremap <Leader>wq :qa<CR>
 " tab
 nnoremap <Leader>tn :tabn<CR>
 nnoremap <Leader>tp :tabp<CR>
@@ -98,6 +99,7 @@ vnoremap <Leader>hf zf
 nnoremap <Leader>mvv :e ~/.vim<CR>
 nnoremap <Leader>mvr :e ~/.vimrc<CR>
 nnoremap <Leader>mvm :e ~/.vim/userautoload/init/mapping.vim<CR>
+nnoremap <Leader>mvp :e ~/.cache/dein/repos/github.com/<CR>
 nnoremap <Leader>mh :e ~/.hyper.js<CR>
 nnoremap <Leader>mt :e ~/.tmux.conf<CR>
 nnoremap <Leader>mbp :e ~/.bash_profile<CR>
@@ -147,7 +149,8 @@ nnoremap <Leader>gol :GoLint<CR>
 " NERD-tree ----------------------------------------
 nnoremap <C-n>t :NERDTreeToggle<CR>
 nnoremap <C-n>g :NERDTreeFocus<CR>
-nnoremap <C-n>f :NERDTreeFind<Space>
+nnoremap <C-n>f :NERDTreeFind<CR>
+nnoremap <C-n>F :NERDTreeFind<Space>
 nnoremap <C-n>c :NERDTreeCWD<Space>
 " Tagbar ----------------------------------------
 nnoremap <C-t>t :TagbarToggle<CR>
@@ -172,3 +175,8 @@ nnoremap <Leader>af :ALEFindReferences<CR>
 nnoremap <Leader>df :DartFmt<CR>
 nnoremap <Leader>da :DartAnalyzer<CR>
 nnoremap <Leader>dj :Dart2Js<CR>
+" QuickNotes ----------------------------------------
+nnoremap <Leader>qnn :call QuickNotesNew()<CR>
+nnoremap <Leader>qnd :call QuickNotesNewDiary()<CR>
+nnoremap <Leader>qnln :call QuickNotesLsNotes()<CR>
+nnoremap <Leader>qnld :call QuickNotesLsDiary()<CR>

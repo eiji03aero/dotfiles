@@ -10,14 +10,8 @@ repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
 repo = 'Shougo/neco-vim'
 
-# [[plugins]]
-# repo = 'ujihisa/neco-look'
-
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
-
-[[plugins]]
-repo = 'scrooloose/nerdtree'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
@@ -61,3 +55,13 @@ repo = 'thinca/vim-splash'
 
 [[plugins]]
 repo = 'tpope/vim-endwise'
+
+[[plugins]]
+repo = 'eiji03aero/quick-notes'
+
+# ==================== File explorer ====================
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+# [[plugins]]
+# repo = 'justinmk/vim-dirvish'
