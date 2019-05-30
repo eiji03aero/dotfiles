@@ -110,6 +110,7 @@ nnoremap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <Leader>st :source ~/.tmux.conf<CR>
 " fzf ----------------------------------------
 nnoremap ,b :Buffers<CR>
+nnoremap ,w :Windows<CR>
 nnoremap ,f :Files<CR>
 nnoremap ,t :Tags<CR>
 nnoremap ,g :Ag<CR>

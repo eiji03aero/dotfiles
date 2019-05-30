@@ -14,7 +14,7 @@ alias method
 
 snippet export-from
 abbr export { member } from './path'
-  export { ${1:member} } from "${0:TARGET}";
+  export { ${1:member} } from '${0:TARGET}';
 
 snippet const{
 abbr const { } = property;
@@ -33,19 +33,22 @@ abbr this.[method] = this.[method].bind(this);
 
 # ==================== imports ====================
 snippet import-ramda
-  import * as R from "ramda";
+  import * as R from 'ramda';
 
 snippet import-lodash
-  import _ from "lodash";
+  import _ from 'lodash';
+
+snippet import-moment
+  import moment from 'moment';
 
 snippet import-react
-  import React from "react";
+  import React from 'react';
 
 snippet import-prop-types
-  import PropTypes from "prop-types";
+  import PropTypes from 'prop-types';
 
 snippet import-styled-components
-  import styled from "styled-components";
+  import styled from 'styled-components';
 
 # ==================== React ====================
 snippet compnt-class
@@ -133,27 +136,27 @@ snippet return-component
   );
 
 snippet why-did-you-update
-  import { whyDidYouUpdate } from "why-did-you-update";
+  import { whyDidYouUpdate } from 'why-did-you-update';
   whyDidYouUpdate(React);
 
 snippet import-react-test
-  import React from "react";
-  import { shallow, mount } from "enzyme";
-  import toJson from "enzyme-to-json";
+  import React from 'react';
+  import { shallow, mount } from 'enzyme';
+  import toJson from 'enzyme-to-json';
 
 snippet describe
-  describe("${1:test-name}", () => {
+  describe('${1:test-name}', () => {
     ${0:TARGET}
   });
 
 snippet it
 abbr it('should ...') {}
-  it("${1:test-name}", () => {
+  it('${1:test-name}', () => {
     ${0:TARGET}
   });
 
 snippet it-snapshot
-  it("matches snapshot", () => {
+  it('matches snapshot', () => {
     const wrapper = shallow(
       ${0:TARGET}
     );

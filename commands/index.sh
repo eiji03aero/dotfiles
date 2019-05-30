@@ -59,6 +59,14 @@ gicb-origin () {
 
 function girb () { git rebase -i HEAD~"$1"; }
 
+function girb-master () {
+  branch=$(gib-current)
+  git checkout master
+  git pull origin master
+  git checkout $branch
+  git rebase master
+}
+
 function gib-current () {
   echo $(git branch \
     | grep -oE '^\* .*' \
@@ -91,14 +99,15 @@ function git_remote_url () {
 
 function giopen () {
   remote_url=$(git_remote_url)
+  command="${1}"
 
   [ ! "$remote_url" ] && return 1;
 
-  if [ $1 = 'new' ]; then
+  if [ $command = 'new' ]; then
     open $remote_url/pull/new/$(gib-current)
-  elif [ $1 = 'pr' ]; then
+  elif [ $command = 'pr' ]; then
     open $remote_url/pull/$(gib-current)
-  elif [ $1 = 'pr-parent' ]; then
+  elif [ $command = 'pr-parent' ]; then
     open $remote_url/compare/$(gib-parent)...$(gib-current)?expand=1
   else
     open $remote_url
@@ -110,14 +119,6 @@ function gifin () {
 
   git push origin $(gib-current)
   giopen $open_command
-}
-
-function girbmaster () {
-  branch=$(gib-current)
-  git checkout master
-  git pull origin master
-  git checkout $branch
-  git rebase master
 }
 
 # -------------------- tmux --------------------
@@ -137,17 +138,6 @@ function dkservicefmt () {
     --no-trunc \
     --filter "desired-state=running" \
     --format "docker container exec -it {{.Node}} docker container exec -it {{.Name}}.{{.ID}} bash"
-}
-
-function dkcom-exec () {
-  yml=$(find . | fzf --prompt="Select the config > " --query="'docker-compose")
-  echo "Use config: ${yml}"
-  echo
-  service_name=$(docker-compose -f $yml config --services | fzf --prompt="Select the service > ")
-  echo "Use service: ${service_name}"
-  echo
-  read -p "Input the command: " command_string
-  docker-compose -f $yml exec $service_name $command_string
 }
 
 # -------------------- ngrok --------------------
