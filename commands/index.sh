@@ -98,16 +98,16 @@ function git_remote_url () {
 }
 
 function giopen () {
-  remote_url=$(git_remote_url)
-  command="${1}"
+  remote_url="$(git_remote_url)"
+  command=${1}
 
   [ ! "$remote_url" ] && return 1;
 
-  if [ $command = 'new' ]; then
+  if [ "$command" = 'new' ]; then
     open $remote_url/pull/new/$(gib-current)
-  elif [ $command = 'pr' ]; then
+  elif [ "$command" = 'pr' ]; then
     open $remote_url/pull/$(gib-current)
-  elif [ $command = 'pr-parent' ]; then
+  elif [ "$command" = 'pr-parent' ]; then
     open $remote_url/compare/$(gib-parent)...$(gib-current)?expand=1
   else
     open $remote_url
