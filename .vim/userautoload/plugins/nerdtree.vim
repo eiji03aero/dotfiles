@@ -10,6 +10,7 @@ endfunction
 
 call NERDTreeHighlightFile('sh',         '251',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('go',         '251',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('cpp',        '251',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('vim',        '251',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('Dockerfile', '251',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('lock',       '251',          'none', 'yellow',  '#151515')

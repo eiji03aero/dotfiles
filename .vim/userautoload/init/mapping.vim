@@ -21,7 +21,8 @@ nnoremap <Leader>wa gg<S-v><S-g><CR>
 nnoremap <Leader>wl $
 nnoremap <Leader>wh 0
 nnoremap <Leader>wp %
-nnoremap <Leader>wq :qa<CR>
+nnoremap <Leader>wq :q<CR>
+nnoremap <Leader>wQ :qa<CR>
 " tab
 nnoremap <Leader>tn :tabn<CR>
 nnoremap <Leader>tp :tabp<CR>
@@ -34,12 +35,12 @@ nnoremap <Leader>tl :tabs<CR>
 nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bp :bp<CR>
 nnoremap <Leader>bl :ls<CR>
-nnoremap <Leader>n :cn<CR>
-nnoremap <Leader>p :cp<CR>
 nnoremap <Leader>y :call YankPathToClip()<CR>
 nnoremap <Leader>ct :! ctags -R<CR>
 nnoremap <Leader>cp <C-w>}<CR>
 nnoremap <Leader>cc :pc<CR>
+nnoremap <Leader>cn :cn<CR>
+nnoremap <Leader>cp :cp<CR>
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 nnoremap <Leader>, :call JustAppend(',')<CR>
 nnoremap <Leader>; :call JustAppend(';')<CR>
@@ -153,6 +154,7 @@ nnoremap <C-n>g :NERDTreeFocus<CR>
 nnoremap <C-n>f :NERDTreeFind<CR>
 nnoremap <C-n>F :NERDTreeFind<Space>
 nnoremap <C-n>c :NERDTreeCWD<Space>
+nnoremap <C-n>m :NERDTreeMirror<CR>
 " Tagbar ----------------------------------------
 nnoremap <C-t>t :TagbarToggle<CR>
 nnoremap <C-t>s :TagbarShowTag<CR>

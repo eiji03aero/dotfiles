@@ -23,7 +23,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/dotfiles/iterm</string>
+	<string>~/Documents/pics/wallpapers</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -67,9 +67,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>-1270 486 620 392 -1920 -30 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>20 534 796 486 0 0 1680 1050 </string>
+	<string>20 568 918 452 0 0 1680 1050 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>0 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1920 -30 1680 1027 -1920 -30 1920 1080 </string>
+	<string>-1270 311 620 377 -1920 -30 1920 1080 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -288,18 +290,18 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.2196078431372549</real>
+				<real>0.25098039215686274</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.19607843137254902</real>
+				<real>0.18431372549019609</real>
 				<key>Red Component</key>
-				<real>0.14901960784313725</real>
+				<real>0.094117647058823528</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/eijiosakabe/Documents/pics/mikumiku/anime_wallpaper_Vocaloid_Hatsune_Miku_11133994893.jpg</string>
+			<string>/Users/eijiosakabe/Documents/pics/wallpapers/main.jpg</string>
 			<key>Blend</key>
-			<real>0.050000000000000003</real>
+			<real>0.12471829927884615</real>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
@@ -847,7 +849,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-05-30T02:46:33Z</date>
+	<date>2019-07-25T06:28:00Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabViewType</key>
@@ -857,6 +859,8 @@
 		<string>Jobs</string>
 		<string>Recent Directories</string>
 	</array>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1564037120</real>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findMode_iTerm</key>

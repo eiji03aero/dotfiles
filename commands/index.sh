@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ~/dotfiles/commands/remove_duplicate_export_path.sh
+source ~/dotfiles/commands/dkcom-create-template.sh
 
 function ct () { ctags -R ; }
 
@@ -44,6 +45,16 @@ function gicb-child () {
   git checkout -b $branch
 }
 
+function gim () {
+  if [ $# -eq 0 ]; then
+    branches=$(git branch -vv) &&
+    branch=$(echo "$branches" | fzf +m) &&
+    git merge $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+  else
+    git merge $1
+  fi
+}
+
 function gim-parent () {
   parent_branch=$(gib-current \
     | sed "s/\/[^/]*$/\/parent/")
@@ -55,6 +66,10 @@ gicb-origin () {
   branch_name=$(echo $origin_branch_name | sed -E "s@origin/(.*)@\1@")
 
   git checkout -b $branch_name $origin_branch_name
+}
+
+gipl-origin () {
+  git pull origin $(git branch -a | fzf)
 }
 
 function girb () { git rebase -i HEAD~"$1"; }
@@ -119,6 +134,13 @@ function gifin () {
 
   git push origin $(gib-current)
   giopen $open_command
+}
+
+function girm-untracked () {
+  git status \
+    | sed -n '/Untracked files:/, $p' \
+    | tail -n +4 \
+    | xargs rm -rf
 }
 
 # -------------------- tmux --------------------
