@@ -11,8 +11,6 @@ alias gicmn='git commit -n -m'
 alias gicma='git commit --amend --no-edit'
 alias gicm-base='git commit --allow-empty -m "base commit"'
 alias gib='git branch'
-alias gim='git merge'
-alias girbc='git rebase --continue'
 alias gicl='git clone'
 
 alias tm='tmux new-session'
