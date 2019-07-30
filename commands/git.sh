@@ -66,31 +66,31 @@ gib-current () {
     | sed -E 's@\* (.*)@\1@')
 }
 
-function gib-parent () {
+gib-parent () {
   echo $(gib-current \
     | sed "s/\/[^/]*$/\/parent/")
 }
 
-function gips-current() {
+gips-current() {
   git push origin $(gib-current)
 }
 
-function gipl-current() {
+gipl-current() {
   git pull origin $(gib-current)
 }
 
-function gipl-master() {
+gipl-master() {
   git pull origin master
 }
 
-function git_remote_url () {
+git_remote_url () {
   echo $(git remote -v \
     | head -n 1 \
     | awk '{print $2}' \
     | sed -E 's@^[^:]*:(.*)\.git$@https://github.com/\1@')
 }
 
-function giopen () {
+giopen () {
   remote_url="$(git_remote_url)"
   command=${1}
 
@@ -107,14 +107,14 @@ function giopen () {
   fi
 }
 
-function gifin () {
+gifin () {
   open_command=${1:-new}
 
   git push origin $(gib-current)
   giopen $open_command
 }
 
-function girm-untracked () {
+girm-untracked () {
   git status \
     | sed -n '/Untracked files:/, $p' \
     | tail -n +4 \

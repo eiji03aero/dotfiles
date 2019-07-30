@@ -67,7 +67,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>-1270 486 620 392 -1920 -30 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>20 568 918 452 0 0 1680 1050 </string>
+	<string>20 568 918 452 0 0 1680 1027 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>0 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -301,7 +301,7 @@
 			<key>Background Image Location</key>
 			<string>/Users/eijiosakabe/Documents/pics/wallpapers/main.jpg</string>
 			<key>Blend</key>
-			<real>0.12471829927884615</real>
+			<real>0.084326171874999994</real>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
