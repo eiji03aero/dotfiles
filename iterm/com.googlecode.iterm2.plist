@@ -67,7 +67,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>-1270 486 620 392 -1920 -30 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>20 568 918 452 0 0 1680 1027 </string>
+	<string>20 568 918 452 0 0 1680 1050 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>0 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -301,7 +301,7 @@
 			<key>Background Image Location</key>
 			<string>/Users/eijiosakabe/Documents/pics/wallpapers/main.jpg</string>
 			<key>Blend</key>
-			<real>0.084326171874999994</real>
+			<real>0.12124524238782051</real>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
@@ -849,7 +849,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-07-25T06:28:00Z</date>
+	<date>2019-07-30T13:57:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabViewType</key>
@@ -860,7 +860,7 @@
 		<string>Recent Directories</string>
 	</array>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1564037120</real>
+	<real>1564295424</real>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findMode_iTerm</key>
