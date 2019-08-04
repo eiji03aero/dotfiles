@@ -56,8 +56,8 @@ gicb-origin () {
   git checkout -b $branch_name $origin_branch_name
 }
 
-gipl-origin () {
-  git pull origin $(git branch -a | fzf)
+gipl() {
+  git pull origin $(gib-current)
 }
 
 gib-current () {
@@ -71,16 +71,8 @@ gib-parent () {
     | sed "s/\/[^/]*$/\/parent/")
 }
 
-gips-current() {
+gips() {
   git push origin $(gib-current)
-}
-
-gipl-current() {
-  git pull origin $(gib-current)
-}
-
-gipl-master() {
-  git pull origin master
 }
 
 git_remote_url () {
@@ -119,4 +111,12 @@ girm-untracked () {
     | sed -n '/Untracked files:/, $p' \
     | tail -n +4 \
     | xargs rm -rf
+}
+
+giconfig-to-local () {
+  g_user_name=$(git config --global user.name)
+  g_user_email=$(git config --global user.email)
+
+  git config --local user.name "$g_user_name"
+  git config --local user.email "$g_user_email"
 }
