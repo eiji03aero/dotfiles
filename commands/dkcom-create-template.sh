@@ -3,9 +3,11 @@
 dkcom-create-template() {
   SH_FILE_NAME="docker-compose.sh"
   COMPOSE_FILE_NAME="docker-compose.yml"
+  SYNC_FILE_NAME="docker-sync.yml"
   DIRECTORY="."
   SH_FILE_PATH="${DIRECTORY}/${SH_FILE_NAME}"
   COMPOSE_FILE_PATH="${DIRECTORY}/${COMPOSE_FILE_NAME}"
+  SYNC_FILE_PATH="${DIRECTORY}/${SYNC_FILE_NAME}"
 
   cat > ${SH_FILE_PATH} <<-EOF
 #!/bin/bash
@@ -48,12 +50,23 @@ services:
   app:
     container_name: app
     build: .
-    image: local/node:11.15.0
+    image: local/node:12.7.0
     ports:
       - "8080:8080"
     volumes:
       - .:/projects
     tty: true
     command: /bin/bash
+EOF
+
+  cat > ${SYNC_FILE_PATH} <<-EOF
+version: "2"
+options:
+  verbose: false
+syncs:
+  app:
+    src: '.'
+    sync_excludes: ['.git', 'node_modules']
+    notify_terminal: false
 EOF
 }

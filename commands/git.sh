@@ -60,6 +60,10 @@ gipl() {
   git pull origin $(gib-current)
 }
 
+girh-origin () {
+  git reset --hard origin/$(gib-current)
+}
+
 gib-current () {
   echo $(git branch \
     | grep -oE '^\* .*' \

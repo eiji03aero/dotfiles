@@ -98,14 +98,12 @@ nnoremap <Leader>ht vip zf
 vnoremap <Leader>hf zf
 " File-related shortcuts ----------------------------------------
 nnoremap <Leader>mvv :e ~/.vim<CR>
-nnoremap <Leader>mvr :e ~/.vimrc<CR>
-nnoremap <Leader>mvm :e ~/.vim/userautoload/init/mapping.vim<CR>
+nnoremap <Leader>mvm :e ~/.vim/userautoload/mapping.vim<CR>
 nnoremap <Leader>mvp :e ~/.cache/dein/repos/github.com/<CR>
 nnoremap <Leader>mh :e ~/.hyper.js<CR>
 nnoremap <Leader>mt :e ~/.tmux.conf<CR>
 nnoremap <Leader>mbp :e ~/.bash_profile<CR>
 nnoremap <Leader>mbr :e ~/.bashrc<CR>
-nnoremap <Leader>me :e ~/.enhancd/enhancd.log<CR>
 nnoremap <Leader>md :e ~/dotfiles<CR>
 nnoremap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <Leader>st :source ~/.tmux.conf<CR>

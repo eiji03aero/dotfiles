@@ -1,15 +1,15 @@
 #!/bin/bash
 
 dkc-runner() {
-  COMMAND='docker container run --rm'
+  ARGS='run --rm -it'
 
   # ==================== volume ====================
   volume_option=''
   volume_option_choice=''
   echo "Select volume mount type"
-  select volume_option_choice in 'local/node' 'custom' 'none'; do
-    if [ "$volume_option_choice" = 'local/node' ]; then
-      volume_option='$(pwd):/projects'
+  select volume_option_choice in '$(pwd):/projects' 'custom' 'none'; do
+    if [ "$volume_option_choice" = '$(pwd):/projects' ]; then
+      volume_option="$(pwd):/projects"
     elif [ "$volume_option_choice" = 'custom' ]; then
       read -p 'Input volume (eg. $(pwd):/projects): ' volume_option
     fi
@@ -17,7 +17,7 @@ dkc-runner() {
   done
 
   if [ "${volume_option}" != '' ]; then
-    COMMAND="${COMMAND} -v ${volume_option}"
+    ARGS="${ARGS} -v ${volume_option}"
   fi
 
 
@@ -28,7 +28,12 @@ dkc-runner() {
     | awk '{print $1 ":" $2}' \
     | fzf --prompt "Select image: ")
 
-  COMMAND="${COMMAND} -t ${selected_image}"
+  if [ "${selected_image}" != "" ]; then
+    ARGS="${ARGS} ${selected_image}"
+  else
+    echo 'error: command has to be given'
+    return 1
+  fi
 
 
   # ==================== command ====================
@@ -45,8 +50,17 @@ dkc-runner() {
   done
 
   if [ "${command_option}" != '' ]; then
-    COMMAND="${COMMAND} ${command_option}"
+    ARGS="${ARGS} ${command_option}"
+  else
+    echo 'error: command has to be given'
+    return 1
   fi
 
-  echo $COMMAND
+  cat <<-EOF
+Will run this command:
+docker container $ARGS
+
+EOF
+
+  docker container $ARGS
 }

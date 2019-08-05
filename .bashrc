@@ -1,6 +1,7 @@
 alias ls='ls -G'
 
 alias gis='git status'
+alias gif='git fetch'
 alias girh='git reset --hard'
 alias gilg='git log --graph'
 alias gilgp='git log --graph -p'
