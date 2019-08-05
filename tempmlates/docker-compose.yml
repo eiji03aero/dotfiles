@@ -1,0 +1,15 @@
+#!/bin/bash
+
+version: '3'
+
+services:
+  app:
+    container_name: app
+    build: .
+    image: local/node:12.7.0
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/projects
+    tty: true
+    command: /bin/bash
