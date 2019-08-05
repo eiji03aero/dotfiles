@@ -16,7 +16,7 @@ dkc-runner() {
     break
   done
 
-  if [ "${volume_option}" != '' ]; then
+  if [ -n "${volume_option}" ]; then
     ARGS="${ARGS} -v ${volume_option}"
   fi
 
@@ -28,10 +28,10 @@ dkc-runner() {
     | awk '{print $1 ":" $2}' \
     | fzf --prompt "Select image: ")
 
-  if [ "${selected_image}" != "" ]; then
+  if [ -n "${selected_image}" ]; then
     ARGS="${ARGS} ${selected_image}"
   else
-    echo 'error: command has to be given'
+    echo 'error: image has to be chosen'
     return 1
   fi
 
@@ -49,7 +49,7 @@ dkc-runner() {
     break
   done
 
-  if [ "${command_option}" != '' ]; then
+  if [ -n "${command_option}" ]; then
     ARGS="${ARGS} ${command_option}"
   else
     echo 'error: command has to be given'

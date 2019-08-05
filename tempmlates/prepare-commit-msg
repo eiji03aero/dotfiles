@@ -10,5 +10,5 @@ firstLine=$(head -n1 $1)
 
 # If first line is empty, treat it as not --amend one
 if [ -z "$firstLine" ] ;then
-    sed -i "" "1 s/^/[#${ticketId}] /" $1
+  sed -i "" "1 s/^/[#${ticketId}] /" $1
 fi
