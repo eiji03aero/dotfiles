@@ -65,9 +65,7 @@ girh-origin () {
 }
 
 gib-current () {
-  echo $(git branch \
-    | grep -oE '^\* .*' \
-    | sed -E 's@\* (.*)@\1@')
+  echo $(git rev-parse --abbrev-ref HEAD)
 }
 
 gib-parent () {
@@ -123,4 +121,24 @@ giconfig-to-local () {
 
   git config --local user.name "$g_user_name"
   git config --local user.email "$g_user_email"
+}
+
+# ==================== hooks ====================
+gi-install-prepare-commit-msg () {
+  hooks_path="./.git/hooks"
+  file_path="${hooks_path}/prepare-commit-msg"
+
+  if [ ! -d $hooks_path ]; then
+    echo 'error: has to be run on git directory'
+    return 1
+  fi
+
+  if [ -e $file_path ]; then
+    echo 'error: cannot override existing hook'
+    return 1
+  fi
+
+  touch $file_path
+  cat ~/dotfiles/tempmlates/prepare-commit-msg > $file_path
+  chmod +x $file_path
 }

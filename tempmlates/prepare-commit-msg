@@ -1,0 +1,14 @@
+#!/bin/bash
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+branchName=$(git rev-parse --abbrev-ref HEAD)
+ticketId=$(echo $branchName | sed 's/[^0-9]//g')
+firstLine=$(head -n1 $1)
+
+# If first line is empty, treat it as not --amend one
+if [ -z "$firstLine" ] ;then
+    sed -i "" "1 s/^/[#${ticketId}] /" $1
+fi

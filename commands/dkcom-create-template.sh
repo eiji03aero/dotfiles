@@ -1,72 +1,23 @@
 #!/bin/bash
 
 dkcom-create-template() {
+  DIRECTORY="."
+
   SH_FILE_NAME="docker-compose.sh"
   COMPOSE_FILE_NAME="docker-compose.yml"
   SYNC_FILE_NAME="docker-sync.yml"
-  DIRECTORY="."
+
   SH_FILE_PATH="${DIRECTORY}/${SH_FILE_NAME}"
   COMPOSE_FILE_PATH="${DIRECTORY}/${COMPOSE_FILE_NAME}"
   SYNC_FILE_PATH="${DIRECTORY}/${SYNC_FILE_NAME}"
 
-  cat > ${SH_FILE_PATH} <<-EOF
-#!/bin/bash
+  SH_TEMPLATE_PATH="~/dotfiles/tempmlates/docker-compose.sh"
+  COMPOSE_TEMPLATE_PATH="~/dotfiles/tempmlates/docker-compose.yml"
+  SYNC_TEMPLATE_PATH="~/dotfiles/tempmlates/docker-sync.yml"
 
-COMMAND=\${1:-up}
-
-function execute_docker_compose () {
-  docker-compose \\
-    -f 'docker-compose.yml' \\
-    \$@
-}
-
-function execute_docker_sync () {
-  docker-sync \\
-    \$@ \\
-    -c 'docker-sync.yml'
-}
-
-function stop_docker_compose () {
-  # execute_docker_sync stop
-  execute_docker_compose stop
-}
-
-if [ \$COMMAND = 'up' ] && [ \$# -le 1 ]; then
-  trap 'stop_docker_compose' SIGINT
-
-  # execute_docker_sync start
-  execute_docker_compose up
-else
-  execute_docker_compose \$@
-fi
-EOF
+  cat ${SH_TEMPLATE_PATH} > ${SH_FILE_PATH}
+  cat ${COMPOSE_TEMPLATE_PATH} > ${COMPOSE_FILE_PATH}
+  cat ${SYNC_TEMPLATE_PATH} > ${SYNC_FILE_PATH}
 
   chmod +x ${SH_FILE_PATH}
-
-  cat > ${COMPOSE_FILE_PATH} <<-EOF
-version: '3'
-
-services:
-  app:
-    container_name: app
-    build: .
-    image: local/node:12.7.0
-    ports:
-      - "8080:8080"
-    volumes:
-      - .:/projects
-    tty: true
-    command: /bin/bash
-EOF
-
-  cat > ${SYNC_FILE_PATH} <<-EOF
-version: "2"
-options:
-  verbose: false
-syncs:
-  app:
-    src: '.'
-    sync_excludes: ['.git', 'node_modules']
-    notify_terminal: false
-EOF
 }

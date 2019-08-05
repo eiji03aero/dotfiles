@@ -1,0 +1,8 @@
+version: "2"
+options:
+  verbose: false
+syncs:
+  app:
+    src: '.'
+    sync_excludes: ['.git', 'node_modules']
+    notify_terminal: false
