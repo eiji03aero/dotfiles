@@ -51,7 +51,7 @@ snippet import-styled-components
   import styled from 'styled-components';
 
 # ==================== React ====================
-snippet compnt-class
+snippet compt-class
 abbr class extends React.Component
 alias class
   ${1:export\ }class ${2:className} extends React.Component {
@@ -66,7 +66,7 @@ alias class
     }
   }
 
-snippet compnt-func
+snippet compt-func
 abbr const Component = () => {};
 alias const, export
   ${1:export\ }const ${2} = ({
@@ -77,16 +77,16 @@ alias const, export
     );
   };
 
-snippet compnt-single
-alias <
+snippet compt-single
 abbr <Component />
+options indent
   <${1:component-name}
     ${0:TARGET:props}
   />
 
-snippet compnt-nested
-alias <
+snippet compt-nested
 abbr <Component />
+options indent
   <${1:component-name}>
     ${0:TARGET}
   </$1>

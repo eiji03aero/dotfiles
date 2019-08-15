@@ -5,16 +5,16 @@ source ~/dotfiles/commands/dkc-runner.sh
 source ~/dotfiles/commands/dkcom-create-template.sh
 source ~/dotfiles/commands/remove_duplicate_export_path.sh
 
-function ct () { ctags -R ; }
+ct () { ctags -R ; }
 
-function mkdircd () { mkdir -p "$@" && cd "$_"; }
+mkdircd () { mkdir -p "$@" && cd "$_"; }
 
-function psgrep () { ps aux | grep "$1"; }
+psgrep () { ps aux | grep "$1"; }
 
-function psgrep_kill () { psgrep $1 | awk '{print $2}' | xargs kill -9; }
+psgrep_kill () { psgrep $1 | awk '{print $2}' | xargs kill -9; }
 
 # -------------------- tmux --------------------
-function tmes () {
+tmes () {
   tmux new-session \; \
     split-window -h -l 45 \; \
     select-pane -L \; \
@@ -22,7 +22,9 @@ function tmes () {
 }
 
 # -------------------- docker --------------------
-function dkservicefmt () {
+dkc-stop-all () { docker container stop $(docker container ls -aq); }
+
+dkservicefmt () {
   read -p "Input manager container name: " manager_name
   read -p "Input service name: " service_name
 
@@ -33,7 +35,7 @@ function dkservicefmt () {
 }
 
 # -------------------- ngrok --------------------
-function ngrok_init () {
+ngrok_init () {
   if [ $# -ne 2 ]; then
     cat <<- EOF
     ngrok_init: error

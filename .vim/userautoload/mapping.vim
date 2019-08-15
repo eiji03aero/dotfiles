@@ -14,13 +14,14 @@ nnoremap <Leader>wv :vsp<CR>
 nnoremap <Leader>wn :vnew<CR>
 nnoremap <Leader>wN :call SplitWindowRight()<CR>
 nnoremap <Leader>wm :new<CR>
-nnoremap <Leader>we :e!<CR>
+nnoremap <Leader>wr :e!<CR>
 nnoremap <Leader>w- <C-w><Bar><C-w>_
 nnoremap <Leader>w= <C-w>=
 nnoremap <Leader>wa gg<S-v><S-g><CR>
 nnoremap <Leader>wl $
 nnoremap <Leader>wh 0
 nnoremap <Leader>wp %
+nnoremap <Leader>wo :on<CR>
 nnoremap <Leader>wq :q<CR>
 nnoremap <Leader>wQ :qa<CR>
 " tab
@@ -124,6 +125,7 @@ nnoremap <Leader>gir :Gread<CR>
 nnoremap <Leader>gic :Gcommit<CR>
 nnoremap <Leader>gib :Gblame<CR>
 nnoremap <Leader>gid :Gdiff<CR>
+nnoremap <Leader>gil :Glog<CR>
 " Gitgutter ----------------------------------------
 nnoremap <Leader>gig :GitGutterAll<CR>
 " Vim-rails ----------------------------------------
