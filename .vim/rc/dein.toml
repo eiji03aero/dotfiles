@@ -8,9 +8,6 @@ repo = 'Shougo/neosnippet.vim'
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
-repo = 'Shougo/neco-vim'
-
-[[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
@@ -62,6 +59,3 @@ repo = 'eiji03aero/quick-notes'
 # ==================== File explorer ====================
 [[plugins]]
 repo = 'scrooloose/nerdtree'
-
-# [[plugins]]
-# repo = 'justinmk/vim-dirvish'

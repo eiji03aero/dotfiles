@@ -13,6 +13,12 @@ psgrep () { ps aux | grep "$1"; }
 
 psgrep_kill () { psgrep $1 | awk '{print $2}' | xargs kill -9; }
 
+# -------------------- vim --------------------
+vim-perf-cursor () {
+  file=${1}
+  vim +'call ProfileCursorMove()' $file
+}
+
 # -------------------- tmux --------------------
 tmes () {
   tmux new-session \; \
@@ -24,14 +30,15 @@ tmes () {
 # -------------------- docker --------------------
 dkc-stop-all () { docker container stop $(docker container ls -aq); }
 
-dkservicefmt () {
-  read -p "Input manager container name: " manager_name
-  read -p "Input service name: " service_name
+dkc-attach() {
+  set -e
+  container_id=$(docker container ls \
+    | tail +2 \
+    | awk '{print $1 ":" $2}' \
+    | fzf --prompt "Select container" \
+    | sed 's/:.*$//')
 
-  docker container exec -it $manager_name docker service ps $service_name \
-    --no-trunc \
-    --filter "desired-state=running" \
-    --format "docker container exec -it {{.Node}} docker container exec -it {{.Name}}.{{.ID}} bash"
+  docker attach $container_id
 }
 
 # -------------------- ngrok --------------------

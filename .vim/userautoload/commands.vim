@@ -42,3 +42,42 @@ function! s:get_highlight_info()
     execute "highlight " . s:get_syn_name(s:get_syn_id(1))
 endfunction
 command! HighlightInfo call s:get_highlight_info()
+
+function! ProfileCursorMove() abort
+  let date_str = strftime('%Y%m%d')
+  let time_str = strftime('%H%M%S')
+  let directory_name = expand('~/dotfiles/logs/vim-profile' . '/' . date_str)
+  let file_name = strftime(time_str . '.log')
+  let g:profile_file = expand(directory_name . '/' . file_name)
+
+  call mkdir(directory_name, 'p')
+  execute 'redir > ' . g:profile_file
+  redir END
+
+  normal! gg
+  normal! zR
+
+  execute 'profile start ' . g:profile_file
+  profile func *
+  profile file *
+
+  augroup ProfileCursorMove
+    autocmd!
+    autocmd CursorHold <buffer> profile pause | q
+  augroup END
+
+  for i in range(100)
+    call feedkeys('j')
+  endfor
+endfunction
+
+function! s:fzf_directory()
+  call fzf#run({
+        \ 'source': 'find ' . getcwd() . ' -type d',
+        \ 'down': '40%',
+        \ 'sink':   'e',
+        \ 'options': '-x +s'
+        \})
+endfunction
+
+command! Directories call s:fzf_directory()

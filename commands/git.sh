@@ -81,6 +81,10 @@ gips() {
   git push origin $(gib-current)
 }
 
+gips-f() {
+  git push -f origin $(gib-current)
+}
+
 git_remote_url () {
   echo $(git remote -v \
     | head -n 1 \

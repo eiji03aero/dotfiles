@@ -118,6 +118,7 @@ nnoremap ,g :Ag<CR>
 nnoremap ,r :History<CR>
 nnoremap ,c :Commits<CR>
 nnoremap ,s :GFiles?<CR>
+nnoremap ,d :Directories<CR>
 " Git ----------------------------------------
 nnoremap <Leader>gis :Gstatus!<CR>
 nnoremap <Leader>gia :Gwrite<CR>
