@@ -156,6 +156,7 @@ nnoremap <C-n>g :NERDTreeFocus<CR>
 nnoremap <C-n>f :NERDTreeFind<CR>
 nnoremap <C-n>F :NERDTreeFind<Space>
 nnoremap <C-n>c :NERDTreeCWD<Space>
+nnoremap <C-n>b :NERDTreeFromBookmark<Space>
 nnoremap <C-n>m :NERDTreeMirror<CR>
 " Tagbar ----------------------------------------
 nnoremap <C-t>t :TagbarToggle<CR>

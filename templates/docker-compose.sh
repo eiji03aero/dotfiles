@@ -2,28 +2,28 @@
 
 COMMAND=${1:-up}
 
-function execute_docker_compose () {
+function execute-docker-compose () {
   docker-compose \
     -f 'docker-compose.yml' \
     $@
 }
 
-function execute_docker_sync () {
+function execute-docker-sync () {
   docker-sync \
     $@ \
     -c 'docker-sync.yml'
 }
 
-function stop_docker_compose () {
-  # execute_docker_sync stop
-  execute_docker_compose stop
+function stop-docker-compose () {
+  # execute-docker-sync stop
+  execute-docker-compose stop
 }
 
 if [ $COMMAND = 'up' ] && [ $# -le 1 ]; then
-  trap 'stop_docker_compose' SIGINT
+  trap 'stop-docker-compose' SIGINT
 
-  # execute_docker_sync start
-  execute_docker_compose up
+  # execute-docker-sync start
+  execute-docker-compose up
 else
-  execute_docker_compose $@
+  execute-docker-compose $@
 fi
