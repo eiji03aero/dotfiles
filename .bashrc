@@ -13,6 +13,8 @@ alias gicma='git commit --amend --no-edit'
 alias gicm-base='git commit --allow-empty -m "base commit"'
 alias gib='git branch'
 alias gicl='git clone'
+alias girb-c='git rebase --continue'
+alias girb-a='git rebase --abort'
 
 alias tm='tmux new-session'
 alias tmls='tmux ls'

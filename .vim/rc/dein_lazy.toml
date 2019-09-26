@@ -61,6 +61,10 @@ repo = 'digitaltoad/vim-pug'
 on_ft = ['pug', 'vue']
 
 [[plugins]]
+repo = 'lepture/vim-jinja'
+on_ft = ['html', 'jinja2', 'jinja', 'njk']
+
+[[plugins]]
 repo = 'hail2u/vim-css3-syntax'
 on_ft = ['css', 'scss']
 

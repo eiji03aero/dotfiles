@@ -85,6 +85,15 @@ gips-f() {
   git push -f origin $(gib-current)
 }
 
+girb () {
+  if [ $# -eq 0 ]; then
+    branch=$(git branch -vv | fzf +m) &&
+    git rebase $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+  else
+    git rebase $1
+  fi
+}
+
 git_remote_url () {
   echo $(git remote -v \
     | head -n 1 \

@@ -13,6 +13,10 @@ psgrep () { ps aux | grep "$1"; }
 
 psgrep_kill () { psgrep $1 | awk '{print $2}' | xargs kill -9; }
 
+fmt-concat-bars () {
+  echo $@ | sed -e 's/[, ]/-/g';
+}
+
 # -------------------- vim --------------------
 vim-perf-cursor () {
   file=${1}

@@ -15,6 +15,7 @@ nnoremap <Leader>wn :vnew<CR>
 nnoremap <Leader>wN :call SplitWindowRight()<CR>
 nnoremap <Leader>wm :new<CR>
 nnoremap <Leader>wr :e!<CR>
+nnoremap <Leader>ww :w<CR>
 nnoremap <Leader>w- <C-w><Bar><C-w>_
 nnoremap <Leader>w= <C-w>=
 nnoremap <Leader>wa gg<S-v><S-g><CR>

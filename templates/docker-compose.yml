@@ -3,11 +3,13 @@ version: '3'
 services:
   app:
     container_name: app
-    build: .
-    image: local/node:12.7.0
+    # image: local/node:12.7.0
+    # volumes:
+    #    - .:/projects
+    # image: local/golang:1.13.0
+    # volumes:
+    #    - .:/go/src
     ports:
       - "8080:8080"
-    volumes:
-      - .:/projects
     tty: true
     command: /bin/bash
