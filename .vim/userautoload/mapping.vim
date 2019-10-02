@@ -47,8 +47,7 @@ nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 nnoremap <Leader>, :call JustAppend(',')<CR>
 nnoremap <Leader>; :call JustAppend(';')<CR>
 nnoremap <Leader>x :call JustTrimTail()<CR>
-nnoremap ,d :call OpenDoc()<CR>
-nnoremap <Leader>scuct :r !cu-commit-title-template<CR>
+nnoremap <Leader>ud :call OpenDoc()<CR>
 " Insert mode ----------------------------------------
 inoremap <C-C> <ESC>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>

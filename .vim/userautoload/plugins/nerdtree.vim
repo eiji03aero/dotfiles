@@ -27,6 +27,7 @@ call NERDTreeHighlightFile('css',        '208',          'none', 'cyan',    '#15
 call NERDTreeHighlightFile('html',       'white',        'none', 'yellow',  '#151515')
 
 call NERDTreeHighlightFile('styl',       'blue',         'none', 'cyan',    '#151515')
+call NERDTreeHighlightFile('sql',        'blue',         'none', 'cyan',    '#151515')
 
 call NERDTreeHighlightFile('md',         'darkblue',     'none', '#3366FF', '#151515')
 call NERDTreeHighlightFile('dart',       'darkblue',     'none', '#ffa500', '#151515')
