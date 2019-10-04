@@ -60,6 +60,10 @@ gipl() {
   git pull origin $(gib-current)
 }
 
+gipl-f() {
+  git pull --force origin $(gib-current)
+}
+
 gir () {
   git reset HEAD^
 }
