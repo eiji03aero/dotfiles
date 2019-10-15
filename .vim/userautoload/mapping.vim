@@ -166,9 +166,9 @@ vmap ga <Plug>(EasyAlign)
 " Deoplete ----------------------------------------
 " inoremap <expr><C-m> deoplete#refresh()
 " Neosnippets ----------------------------------------
-imap <C-s> <Plug>(neosnippet_expand_or_jump)
-smap <C-s> <Plug>(neosnippet_expand_or_jump)
-xmap <C-s> <Plug>(neosnippet_expand_target)
+imap <C-i> <Plug>(neosnippet_expand_or_jump)
+smap <C-i> <Plug>(neosnippet_expand_or_jump)
+xmap <C-i> <Plug>(neosnippet_expand_target)
 nnoremap <Leader>pse :NeoSnippetEdit<CR>
 " Ale ----------------------------------------
 nnoremap <Leader>at :ALEToggle<CR>

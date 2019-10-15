@@ -65,7 +65,7 @@ gipl-f() {
 }
 
 gir () {
-  git reset HEAD^
+  git reset HEAD~1
 }
 
 girh-origin () {

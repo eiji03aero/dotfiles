@@ -7,9 +7,10 @@ dkc-runner() {
   volume_option=''
   volume_option_choice=''
   echo "Select volume mount type"
-  select volume_option_choice in '$(pwd):/projects' 'custom' 'none'; do
-    if [ "$volume_option_choice" = '$(pwd):/projects' ]; then
-      volume_option="$(pwd):/projects"
+  select volume_option_choice in '$(pwd):[custom]' 'custom' 'none'; do
+    if [ "$volume_option_choice" = '$(pwd):[custom]' ]; then
+      read -p 'Input mount path (eg. $(pwd):[this part]): ' mount_path
+      volume_option="$(pwd):${mount_path}"
     elif [ "$volume_option_choice" = 'custom' ]; then
       read -p 'Input volume (eg. $(pwd):/projects): ' volume_option
     fi

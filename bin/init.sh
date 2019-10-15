@@ -3,6 +3,9 @@
 if [ ! -e ~/dotfiles/.bash_profile.local ]; then
   touch ~/dotfiles/.bash_profile.local
 fi
+if [ ! -e ~/dotfiles/.zprofile.local ]; then
+  touch ~/dotfiles/.zprofile.local
+fi
 
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global

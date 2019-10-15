@@ -56,8 +56,8 @@ repo = 'tpope/vim-endwise'
 [[plugins]]
 repo = 'eiji03aero/quick-notes'
 
-[[plugins]]
-repo = 'liuchengxu/vim-clap'
+# [[plugins]]
+# repo = 'liuchengxu/vim-clap'
 
 # ==================== File explorer ====================
 [[plugins]]
