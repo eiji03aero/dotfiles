@@ -21,3 +21,5 @@ $ '
 
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd precmd-prompt-vars
+
+setopt clobber
