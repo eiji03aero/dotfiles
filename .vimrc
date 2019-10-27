@@ -30,9 +30,6 @@ if dein#check_install()
   call dein#install()
 endif
 
-filetype plugin indent on
-syntax enable
-
 set runtimepath+=~/.vim/
 runtime! userautoload/*vim
 runtime! userautoload/plugins/*vim
