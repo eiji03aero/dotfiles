@@ -4,6 +4,7 @@ source ~/dotfiles/commands/git.sh
 source ~/dotfiles/commands/dkc-runner.sh
 source ~/dotfiles/commands/dkcom-create-template.sh
 source ~/dotfiles/commands/remove_duplicate_export_path.sh
+source ~/dotfiles/commands/bridge.sh
 
 ct () { ctags -R ; }
 

@@ -9,10 +9,10 @@ dkc-runner() {
   echo "Select volume mount type"
   select volume_option_choice in '$(pwd):[custom]' 'custom' 'none'; do
     if [ "$volume_option_choice" = '$(pwd):[custom]' ]; then
-      read -p 'Input mount path (eg. $(pwd):[this part]): ' mount_path
+      bridge-read 'Input mount path (eg. $(pwd):[this part]): ' mount_path
       volume_option="$(pwd):${mount_path}"
     elif [ "$volume_option_choice" = 'custom' ]; then
-      read -p 'Input volume (eg. $(pwd):/projects): ' volume_option
+      bridge-read 'Input volume (eg. $(pwd):/projects): ' volume_option
     fi
     break
   done
@@ -45,7 +45,7 @@ dkc-runner() {
     if [ "$command_option_choice" = '/bin/bash' ]; then
       command_option='/bin/bash'
     elif [ "$command_option_choice" = 'custom' ]; then
-      read -p 'Input volume (eg. /bin/bash): ' command_option
+      bridge-read 'Input volume (eg. /bin/bash): ' command_option
     fi
     break
   done
@@ -63,5 +63,5 @@ docker container $ARGS
 
 EOF
 
-  docker container $ARGS
+  eval "docker container $ARGS"
 }

@@ -82,6 +82,7 @@ augroup custom_augroup
   autocmd FilterWritePre * if &diff | setlocal wrap< | endif
   autocmd FileType vim setlocal foldmethod=indent
   autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
+  autocmd BufRead,BufNewFile *.tsx set filetype=typescript.jsx
 augroup END
 "----------------------------------------
 " Extra config
