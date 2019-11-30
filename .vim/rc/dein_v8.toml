@@ -1,13 +1,19 @@
 # ==================== deoplete ====================
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-if = 'has("python3")'
-depends = ['roxma/nvim-yarpc', 'roxma/vim-hug-neovim-rpc']
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
+# if = 'has("python3")'
+# depends = ['roxma/nvim-yarpc', 'roxma/vim-hug-neovim-rpc']
+#
+# [[plugins]]
+# repo = 'roxma/nvim-yarp'
+# if = ''' ! has('nvim') '''
+#
+# [[plugins]]
+# repo = 'roxma/vim-hug-neovim-rpc'
+# if = ''' ! has('nvim') '''
 
+# Should do more research before replace deoplete
 [[plugins]]
-repo = 'roxma/nvim-yarp'
-if = ''' ! has('nvim') '''
-
-[[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
-if = ''' ! has('nvim') '''
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+merged = 0

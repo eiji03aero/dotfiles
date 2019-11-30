@@ -16,6 +16,7 @@ hi NonText      ctermfg = darkgrey
 hi Pmenu        ctermfg = grey      ctermbg = black
 hi PmenuSel     ctermfg = black     ctermbg = 214
 hi Search       ctermfg = black     ctermbg = yellow
+hi SignColumn   ctermfg = black     ctermbg = none
 hi SpecialKey   ctermfg = darkgrey
 hi SpellRare    ctermfg = black
 hi StatusLine   ctermfg = black     ctermbg = grey

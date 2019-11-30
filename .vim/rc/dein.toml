@@ -13,8 +13,8 @@ repo = 'editorconfig/editorconfig-vim'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
+# [[plugins]]
+# repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
 repo = 'junegunn/fzf.vim'

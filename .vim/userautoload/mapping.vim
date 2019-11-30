@@ -109,6 +109,28 @@ nnoremap <Leader>mbr :e ~/.bashrc<CR>
 nnoremap <Leader>md :e ~/dotfiles<CR>
 nnoremap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <Leader>st :source ~/.tmux.conf<CR>
+" coc ----------------------------------------
+nnoremap <Leader>pcld  :<C-u>CocList diagnostics<cr>
+nnoremap <Leader>pcle  :<C-u>CocList extensions<cr>
+nnoremap <Leader>pclc  :<C-u>CocList commands<cr>
+nnoremap <Leader>pclo  :<C-u>CocList outline<cr>
+nnoremap <Leader>pcls  :<C-u>CocList -I symbols<cr>
+nnoremap <Leader>pcc  :<C-u>CocConfig<cr>
+nnoremap <Leader>pcn  :<C-u>CocNext<CR>
+nnoremap <Leader>pcp  :<C-u>CocPrev<CR>
+nnoremap <Leader>pcr  :<C-u>CocListResume<CR>
+nnoremap K :call ShowDocumentation()<CR>
+inoremap <expr> <TAB>
+     \ pumvisible() ? "\<C-n>" :
+     \ CheckBackSpace() ? "\<TAB>" :
+     \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" inoremap <expr> <C-m>m coc#refresh()
+" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+nmap gd <Plug>(coc-definition)
+nmap gy <Plug>(coc-type-definition)
+nmap gi <Plug>(coc-implementation)
+nmap gr <Plug>(coc-references)
 " fzf ----------------------------------------
 nnoremap ,b :Buffers<CR>
 nnoremap ,w :Windows<CR>
@@ -129,19 +151,6 @@ nnoremap <Leader>gid :Gdiff<CR>
 nnoremap <Leader>gil :Glog<CR>
 " Gitgutter ----------------------------------------
 nnoremap <Leader>gig :GitGutterAll<CR>
-" Vim-rails ----------------------------------------
-nnoremap <Leader>rc :Econtroller<CR>
-nnoremap <Leader>re :Eenvironment<CR>
-nnoremap <Leader>ri :Einitializer<CR>
-nnoremap <Leader>rh :Ehelper<CR>
-nnoremap <Leader>rmi :Emigration<CR>
-nnoremap <Leader>rmo :Emodel<CR>
-nnoremap <Leader>rtf :Efunctionaltest<CR>
-nnoremap <Leader>rti :Eintegrationtest<CR>
-nnoremap <Leader>rtu :Eunittest<CR>
-nnoremap <Leader>rv :Eview<CR>
-nnoremap <Leader>ra :A<CR>
-nnoremap <Leader>rr :R<CR>
 " Vim-go ----------------------------------------
 nnoremap <Leader>goi :GoImport<Space>
 nnoremap <Leader>godr :GoDrop<Space>
@@ -170,13 +179,6 @@ imap <C-i> <Plug>(neosnippet_expand_or_jump)
 smap <C-i> <Plug>(neosnippet_expand_or_jump)
 xmap <C-i> <Plug>(neosnippet_expand_target)
 nnoremap <Leader>pse :NeoSnippetEdit<CR>
-" Ale ----------------------------------------
-nnoremap <Leader>at :ALEToggle<CR>
-nnoremap <Leader>ad :ALEDetail<CR>
-nnoremap <Leader>an :ALENextWrap<CR>
-nnoremap <Leader>ap :ALEPreviousWrap<CR>
-nnoremap <Leader>ag :ALEGoToDefinition<CR>
-nnoremap <Leader>af :ALEFindReferences<CR>
 " Dart ----------------------------------------
 nnoremap <Leader>df :DartFmt<CR>
 nnoremap <Leader>da :DartAnalyzer<CR>

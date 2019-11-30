@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 gic () {
   if [ $# -eq 0 ]; then
@@ -51,9 +51,9 @@ gim-parent () {
 
 gicb-origin () {
   origin_branch_name=$(git branch -r | fzf)
-  branch_name=$(echo $origin_branch_name | sed -E "s@origin/(.*)@\1@")
+  branch_name=$(echo $origin_branch_name | sed -E "s@.*origin/(.*)@\1@")
 
-  git checkout -b $branch_name $origin_branch_name
+  git checkout $branch_name
 }
 
 gipl() {
@@ -98,6 +98,10 @@ girb () {
   fi
 }
 
+girb-h () {
+  git rebase -i HEAD~$1
+}
+
 git_remote_url () {
   echo $(git remote -v \
     | head -n 1 \
@@ -136,7 +140,7 @@ girm-untracked () {
     | xargs rm -rf
 }
 
-giconfig-to-local () {
+gi-config-to-local () {
   g_user_name=$(git config --global user.name)
   g_user_email=$(git config --global user.email)
 
@@ -160,6 +164,6 @@ gi-install-prepare-commit-msg () {
   fi
 
   touch $file_path
-  cat ~/dotfiles/tempmlates/prepare-commit-msg > $file_path
+  cat ~/dotfiles/templates/prepare-commit-msg > $file_path
   chmod +x $file_path
 }

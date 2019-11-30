@@ -12,10 +12,6 @@ on_ft = ['javascript', 'typescript', 'vue']
 # on_ft = ['javascript', 'typescript', 'html']
 
 [[plugins]]
-repo = 'w0rp/ale'
-on_ft = ['javascript', 'typescript']
-
-[[plugins]]
 repo = 'mxw/vim-jsx'
 on_ft = ['javascript', 'typescript']
 
@@ -27,9 +23,9 @@ on_ft = ['coffee']
 repo = 'leafgarland/typescript-vim'
 on_ft = ['typescript']
 
-[[plugins]]
-repo = 'Quramy/tsuquyomi'
-on_ft = ['typescript']
+# [[plugins]]
+# repo = 'Quramy/tsuquyomi'
+# on_ft = ['typescript']
 
 [[plugins]]
 repo = 'elmcast/elm-vim'
@@ -92,11 +88,6 @@ on_ft = ['cpp']
 [[plugins]]
 repo = 'fatih/vim-go'
 on_ft = ['go']
-
-# ==================== ruby ====================
-[[plugins]]
-repo = 'tpope/vim-rails'
-on_ft = ['ruby']
 
 # ==================== python ====================
 [[plugins]]
