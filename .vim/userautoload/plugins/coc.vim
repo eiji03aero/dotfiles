@@ -5,7 +5,8 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-json',
   \ 'coc-css',
-  \ 'coc-html'
+  \ 'coc-html',
+  \ 'coc-ccls'
   \ ]
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}

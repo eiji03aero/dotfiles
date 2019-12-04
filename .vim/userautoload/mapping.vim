@@ -118,7 +118,7 @@ nnoremap <Leader>pcls  :<C-u>CocList -I symbols<cr>
 nnoremap <Leader>pcc  :<C-u>CocConfig<cr>
 nnoremap <Leader>pcn  :<C-u>CocNext<CR>
 nnoremap <Leader>pcp  :<C-u>CocPrev<CR>
-nnoremap <Leader>pcr  :<C-u>CocListResume<CR>
+nnoremap <Leader>pcr  :<C-u>CocRestart<CR>
 nnoremap K :call ShowDocumentation()<CR>
 inoremap <expr> <TAB>
      \ pumvisible() ? "\<C-n>" :

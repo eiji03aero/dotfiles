@@ -136,7 +136,7 @@ gifin () {
 girm-untracked () {
   git status \
     | sed -n '/Untracked files:/, $p' \
-    | tail -n +4 \
+    | tail -n +3 \
     | xargs rm -rf
 }
 
