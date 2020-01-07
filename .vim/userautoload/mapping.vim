@@ -167,6 +167,8 @@ nnoremap <C-n>F :NERDTreeFind<Space>
 nnoremap <C-n>c :NERDTreeCWD<Space>
 nnoremap <C-n>b :NERDTreeFromBookmark<Space>
 nnoremap <C-n>m :NERDTreeMirror<CR>
+" ranger ----------------------------------------
+nnoremap <C-n>r :Ranger<CR>
 " Tagbar ----------------------------------------
 nnoremap <C-t>t :TagbarToggle<CR>
 nnoremap <C-t>s :TagbarShowTag<CR>
@@ -174,11 +176,17 @@ nnoremap <C-t>s :TagbarShowTag<CR>
 vmap ga <Plug>(EasyAlign)
 " Deoplete ----------------------------------------
 " inoremap <expr><C-m> deoplete#refresh()
-" Neosnippets ----------------------------------------
-imap <C-i> <Plug>(neosnippet_expand_or_jump)
-smap <C-i> <Plug>(neosnippet_expand_or_jump)
-xmap <C-i> <Plug>(neosnippet_expand_target)
-nnoremap <Leader>pse :NeoSnippetEdit<CR>
+" " Neosnippets ----------------------------------------
+" imap <C-i> <Plug>(neosnippet_expand_or_jump)
+" smap <C-i> <Plug>(neosnippet_expand_or_jump)
+" xmap <C-i> <Plug>(neosnippet_expand_target)
+" nnoremap <Leader>pse :NeoSnippetEdit<CR>
+" coc-snippets ----------------------------------------
+imap <C-i> <Plug>(coc-snippets-expand-jump)
+smap <C-i> <Plug>(coc-snippets-expand-jump)
+xmap <C-i> <Plug>(coc-snippets-expand-jump)
+nnoremap <Leader>pse :CocCommand snippets.editSnippets<CR>
+nnoremap <Leader>psf :CocCommand snippets.openSnippetFiles<CR>
 " Dart ----------------------------------------
 nnoremap <Leader>df :DartFmt<CR>
 nnoremap <Leader>da :DartAnalyzer<CR>

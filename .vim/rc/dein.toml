@@ -1,11 +1,14 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
+# [[plugins]]
+# repo = 'Shougo/neosnippet.vim'
+#
+# [[plugins]]
+# repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+repo = 'honza/vim-snippets'
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
@@ -62,3 +65,6 @@ repo = 'eiji03aero/quick-notes'
 # ==================== File explorer ====================
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'francoiscabrol/ranger.vim'

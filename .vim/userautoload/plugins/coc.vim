@@ -1,7 +1,9 @@
 let g:coc_global_extensions = [
   \ 'coc-git',
+  \ 'coc-snippets',
   \ 'coc-tsserver',
   \ 'coc-eslint',
+  \ 'coc-tslint',
   \ 'coc-prettier',
   \ 'coc-json',
   \ 'coc-css',
