@@ -22,6 +22,14 @@ gicb () {
   git checkout -b $1
 }
 
+gicb-fmt () {
+  if [ $# -eq 0 ]; then
+    echo "error: You need to pass first argument for the name of new branch"
+    return 1
+  fi
+  git checkout -b $(fmt-concat-bars $@)
+}
+
 gicb-child () {
   if [ $# -lt 1 ]; then
     echo "error: You need to pass first argument to append the name of new branch"
