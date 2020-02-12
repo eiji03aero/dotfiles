@@ -1,24 +1,34 @@
 #!/bin/bash
 
+private_prefix=".eiji03aero.local."
+
 dkcom-create-template() {
-  DIRECTORY="."
-  TEMPLATE_DIRECTORY="$HOME/dotfiles/templates"
+  arg_public="${1:-public}"
 
-  SH_FILE_NAME="docker-compose.sh"
-  COMPOSE_FILE_NAME="docker-compose.yml"
-  SYNC_FILE_NAME="docker-sync.yml"
+  directory="."
+  template_directory="$HOME/dotfiles/templates"
 
-  SH_FILE_PATH="${DIRECTORY}/${SH_FILE_NAME}"
-  COMPOSE_FILE_PATH="${DIRECTORY}/${COMPOSE_FILE_NAME}"
-  SYNC_FILE_PATH="${DIRECTORY}/${SYNC_FILE_NAME}"
+  sh_file_name="docker-compose.sh"
+  compose_file_name="docker-compose.yml"
+  sync_file_name="docker-sync.yml"
 
-  SH_TEMPLATE_PATH="${TEMPLATE_DIRECTORY}/docker-compose.sh"
-  COMPOSE_TEMPLATE_PATH="${TEMPLATE_DIRECTORY}/docker-compose.yml"
-  SYNC_TEMPLATE_PATH="${TEMPLATE_DIRECTORY}/docker-sync.yml"
+  if [ $arg_public = "private" ]; then
+    sh_file_name="$private_prefix$sh_file_name"
+    compose_file_name="$private_prefix$compose_file_name"
+    sync_file_name="$private_prefix$sync_file_name"
+  fi
 
-  cat ${SH_TEMPLATE_PATH} > ${SH_FILE_PATH}
-  cat ${COMPOSE_TEMPLATE_PATH} > ${COMPOSE_FILE_PATH}
-  cat ${SYNC_TEMPLATE_PATH} > ${SYNC_FILE_PATH}
-  
-  chmod +x ${SH_FILE_PATH}
+  sh_file_path="${directory}/${sh_file_name}"
+  compose_file_path="${directory}/${compose_file_name}"
+  sync_file_path="${directory}/${sync_file_name}"
+
+  sh_template_path="${template_directory}/docker-compose.sh"
+  compose_template_path="${template_directory}/docker-compose.yml"
+  sync_template_path="${template_directory}/docker-sync.yml"
+
+  cat ${sh_template_path} > ${sh_file_path}
+  cat ${compose_template_path} > ${compose_file_path}
+  cat ${sync_template_path} > ${sync_file_path}
+
+  chmod +x ${sh_file_path}
 }

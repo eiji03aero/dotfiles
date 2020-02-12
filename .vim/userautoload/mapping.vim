@@ -32,7 +32,6 @@ nnoremap <Leader>ts :tab split<CR>
 nnoremap <Leader>te :tabe<CR>
 nnoremap <Leader>tc :tabc<CR>
 nnoremap <Leader>to :tabo<CR>
-nnoremap <Leader>tl :tabs<CR>
 " buffer
 nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bp :bp<CR>

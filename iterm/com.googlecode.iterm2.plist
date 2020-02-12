@@ -6,6 +6,8 @@
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -33,7 +35,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents/pics/neptune</string>
+	<string>~/Documents/pics/mikumiku</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{799, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -318,9 +320,9 @@
 				<real>0.094117647058823528</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/eijiosakabe/Documents/pics/neptune/wallpaper1920x1080.jpg</string>
+			<string>/Users/eijiosakabe/Documents/pics/mikumiku/hatsune-miku0131.jpg</string>
 			<key>Blend</key>
-			<real>0.076129590850515461</real>
+			<real>0.071634383054123937</real>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
@@ -894,14 +896,15 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.6</string>
+		<string>3.3.8</string>
 		<string>3.3.4</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.5</string>
 		<string>3.3.7</string>
 		<string>3.2.9</string>
-		<string>3.3.0</string>
 		<string>3.3.2</string>
+		<string>3.3.0</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -919,7 +922,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>78ADF3E2-A81E-44B6-9475-86FF9C2F56C0</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>148</integer>
+	<integer>174</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1628,15 +1631,6 @@
 			</dict>
 		</array>
 	</dict>
-	<key>NoSyncSearchHistory</key>
-	<array>
-		<string>drouuu/drop</string>
-	</array>
-	<key>NoSyncSearchHistory2</key>
-	<array>
-		<string>ƒƒ∫</string>
-		<string>awefoij</string>
-	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>574424507.68659604</real>
 	<key>NoSyncToolbeltProportions</key>
@@ -1707,7 +1701,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-01-06T02:04:25Z</date>
+	<date>2020-02-05T01:31:01Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -1742,7 +1736,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.7</string>
+	<string>3.3.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

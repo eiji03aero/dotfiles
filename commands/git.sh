@@ -41,6 +41,13 @@ gicb-child () {
   git checkout -b $branch
 }
 
+gicb-origin () {
+  origin_branch_name=$(git branch -r | fzf)
+  branch_name=$(echo $origin_branch_name | sed -E "s@.*origin/(.*)@\1@")
+
+  git checkout $branch_name
+}
+
 gim () {
   if [ $# -eq 0 ]; then
     branches=$(git branch -vv) &&
@@ -57,13 +64,6 @@ gim-parent () {
   git merge $parent_branch
 }
 
-gicb-origin () {
-  origin_branch_name=$(git branch -r | fzf)
-  branch_name=$(echo $origin_branch_name | sed -E "s@.*origin/(.*)@\1@")
-
-  git checkout $branch_name
-}
-
 gipl() {
   git pull origin $(gib-current)
 }
@@ -73,6 +73,10 @@ gipl-f() {
 }
 
 gir () {
+  git reset
+}
+
+gir-1 () {
   git reset HEAD~1
 }
 
