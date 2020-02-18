@@ -151,10 +151,14 @@ nnoremap <Leader>gil :Glog<CR>
 " Gitgutter ----------------------------------------
 nnoremap <Leader>gig :GitGutterAll<CR>
 " Vim-go ----------------------------------------
-nnoremap <Leader>goi :GoImport<Space>
+nnoremap <Leader>goim :GoImport<Space>
+nnoremap <Leader>goig :GoImport<Space>github.com/
+nnoremap <Leader>goii :GoImports<CR>
 nnoremap <Leader>godr :GoDrop<Space>
 nnoremap <Leader>godc :GoDoc<Space>
 nnoremap <Leader>gol :GoLint<CR>
+nnoremap <Leader>gof :GoFmt<CR>
+nnoremap <Leader>gor :GoRename<CR>
 " " Vim-splash ----------------------------------------
 " nnoremap <Leader>vsi :Splash ~/.vim/splash/vim_intro.txt<CR>
 " nnoremap <Leader>vsc :Splash ~/.vim/splash/conciergeu_logo.txt<CR>

@@ -35,3 +35,9 @@ alias dkcom='docker-compose'
 alias dkcom-e='docker-compose -f .eiji03aero.local.docker-compose.yml'
 alias dkv='docker volume'
 alias dks='docker stats'
+
+# cds
+alias cd-mash='cd ~/projects/mash'
+alias cd-mskit='cd ~/projects/mskit'
+alias cd-cu='cd ~/projects/conciergeu'
+alias cd-cu-web='cd ~/projects/conciergeu/conciergeu_website'

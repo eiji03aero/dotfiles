@@ -37,3 +37,4 @@ hi Special    ctermfg = 9
 hi Statement  ctermfg = 11
 hi Type       ctermfg = 33
 hi Structure  ctermfg = 33
+hi SpellBad   ctermfg = white ctermbg = 9

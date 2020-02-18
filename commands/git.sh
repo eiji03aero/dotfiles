@@ -10,35 +10,12 @@ gic () {
   fi
 }
 
-gic-parent () {
-  git checkout $(gib-parent)
-}
-
 gicb () {
   if [ $# -eq 0 ]; then
     echo "error: You need to pass first argument for the name of new branch"
     return 1
   fi
-  git checkout -b $1
-}
-
-gicb-fmt () {
-  if [ $# -eq 0 ]; then
-    echo "error: You need to pass first argument for the name of new branch"
-    return 1
-  fi
   git checkout -b $(fmt-concat-bars $@)
-}
-
-gicb-child () {
-  if [ $# -lt 1 ]; then
-    echo "error: You need to pass first argument to append the name of new branch"
-    return 1
-  fi
-
-  branch=$(gib-current \
-    | sed "s/parent$/${1}/")
-  git checkout -b $branch
 }
 
 gicb-origin () {
@@ -88,11 +65,6 @@ gib-current () {
   echo $(git rev-parse --abbrev-ref HEAD)
 }
 
-gib-parent () {
-  echo $(gib-current \
-    | sed "s/\/[^/]*$/\/parent/")
-}
-
 gips() {
   git push origin $(gib-current)
 }
@@ -131,8 +103,6 @@ giopen () {
     open $remote_url/pull/new/$(gib-current)
   elif [ "$command" = 'pr' ]; then
     open $remote_url/pull/$(gib-current)
-  elif [ "$command" = 'pr-parent' ]; then
-    open $remote_url/compare/$(gib-parent)...$(gib-current)?expand=1
   else
     open $remote_url
   fi
