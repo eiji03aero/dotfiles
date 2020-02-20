@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dkc-runner() {
-  ARGS='run --rm -it'
+  args='run --rm -it'
 
   # ==================== volume ====================
   volume_option=''
@@ -18,7 +18,7 @@ dkc-runner() {
   done
 
   if [ -n "${volume_option}" ]; then
-    ARGS="${ARGS} -v ${volume_option}"
+    args="${args} -v ${volume_option}"
   fi
 
 
@@ -30,7 +30,7 @@ dkc-runner() {
     | fzf --prompt "Select image: ")
 
   if [ -n "${selected_image}" ]; then
-    ARGS="${ARGS} ${selected_image}"
+    args="${args} ${selected_image}"
   else
     echo 'error: image has to be chosen'
     return 1
@@ -51,7 +51,7 @@ dkc-runner() {
   done
 
   if [ -n "${command_option}" ]; then
-    ARGS="${ARGS} ${command_option}"
+    args="${args} ${command_option}"
   else
     echo 'error: command has to be given'
     return 1
@@ -59,9 +59,9 @@ dkc-runner() {
 
   cat <<-EOF
 Will run this command:
-docker container $ARGS
+docker container $args
 
 EOF
 
-  eval "docker container $ARGS"
+  eval "docker container $args"
 }

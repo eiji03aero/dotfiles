@@ -1,0 +1,8 @@
+FROM node:12.7.0-buster
+
+WORKDIR /projects
+
+RUN apt-get update && apt-get upgrade -y
+
+RUN git config --global user.email "eiji03aero@gmail.com" \
+  && git config --global user.name "eiji03aero"
