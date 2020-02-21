@@ -152,6 +152,7 @@ nnoremap <Leader>gil :Glog<CR>
 nnoremap <Leader>gig :GitGutterAll<CR>
 " Vim-go ----------------------------------------
 nnoremap <Leader>goim :GoImport<Space>
+nnoremap <Leader>goia :GoImportAs<Space>
 nnoremap <Leader>goig :GoImport<Space>github.com/
 nnoremap <Leader>goii :GoImports<CR>
 nnoremap <Leader>godr :GoDrop<Space>
