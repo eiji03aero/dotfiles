@@ -3,19 +3,19 @@
 COMMAND=${1:-up}
 container_name="app"
 
-function execute-docker-compose () {
+execute-docker-compose () {
   docker-compose \
     -f 'docker-compose.yml' \
     $@
 }
 
-function execute-docker-sync () {
+execute-docker-sync () {
   docker-sync \
     $@ \
     -c 'docker-sync.yml'
 }
 
-function stop-docker-compose () {
+stop-docker-compose () {
   # execute-docker-sync stop
   execute-docker-compose stop
 }

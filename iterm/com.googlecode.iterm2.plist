@@ -324,9 +324,9 @@
 				<real>0.094117647058823528</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/eijiosakabe/Documents/pics/mikumiku/Hatsune.Miku.full.461724.jpg</string>
+			<string>/Users/eijiosakabe/Documents/pics/mikumiku/Vocaloid_Hatsune_Miku_Sitting_550635_2560x1440.jpg</string>
 			<key>Blend</key>
-			<real>0.073069023840206387</real>
+			<real>0.050000000000000003</real>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
@@ -903,15 +903,15 @@
 	<array>
 		<string>3.3.6</string>
 		<string>3.3.8</string>
-		<string>3.3.2</string>
+		<string>3.3.4</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.5</string>
 		<string>3.3.7</string>
 		<string>3.3.9</string>
 		<string>3.3.0</string>
+		<string>3.3.2</string>
 		<string>3.2.9</string>
-		<string>3.3.4</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -929,7 +929,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>78ADF3E2-A81E-44B6-9475-86FF9C2F56C0</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>185</integer>
+	<integer>202</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1708,7 +1708,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-21T01:41:53Z</date>
+	<date>2020-03-09T01:14:45Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>

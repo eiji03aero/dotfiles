@@ -65,3 +65,10 @@ fi
 
 source ~/dotfiles/zsh/.zprofile.local
 source ~/dotfiles/commands/index.sh
+
+#
+# X11
+# https://sourabhbajaj.com/blog/2017/02/07/gui-applications-docker-mac/
+path+=('/usr/X11/bin')
+export IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+# export IP=$(ifconfig en1 | grep inet | awk '$1=="inet" {print $2}')

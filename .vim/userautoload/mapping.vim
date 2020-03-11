@@ -37,11 +37,15 @@ nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bp :bp<CR>
 nnoremap <Leader>bl :ls<CR>
 nnoremap <Leader>y :call YankPathToClip()<CR>
+nnoremap <Leader>jq :%!jq '.'<CR>
 nnoremap <Leader>ct :! ctags -R<CR>
 nnoremap <Leader>cp <C-w>}<CR>
 nnoremap <Leader>cc :pc<CR>
 nnoremap <Leader>cn :cn<CR>
 nnoremap <Leader>cp :cp<CR>
+nnoremap <Leader>lc :lcl<CR>
+nnoremap <Leader>ln :lne<CR>
+nnoremap <Leader>lp :lp<CR>
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 nnoremap <Leader>, :call JustAppend(',')<CR>
 nnoremap <Leader>; :call JustAppend(';')<CR>
