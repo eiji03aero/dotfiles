@@ -17,6 +17,6 @@ augroup mygroup
   autocmd!
   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-  autocmd BufNew,BufEnter *.go execute "silent! CocDisable"
-  autocmd BufLeave *.go execute "silent! CocEnable"
+  " autocmd BufNew,BufEnter *.go execute "silent! CocDisable"
+  " autocmd BufLeave *.go execute "silent! CocEnable"
 augroup end
