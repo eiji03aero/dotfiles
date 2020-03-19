@@ -23,10 +23,6 @@ on_ft = ['coffee']
 repo = 'leafgarland/typescript-vim'
 on_ft = ['typescript']
 
-# [[plugins]]
-# repo = 'Quramy/tsuquyomi'
-# on_ft = ['typescript']
-
 [[plugins]]
 repo = 'elmcast/elm-vim'
 on_ft = ['elm']
@@ -35,6 +31,7 @@ on_ft = ['elm']
 repo = 'posva/vim-vue'
 on_ft = ['vue']
 
+# ==================== dart ====================
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
 on_ft = ['dart']

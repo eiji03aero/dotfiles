@@ -2,6 +2,7 @@ let g:coc_global_extensions = [
   \ 'coc-git',
   \ 'coc-snippets',
   \ 'coc-tsserver',
+  \ 'coc-flow',
   \ 'coc-eslint',
   \ 'coc-tslint',
   \ 'coc-prettier',

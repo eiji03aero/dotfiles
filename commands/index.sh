@@ -20,6 +20,12 @@ fmt-concat-bars () {
   echo "$@" | sed -e "s/[][, \/]/-/g" -e "s/[.]//g";
 }
 
+fd() {
+  local dir
+  dir=$(find ${1:-.} -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
 # -------------------- vim --------------------
 vim-perf-cursor () {
   file=${1}
