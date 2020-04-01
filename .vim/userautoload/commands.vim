@@ -94,3 +94,31 @@ function! ShowDocumentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" -------------------- git --------------------
+function! GitConflictResolveFst() abort
+  call SearchTo("<<<<")
+  normal! dd
+  call SearchTo("====")
+  normal! V
+  call SearchTo(">>>>")
+  normal! dd
+endfunction
+
+function! GitConflictResolveSnd() abort
+  call SearchTo("<<<<")
+  normal! V
+  call SearchTo("====")
+  normal! dd
+  call SearchTo(">>>>")
+  normal! dd
+endfunction
+
+function! GitConflictShow()
+  call SearchTo("<<<<")
+endfunction
+
+" -------------------- utils --------------------
+function! SearchTo(str)
+  execute "normal! /" . a:str . "\<cr>"
+endfunction

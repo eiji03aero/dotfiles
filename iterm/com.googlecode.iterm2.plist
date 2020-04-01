@@ -84,7 +84,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>78 353 799 448 0 0 1680 1050 </string>
+	<string>429 315 799 448 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>-1160 683 400 129 -1920 -30 1920 1080 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -94,7 +94,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>0 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1270 300 620 398 -1920 -30 1920 1080 </string>
+	<string>544 1380 620 398 -106 1050 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>-1920 -30 1920 342 -1920 -30 1920 1057 </string>
 	<key>New Bookmarks</key>
@@ -287,13 +287,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.33333333333333331</real>
+				<real>0.35294117647058826</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.33333333333333331</real>
+				<real>0.35294117647058826</real>
 				<key>Red Component</key>
-				<real>0.33333333333333331</real>
+				<real>0.35294117647058826</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -324,9 +324,9 @@
 				<real>0.094117647058823528</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/eijiosakabe/Documents/pics/mikumiku/Vocaloid_Hatsune_Miku_Sitting_550635_2560x1440.jpg</string>
+			<string>/Users/eijiosakabe/Documents/pics/mikumiku/hatsune-miku0131.jpg</string>
 			<key>Blend</key>
-			<real>0.11530484858247424</real>
+			<real>0.067846931378865979</real>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
@@ -352,6 +352,8 @@
 			<integer>80</integer>
 			<key>Command</key>
 			<string></string>
+			<key>Cursor Boost</key>
+			<real>0.0</real>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -709,7 +711,7 @@
 				<real>0.98039215686274506</real>
 			</dict>
 			<key>Minimum Contrast</key>
-			<real>0.011496803977272728</real>
+			<real>0.0</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
@@ -903,22 +905,22 @@
 	<array>
 		<string>3.3.6</string>
 		<string>3.3.8</string>
-		<string>3.3.4</string>
+		<string>3.3.2</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.5</string>
 		<string>3.3.7</string>
 		<string>3.3.9</string>
-		<string>3.3.0</string>
 		<string>3.2.9</string>
-		<string>3.3.2</string>
+		<string>3.3.0</string>
+		<string>3.3.4</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{12, 879}</string>
+		<string>{363, 841}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -929,7 +931,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>78ADF3E2-A81E-44B6-9475-86FF9C2F56C0</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>208</integer>
+	<integer>221</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1708,7 +1710,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-11T01:14:52Z</date>
+	<date>2020-03-27T01:16:47Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>

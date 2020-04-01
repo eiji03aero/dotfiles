@@ -63,12 +63,16 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-source ~/dotfiles/zsh/.zprofile.local
-source ~/dotfiles/commands/index.sh
+#
+# fzf
+#
+export FZF_DEFAULT_COMMAND='ag -l --hidden -g ""'
 
 #
 # X11
 # https://sourabhbajaj.com/blog/2017/02/07/gui-applications-docker-mac/
 path+=('/usr/X11/bin')
 export IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
-# export IP=$(ifconfig en1 | grep inet | awk '$1=="inet" {print $2}')
+
+source ~/dotfiles/zsh/.zprofile.local
+source ~/dotfiles/commands/index.sh

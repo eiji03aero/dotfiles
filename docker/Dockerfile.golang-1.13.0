@@ -6,7 +6,7 @@ WORKDIR /app
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y \
   vim less \
-  zip unzip
+  zip unzip netcat
 
 ENV PROTOC_ZIP=protoc-3.7.1-linux-x86_64.zip
 RUN curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.7.1/$PROTOC_ZIP \

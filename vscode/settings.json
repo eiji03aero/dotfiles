@@ -1,0 +1,40 @@
+{
+  "editor.renderWhitespace": "boundary",
+  "editor.suggestSelection": "first",
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "explorer.confirmDelete": false,
+  "git.autofetch": true,
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.colorTheme": "Sapphire",
+  "workbench.editor.showTabs": true,
+  "workbench.icontheme": "vscode-icons",
+
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.whichwrap": "b,s,h,l,<,>,[,],~",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "g", "i", "a"],
+      "commands": [
+        "git.stage"
+      ]
+    },
+    {
+      "before": ["<leader>", "g", "i", "c"],
+      "commands": [
+        "git.commitStaged"
+      ]
+    }
+  ],
+
+  "emmet.includeLanguages": {
+    "nunjucks": "html"
+  },
+  "[makefile]": {
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false
+  }
+}
