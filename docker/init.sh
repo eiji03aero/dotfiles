@@ -3,7 +3,7 @@
 cmd="${1:-build-all}"
 
 configurations=(
-  "./Dockerfile.golang-1.13.0 local/golang:1.13.0"
+  "./Dockerfile.golang-1.14.1 local/golang:1.14.0"
   "./Dockerfile.haskell-8.8 local/haskell:8.8"
   "./Dockerfile.node-12.7.0 local/node:12.7.0"
   "./Dockerfile.node-10.18.1 local/node:10.18.1"
