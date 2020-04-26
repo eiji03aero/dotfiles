@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMMAND=${1:-up}
+cmd=${1:-up}
 container_name="app"
 
 execute-docker-compose () {
@@ -20,7 +20,7 @@ stop-docker-compose () {
   execute-docker-compose stop
 }
 
-if [ $COMMAND = 'up' ] && [ $# -le 1 ]; then
+if [ $cmd = 'up' ] && [ $# -le 1 ]; then
   # trap 'stop-docker-compose' SIGINT
   # execute-docker-sync start
   # execute-docker-compose up
@@ -29,7 +29,7 @@ if [ $COMMAND = 'up' ] && [ $# -le 1 ]; then
   # execute-docker-compose up -d
   # execute-docker-compose exec $container_name /bin/bash
   # stop-docker-compose
-elif [ $COMMAND = 'bash' ]; then
+elif [ $cmd = 'bash' ]; then
   execute-docker-compose exec $container_name /bin/bash
 else
   execute-docker-compose $@

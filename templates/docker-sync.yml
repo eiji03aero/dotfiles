@@ -4,5 +4,5 @@ options:
 syncs:
   app:
     src: '.'
-    sync_excludes: ['.git', 'node_modules']
+    sync_excludes: ['.git']
     notify_terminal: false

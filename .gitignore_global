@@ -3,4 +3,7 @@ tags
 
 .eiji03aero.local.*
 .eiji03aero.local/
+*.eiji03aero.local/
+
 .docker-sync/
+.netlify/

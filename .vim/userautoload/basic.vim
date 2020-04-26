@@ -86,6 +86,7 @@ augroup custom_augroup
   autocmd FileType nerdtree setlocal signcolumn=no
   autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
   autocmd BufRead,BufNewFile *.tsx set filetype=typescript.jsx
+  autocmd FileType vue syntax sync fromstart
 augroup END
 "----------------------------------------
 " Extra config

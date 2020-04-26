@@ -30,6 +30,5 @@ if dein#check_install()
   call dein#install()
 endif
 
-set runtimepath+=~/.vim/
 runtime! userautoload/*vim
 runtime! userautoload/plugins/*vim

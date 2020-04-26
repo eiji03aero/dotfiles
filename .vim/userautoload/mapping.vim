@@ -195,6 +195,8 @@ smap <C-i> <Plug>(coc-snippets-expand-jump)
 xmap <C-i> <Plug>(coc-snippets-expand-jump)
 nnoremap <Leader>pse :CocCommand snippets.editSnippets<CR>
 nnoremap <Leader>psf :CocCommand snippets.openSnippetFiles<CR>
+" Prettier ----------------------------------------
+nnoremap <Leader>pp :PrettierAsync<CR>
 " Dart ----------------------------------------
 nnoremap <Leader>df :DartFmt<CR>
 nnoremap <Leader>da :DartAnalyzer<CR>

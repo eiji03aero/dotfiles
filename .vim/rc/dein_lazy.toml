@@ -12,7 +12,7 @@ on_ft = ['javascript', 'typescript', 'vue']
 # on_ft = ['javascript', 'typescript', 'html']
 
 [[plugins]]
-repo = 'mxw/vim-jsx'
+repo = 'maxmellon/vim-jsx-pretty'
 on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescript.jsx']
 
 [[plugins]]
@@ -24,12 +24,20 @@ repo = 'leafgarland/typescript-vim'
 on_ft = ['typescript']
 
 [[plugins]]
+repo = 'jparise/vim-graphql'
+on_ft = ['graphql']
+
+[[plugins]]
 repo = 'elmcast/elm-vim'
 on_ft = ['elm']
 
 [[plugins]]
-repo = 'posva/vim-vue'
+repo = 'leafOfTree/vim-vue-plugin'
 on_ft = ['vue']
+
+[[plugins]]
+repo = 'prettier/vim-prettier'
+on_ft = ['javascript', 'typescript', 'css', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
 
 # ==================== dart ====================
 [[plugins]]

@@ -9,7 +9,7 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-css',
   \ 'coc-html',
-  \ 'coc-ccls'
+  \ 'coc-phpls'
   \ ]
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}

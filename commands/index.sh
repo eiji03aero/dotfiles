@@ -48,7 +48,7 @@ dkc-attach() {
   container_id=$(docker container ls \
     | tail +2 \
     | awk '{print $1 ":" $2}' \
-    | fzf --prompt "Select container" \
+    | fzf --prompt "Select container: " \
     | sed 's/:.*$//')
 
   docker attach $container_id

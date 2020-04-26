@@ -2,10 +2,10 @@
 hi CursorLine   cterm   = underline ctermfg = none ctermbg = none
 hi CursorLineNr ctermfg = 214
 hi ColorColumn  ctermbg = 238
-hi DiffAdd      ctermfg = 10        ctermbg = 28   cterm   = bold
-hi DiffChange   ctermfg = 10        ctermbg = 22   cterm   = bold
-hi DiffDelete   ctermfg = 10        ctermbg = 52
-hi DiffText     ctermfg = 10        ctermbg = 28   cterm   = bold
+hi DiffAdd      ctermfg = 191        ctermbg = 28 cterm=NONE
+hi DiffChange   ctermfg = 191        ctermbg = 22 cterm=NONE
+hi DiffDelete   ctermfg = 191        ctermbg = 52 cterm=NONE
+hi DiffText     ctermfg = 191        ctermbg = 28 cterm=NONE
 hi Directory    ctermfg = 33
 hi FoldColumn   ctermfg = white     ctermbg = black
 hi Folded       ctermfg = grey      ctermbg = none
@@ -13,12 +13,13 @@ hi IncSearch    ctermfg = white     ctermbg = darkblue
 hi LineNr       ctermfg = darkgrey
 hi MatchParen   ctermfg = yellow    ctermbg = darkgrey
 hi NonText      ctermfg = darkgrey
-hi Pmenu        ctermfg = grey      ctermbg = black
-hi PmenuSel     ctermfg = black     ctermbg = 214
+hi Pmenu        ctermfg = 250       ctermbg = 16
+hi PmenuSel     ctermfg = 255       ctermbg = 33
 hi Search       ctermfg = black     ctermbg = yellow
 hi SignColumn   ctermfg = black     ctermbg = none
 hi SpecialKey   ctermfg = darkgrey
-hi SpellRare    ctermfg = black
+hi SpellRare    ctermfg = white ctermbg = red
+hi SpellBad   ctermfg = white ctermbg = 9
 hi StatusLine   ctermfg = black     ctermbg = grey
 hi StatusLineNC ctermfg = darkgrey  ctermbg = white
 hi Terminal     ctermbg = black     ctermfg = white
@@ -37,4 +38,3 @@ hi Special    ctermfg = 9
 hi Statement  ctermfg = 11
 hi Type       ctermfg = 33
 hi Structure  ctermfg = 33
-hi SpellBad   ctermfg = white ctermbg = 9

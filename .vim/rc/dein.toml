@@ -20,6 +20,9 @@ repo = 'tpope/vim-fugitive'
 # repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
 repo = 'junegunn/fzf.vim'
 
 [[plugins]]
@@ -40,12 +43,6 @@ repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 't9md/vim-textmanip'
-
-[[plugins]]
-repo = 'vim-airline/vim-airline'
-
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
