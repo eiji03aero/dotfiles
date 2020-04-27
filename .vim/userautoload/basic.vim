@@ -34,13 +34,13 @@ set hlsearch
 "----------------------------------------
 syntax on
 " statusline --------------------
-set statusline=%F
-set statusline+=%m
-set statusline+=%r
-set statusline+=%h
-set statusline+=%w
-set statusline+=%=
-set statusline+=[ROW=%l/%L]
+" set statusline=%F
+" set statusline+=%m
+" set statusline+=%r
+" set statusline+=%h
+" set statusline+=%w
+" set statusline+=%=
+" set statusline+=[ROW=%l/%L]
 set laststatus=2
 set showcmd
 set cmdheight=2
