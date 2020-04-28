@@ -51,6 +51,9 @@ nnoremap <Leader>, :call JustAppend(',')<CR>
 nnoremap <Leader>; :call JustAppend(';')<CR>
 nnoremap <Leader>x :call JustTrimTail()<CR>
 nnoremap <Leader>ud :call OpenDoc()<CR>
+" Print utils
+nnoremap <Leader>prc :echo expand('%:p')<CR>
+nnoremap <Leader>prgb :echo fugitive#head()<CR>
 " Insert mode ----------------------------------------
 inoremap <C-C> <ESC>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>

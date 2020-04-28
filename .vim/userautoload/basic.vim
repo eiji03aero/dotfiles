@@ -42,6 +42,7 @@ syntax on
 " set statusline+=%=
 " set statusline+=[ROW=%l/%L]
 set laststatus=2
+set showtabline=2
 set showcmd
 set cmdheight=2
 " indent/space --------------------

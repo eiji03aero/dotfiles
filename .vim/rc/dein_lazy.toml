@@ -32,6 +32,10 @@ repo = 'elmcast/elm-vim'
 on_ft = ['elm']
 
 [[plugins]]
+repo = 'posva/vim-vue'
+on_ft = ['vue']
+
+[[plugins]]
 repo = 'leafOfTree/vim-vue-plugin'
 on_ft = ['vue']
 

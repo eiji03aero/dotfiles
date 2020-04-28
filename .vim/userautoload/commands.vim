@@ -71,6 +71,12 @@ function! ProfileCursorMove() abort
   endfor
 endfunction
 
+function! ProfileStart() abort
+  profile start ./perf
+  profile func *
+  profile file *
+endfunction
+
 function! s:fzf_directory()
   call fzf#run({
         \ 'source': 'find ' . getcwd() . ' -type d',

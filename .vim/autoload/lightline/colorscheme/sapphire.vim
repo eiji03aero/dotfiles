@@ -3,30 +3,109 @@ let s:term_green = 114
 let s:term_yellow = 180
 let s:term_blue = 33
 let s:term_purple = 170
-let s:term_white = 252
+let s:term_white = 254
 let s:term_black = 234
 let s:term_grey = 236
+let s:term_brightgrey = 244
 
-let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
+let s:set = {}
+let s:set.modified = [ '#98c379', '#292c33', s:term_red, s:term_black ]
+let s:set.white = [ '#98c379', '#292c33', s:term_white, s:term_black ]
+let s:set.blue = [ '#98c379', '#292c33', s:term_blue, s:term_black ]
+let s:set.grey = [ '#98c379', '#292c33', s:term_brightgrey, s:term_black ]
+let s:set.redBg = [ '#98c379', '#292c33', s:term_black, s:term_red ]
+let s:set.greenBg = [ '#98c379', '#292c33', s:term_black, s:term_green ]
+let s:set.blueBg = [ '#98c379', '#292c33', s:term_black, s:term_blue ]
+let s:set.purpleBg = [ '#98c379', '#292c33', s:term_black, s:term_purple ]
 
-let s:p.normal.left = [ [ '#292c33', '#98c379', s:term_black, s:term_blue, 'bold' ], [ '#abb2bf', '#3e4452', s:term_white, s:term_grey ], [ '#98c379', '#292c33', s:term_blue, s:term_black ] ]
-let s:p.normal.right = [ [ '#292c33', '#98c379', s:term_black, s:term_blue ], [ '#abb2bf', '#3e4452', s:term_white, s:term_grey ], [ '#98c379', '#292c33', s:term_blue, s:term_black ] ]
-let s:p.inactive.right = [ [ '#abb2bf', '#3e4452', s:term_white, s:term_grey ] ]
-let s:p.inactive.left = [ [ '#abb2bf', '#3e4452', s:term_white, s:term_grey ] ]
-let s:p.insert.left = [ [ '#292c33', '#61afef', s:term_black, s:term_green, 'bold' ], [ '#61afef', '#292c33', s:term_green, s:term_black ] ]
-let s:p.insert.right = [ [ '#292c33', '#61afef', s:term_black, s:term_green ], [ '#ABB2BF', '#3E4452', s:term_white, s:term_grey ] ]
-let s:p.replace.left = [ [ '#292c33', '#e06c75', s:term_black, s:term_red, 'bold' ], [ '#e06c75', '#292c33', s:term_red, s:term_black ] ]
-let s:p.replace.right = [ [ '#292c33', '#e06c75', s:term_black, s:term_red, 'bold' ], s:p.normal.right[1], [ '#e06c75', '#292c33', s:term_red, s:term_black ] ]
-let s:p.visual.left = [ [ '#292c33', '#c678dd', s:term_black, s:term_red, 'bold' ], [ '#c678dd', '#292c33', s:term_red, s:term_black ] ]
-let s:p.visual.right = [ [ '#292c33', '#c678dd', s:term_black, s:term_red, 'bold' ], s:p.normal.right[1], [ '#c678dd', '#292c33', s:term_red, s:term_black ] ]
-let s:p.normal.middle = [ [ '#abb2bf', '#292c33', s:term_white, s:term_black ] ]
-let s:p.insert.middle = s:p.normal.middle
-let s:p.replace.middle = s:p.normal.middle
-let s:p.tabline.left = [ s:p.normal.left[1] ]
-let s:p.tabline.tabsel = [ s:p.normal.left[0] ]
-let s:p.tabline.middle = s:p.normal.middle
-let s:p.tabline.right = [ s:p.normal.left[1] ]
-let s:p.normal.error = [ [ '#292c33', '#e06c75', s:term_black, s:term_red ] ]
-let s:p.normal.warning = [ [ '#292c33', '#e5c07b', s:term_black, s:term_yellow ] ]
+" Hard to read. should be formatted in object literal syntax
+" Show modified on inactive
+" Make modified more visible
+let s:p = {}
+
+let s:p.normal = {
+  \ 'left': [
+  \   s:set.blueBg,
+  \   s:set.white,
+  \   s:set.grey,
+  \   s:set.modified
+  \ ],
+  \ 'middle': [
+  \   s:set.white,
+  \ ],
+  \ 'right': [
+  \   s:set.blueBg,
+  \   [ '#abb2bf', '#3e4452', s:term_white, s:term_grey ],
+  \   s:set.white,
+  \ ],
+  \ 'error': [
+  \   [ '#292c33', '#e06c75', s:term_black, s:term_red ]
+  \ ],
+  \ 'warning': [
+  \   [ '#292c33', '#e5c07b', s:term_black, s:term_yellow ]
+  \ ]
+  \ }
+
+let s:p.inactive = {
+  \ 'left': [
+  \   s:set.white,
+  \   s:set.grey,
+  \   s:set.modified
+  \ ],
+  \ 'right': [
+  \   [ '#abb2bf', '#3e4452', s:term_white, s:term_grey ],
+  \   s:set.white,
+  \ ]
+  \ }
+
+let s:p.insert = {
+  \ 'left': [
+  \   s:set.greenBg,
+  \   s:set.white,
+  \   s:set.grey,
+  \   s:set.modified
+  \ ],
+  \ 'middle': s:p.normal.middle,
+  \ 'right': [
+  \   s:set.greenBg,
+  \   [ '#ABB2BF', '#3E4452', s:term_white, s:term_grey ]
+  \ ],
+  \ }
+
+let s:p.replace = {
+  \ 'left': [
+  \   s:set.purpleBg,
+  \   s:set.white,
+  \   s:set.grey,
+  \   s:set.modified
+  \ ],
+  \ 'middle': s:p.normal.middle,
+  \ 'right': [
+  \   s:set.purpleBg,
+  \   s:p.normal.right[1],
+  \   [ '#e06c75', '#292c33', s:term_purple, s:term_black ]
+  \ ]
+  \ }
+
+let s:p.visual = {
+  \ 'left': [
+  \   s:set.redBg,
+  \   s:set.white,
+  \   s:set.grey,
+  \   s:set.modified
+  \ ],
+  \ 'right': [
+  \   s:set.redBg,
+  \   s:p.normal.right[1],
+  \   s:set.white,
+  \ ]
+  \ }
+
+let s:p.tabline = {
+  \ 'left': [ s:p.normal.left[1] ],
+  \ 'tabsel': [ s:p.normal.left[0] ],
+  \ 'middle': s:p.normal.middle,
+  \ 'right': [ s:set.blue ]
+  \ }
 
 let g:lightline#colorscheme#sapphire#palette = lightline#colorscheme#fill(s:p)
