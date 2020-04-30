@@ -4,7 +4,7 @@ let s:term_yellow = 180
 let s:term_blue = 33
 let s:term_purple = 170
 let s:term_white = 254
-let s:term_black = 234
+let s:term_black = 233
 let s:term_grey = 236
 let s:term_brightgrey = 244
 
@@ -17,6 +17,7 @@ let s:set.redBg = [ '#98c379', '#292c33', s:term_black, s:term_red ]
 let s:set.greenBg = [ '#98c379', '#292c33', s:term_black, s:term_green ]
 let s:set.blueBg = [ '#98c379', '#292c33', s:term_black, s:term_blue ]
 let s:set.purpleBg = [ '#98c379', '#292c33', s:term_black, s:term_purple ]
+let s:set.whiteBlueBg = [ '#98c379', '#292c33', s:term_white, s:term_blue ]
 
 " Hard to read. should be formatted in object literal syntax
 " Show modified on inactive
@@ -102,10 +103,10 @@ let s:p.visual = {
   \ }
 
 let s:p.tabline = {
-  \ 'left': [ s:p.normal.left[1] ],
-  \ 'tabsel': [ s:p.normal.left[0] ],
+  \ 'left': [ s:set.white ],
+  \ 'tabsel': [ s:set.blueBg ],
   \ 'middle': s:p.normal.middle,
-  \ 'right': [ s:set.blue ]
+  \ 'right': [ s:set.blueBg ]
   \ }
 
 let g:lightline#colorscheme#sapphire#palette = lightline#colorscheme#fill(s:p)
