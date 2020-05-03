@@ -31,6 +31,10 @@ let g:lightline = {
   \   'left': [ [ 'tabs' ] ],
   \   'right': [ [ 'gitbranch', 'close' ] ],
   \ },
+  \ 'tab': {
+  \   'active': ['tabnum', 'filename', 'modified'],
+  \   'inactive': ['tabnum', 'filename', 'modified']
+  \ },
   \ 'mode_map': {
   \   'n' : 'NL',
   \   'i' : 'IN',

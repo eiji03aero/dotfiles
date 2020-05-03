@@ -7,10 +7,6 @@ on_ft = ['javascript', 'typescript', 'html', 'vue']
 repo = 'othree/es.next.syntax.vim'
 on_ft = ['javascript', 'typescript', 'vue']
 
-# [[plugins]]
-# repo = 'othree/javascript-libraries-syntax.vim'
-# on_ft = ['javascript', 'typescript', 'html']
-
 [[plugins]]
 repo = 'maxmellon/vim-jsx-pretty'
 on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescript.jsx']

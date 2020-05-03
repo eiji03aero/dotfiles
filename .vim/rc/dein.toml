@@ -1,12 +1,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# [[plugins]]
-# repo = 'Shougo/neosnippet.vim'
-#
-# [[plugins]]
-# repo = 'Shougo/neosnippet-snippets'
-
 [[plugins]]
 repo = 'honza/vim-snippets'
 
@@ -15,9 +9,6 @@ repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-
-# [[plugins]]
-# repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -37,10 +28,6 @@ repo = 'tyru/caw.vim'
 [[plugins]]
 repo = 'tpope/vim-surround'
 
-# Stop tagbar for now, since it causes annoying bugs
-# [[plugins]]
-# repo = 'majutsushi/tagbar'
-
 [[plugins]]
 repo = 't9md/vim-textmanip'
 
@@ -55,9 +42,6 @@ repo = 'tpope/vim-endwise'
 
 [[plugins]]
 repo = 'eiji03aero/quick-notes'
-
-# [[plugins]]
-# repo = 'liuchengxu/vim-clap'
 
 # ==================== File explorer ====================
 [[plugins]]

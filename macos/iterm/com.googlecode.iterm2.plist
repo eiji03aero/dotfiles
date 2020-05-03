@@ -330,7 +330,7 @@
 			<key>Background Image Location</key>
 			<string>/Users/eijiosakabe/Documents/pics/pic pic/kali-linux-wallpaper-v8.png</string>
 			<key>Blend</key>
-			<real>0.16117509664948457</real>
+			<real>0.07691386114690725</real>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
@@ -1724,9 +1724,9 @@
 		<string>3.3.5</string>
 		<string>3.3.7</string>
 		<string>3.3.9</string>
+		<string>3.2.9</string>
 		<string>3.3.0</string>
 		<string>3.3.2</string>
-		<string>3.2.9</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -1744,7 +1744,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>78ADF3E2-A81E-44B6-9475-86FF9C2F56C0</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>258</integer>
+	<integer>260</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2523,7 +2523,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-28T04:03:01Z</date>
+	<date>2020-05-01T04:59:22Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
