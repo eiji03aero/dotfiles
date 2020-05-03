@@ -26,7 +26,7 @@ let g:tagbar_type_coffee = {
   \  'method' : 'm',
   \  'var' : 'v',
   \  'ivar' : 'i',
-  \ 'object' : 'o'
-  \},
+  \  'object' : 'o'
+  \ },
   \ 'deffile' : '~/.ctags.d/coffee.ctags'
-\ }
+  \ }
