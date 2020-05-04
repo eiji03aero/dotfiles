@@ -137,6 +137,12 @@ nmap gd <Plug>(coc-definition)
 nmap gy <Plug>(coc-type-definition)
 nmap gi <Plug>(coc-implementation)
 nmap gr <Plug>(coc-references)
+" coc-snippets ----------------------------------------
+imap <C-i> <Plug>(coc-snippets-expand-jump)
+smap <C-i> <Plug>(coc-snippets-expand-jump)
+xmap <C-i> <Plug>(coc-snippets-expand-jump)
+nnoremap <Leader>pse :CocCommand snippets.editSnippets<CR>
+nnoremap <Leader>psf :CocCommand snippets.openSnippetFiles<CR>
 " fzf ----------------------------------------
 nnoremap ,b :Buffers<CR>
 nnoremap ,w :Windows<CR>
@@ -155,8 +161,6 @@ nnoremap <Leader>gic :Gcommit<CR>
 nnoremap <Leader>gib :Gblame<CR>
 nnoremap <Leader>gid :Gdiff<CR>
 nnoremap <Leader>gil :Glog<CR>
-" Gitgutter ----------------------------------------
-nnoremap <Leader>gig :GitGutterAll<CR>
 " Vim-go ----------------------------------------
 nnoremap <Leader>goim :GoImport<Space>
 nnoremap <Leader>goia :GoImportAs<Space>
@@ -192,12 +196,6 @@ vmap ga <Plug>(EasyAlign)
 " smap <C-i> <Plug>(neosnippet_expand_or_jump)
 " xmap <C-i> <Plug>(neosnippet_expand_target)
 " nnoremap <Leader>pse :NeoSnippetEdit<CR>
-" coc-snippets ----------------------------------------
-imap <C-i> <Plug>(coc-snippets-expand-jump)
-smap <C-i> <Plug>(coc-snippets-expand-jump)
-xmap <C-i> <Plug>(coc-snippets-expand-jump)
-nnoremap <Leader>pse :CocCommand snippets.editSnippets<CR>
-nnoremap <Leader>psf :CocCommand snippets.openSnippetFiles<CR>
 " Prettier ----------------------------------------
 nnoremap <Leader>pp :PrettierAsync<CR>
 " Dart ----------------------------------------
