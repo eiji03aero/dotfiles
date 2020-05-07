@@ -116,12 +116,13 @@ nnoremap <Leader>md :e ~/dotfiles<CR>
 nnoremap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <Leader>st :source ~/.tmux.conf<CR>
 " coc ----------------------------------------
-nnoremap <Leader>pcld  :<C-u>CocList diagnostics<cr>
-nnoremap <Leader>pcle  :<C-u>CocList extensions<cr>
-nnoremap <Leader>pclc  :<C-u>CocList commands<cr>
-nnoremap <Leader>pclo  :<C-u>CocList outline<cr>
-nnoremap <Leader>pcls  :<C-u>CocList -I symbols<cr>
-nnoremap <Leader>pcc  :<C-u>CocConfig<cr>
+nnoremap <Leader>pcld  :<C-u>CocList diagnostics<CR>
+nnoremap <Leader>pcle  :<C-u>CocList extensions<CR>
+nnoremap <Leader>pclc  :<C-u>CocList commands<CR>
+nnoremap <Leader>pclo  :<C-u>CocList outline<CR>
+nnoremap <Leader>pcls  :<C-u>CocList -I symbols<CR>
+nnoremap <Leader>pcc  :<C-u>CocCommand<CR>
+vnoremap <Leader>pcc  :<C-u>CocCommand<CR>
 nnoremap <Leader>pcn  :<C-u>CocNext<CR>
 nnoremap <Leader>pcp  :<C-u>CocPrev<CR>
 nnoremap <Leader>pcr  :<C-u>CocRestart<CR>
