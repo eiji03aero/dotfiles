@@ -101,6 +101,16 @@ function! ShowDocumentation()
   endif
 endfunction
 
+function! GlobalReplace() abort
+  " args ./**
+  " argdo %s/domo/kore/gce
+  let targetGlob = input('target glob (eg ./*.ts): ')
+  execute 'args ' . targetGlob
+
+  let replaceSub = input('replace substitution(eg. domo/kore/gce: ')
+  execute 'argdo %s/' . replaceSub
+endfunction
+
 " -------------------- git --------------------
 function! GitConflictResolveFst() abort
   call SearchTo("<<<<")

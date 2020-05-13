@@ -1,7 +1,6 @@
 let s:term_red = 204
 let s:term_green = 114
 let s:term_yellow = 180
-" let s:term_blue = 33
 let s:term_blue = 33
 let s:term_brightBlue = 39
 let s:term_purple = 170
@@ -11,21 +10,18 @@ let s:term_grey = 236
 let s:term_brightgrey = 244
 
 let s:set = {}
-let s:set.modified = [ '#98c379', '#292c33', s:term_red, s:term_black ]
-let s:set.white = [ '#98c379', '#292c33', s:term_white, s:term_black ]
-let s:set.blue = [ '#98c379', '#292c33', s:term_blue, s:term_black ]
-let s:set.brightBlue = [ '#98c379', '#292c33', s:term_brightBlue, s:term_black ]
-let s:set.grey = [ '#98c379', '#292c33', s:term_brightgrey, s:term_black ]
-let s:set.redBg = [ '#98c379', '#292c33', s:term_black, s:term_red ]
-let s:set.greenBg = [ '#98c379', '#292c33', s:term_black, s:term_green ]
-let s:set.blueBg = [ '#98c379', '#292c33', s:term_black, s:term_blue ]
-let s:set.purpleBg = [ '#98c379', '#292c33', s:term_black, s:term_purple ]
-let s:set.blueGreyBg = [ '#98c379', '#292c33', s:term_blue, s:term_grey ]
-let s:set.whiteBlueBg = [ '#98c379', '#292c33', s:term_white, s:term_blue ]
+let s:set.modified = [ s:term_red, s:term_black ]
+let s:set.white = [ s:term_white, s:term_black ]
+let s:set.blue = [ s:term_blue, s:term_black ]
+let s:set.brightBlue = [ s:term_brightBlue, s:term_black ]
+let s:set.grey = [ s:term_brightgrey, s:term_black ]
+let s:set.redBg = [ s:term_black, s:term_red ]
+let s:set.greenBg = [ s:term_black, s:term_green ]
+let s:set.blueBg = [ s:term_black, s:term_blue ]
+let s:set.purpleBg = [ s:term_black, s:term_purple ]
+let s:set.blueGreyBg = [ s:term_blue, s:term_grey ]
+let s:set.whiteBlueBg = [ s:term_white, s:term_blue ]
 
-" Hard to read. should be formatted in object literal syntax
-" Show modified on inactive
-" Make modified more visible
 let s:p = {}
 
 let s:p.normal = {

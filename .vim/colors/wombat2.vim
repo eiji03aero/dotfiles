@@ -1,31 +1,34 @@
 " Basics--------------------
-hi CursorLine   cterm   = underline ctermfg = none ctermbg = none
+hi CursorLine   ctermfg = none     ctermbg = none cterm = underline
 hi CursorLineNr ctermfg = 214
 hi ColorColumn  ctermbg = 238
-hi DiffAdd      ctermfg = 191        ctermbg = 28 cterm=NONE
-hi DiffChange   ctermfg = 191        ctermbg = 22 cterm=NONE
-hi DiffDelete   ctermfg = 191        ctermbg = 52 cterm=NONE
-hi DiffText     ctermfg = 191        ctermbg = 28 cterm=NONE
+hi DiffAdd      ctermbg = 22       cterm=NONE
+hi DiffChange   ctermbg = 22       cterm=NONE
+hi DiffDelete   ctermbg = 52       cterm=NONE
+hi DiffText     ctermbg = 23       cterm=NONE
 hi Directory    ctermfg = 33
-hi FoldColumn   ctermfg = white     ctermbg = black
-hi Folded       ctermfg = grey      ctermbg = none
-hi IncSearch    ctermfg = white     ctermbg = darkblue
+hi FoldColumn   ctermfg = white    ctermbg = black
+hi Folded       ctermfg = grey     ctermbg = none
+hi IncSearch    ctermfg = white    ctermbg = darkblue
 hi LineNr       ctermfg = darkgrey
-hi MatchParen   ctermfg = yellow    ctermbg = darkgrey
+hi MatchParen   ctermfg = yellow   ctermbg = darkgrey
 hi NonText      ctermfg = darkgrey
-hi Pmenu        ctermfg = 250       ctermbg = 16
-hi PmenuSel     ctermfg = 255       ctermbg = 33
-hi Search       ctermfg = black     ctermbg = yellow
-hi SignColumn   ctermfg = black     ctermbg = none
+hi Pmenu        ctermfg = 253      ctermbg = 16
+hi PmenuSel     ctermfg = 255      ctermbg = 33
+hi PmenuSbar    ctermfg = 233      ctermbg = 233
+hi PmenuThumb   ctermfg = 255      ctermbg = 255
+hi Search       ctermfg = black    ctermbg = yellow
+hi SignColumn   ctermfg = black    ctermbg = none
 hi SpecialKey   ctermfg = darkgrey
-hi SpellRare    ctermfg = white ctermbg = red
-hi SpellBad   ctermfg = white ctermbg = 9
-hi StatusLine   ctermfg = black     ctermbg = grey
-hi StatusLineNC ctermfg = darkgrey  ctermbg = white
-hi Terminal     ctermbg = black     ctermfg = white
+hi SpellRare    ctermfg = 255      ctermbg = 9
+hi SpellBad     ctermfg = 255      ctermbg = 9
+hi StatusLine   ctermfg = black    ctermbg = grey
+hi StatusLineNC ctermfg = darkgrey ctermbg = white
+hi Terminal     ctermbg = black    ctermfg = white
 hi Title        ctermfg = red
-hi VertSplit    ctermbg = 234       ctermfg = 234
-hi WildMenu     ctermfg = black     ctermbg = 214
+hi VertSplit    ctermbg = 233      ctermfg = 233
+hi Visual       ctermbg = 240      cterm=NONE
+hi WildMenu     ctermfg = 255      ctermbg = 33
 " Syntax--------------------
 hi Comment    ctermfg = grey
 hi Constant   ctermfg = 10

@@ -1,4 +1,5 @@
 alias ls='ls -G'
+alias cdr='. ranger'
 
 alias gis='git status'
 alias gif='git fetch'

@@ -43,6 +43,13 @@ repo = 'tpope/vim-endwise'
 [[plugins]]
 repo = 'eiji03aero/quick-notes'
 
+# ==================== Tag ====================
+[[plugins]]
+repo = 'ludovicchabant/vim-gutentags'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+
 # ==================== File explorer ====================
 [[plugins]]
 repo = 'scrooloose/nerdtree'

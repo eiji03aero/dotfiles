@@ -21,7 +21,7 @@ nnoremap <Leader>w= <C-w>=
 nnoremap <Leader>wa gg<S-v><S-g><CR>
 nnoremap <Leader>wl $
 nnoremap <Leader>wh 0
-nnoremap <Leader>wp %
+nnoremap <Leader>wpc :ped %<CR>:wincmd P<CR>
 nnoremap <Leader>wo :on<CR>
 nnoremap <Leader>wq :q<CR>
 nnoremap <Leader>wQ :qa<CR>
@@ -66,18 +66,15 @@ inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap ` ``<LEFT>
-inoremap <expr> ) OmitDuplicateCharacter(")")
-inoremap <expr> } OmitDuplicateCharacter("}")
-inoremap <expr> ] OmitDuplicateCharacter("]")
+inoremap <expr>) OmitDuplicateCharacter(")")
+inoremap <expr>} OmitDuplicateCharacter("}")
+inoremap <expr>] OmitDuplicateCharacter("]")
 inoremap <C-f>{ {
 inoremap <C-f>[ [
 inoremap <C-f>( (
 inoremap <C-f>" "
 inoremap <C-f>' '
 inoremap <C-f>` `
-inoremap <C-f>^ <%  %><LEFT><LEFT><LEFT>
-inoremap <C-f>- <%-  %><LEFT><LEFT><LEFT>
-inoremap <C-f>= <%=  %><LEFT><LEFT><LEFT>
 inoremap <C-f>. ->
 inoremap <C-f>> =>
 inoremap <C-f>, <-
@@ -87,6 +84,10 @@ inoremap <C-f>a &
 inoremap <C-f>p %
 inoremap <C-f>l <C-o>$
 inoremap <C-f>o <C-o>O
+inoremap <expr><C-f>cr coc#refresh()
+" float scroll somehow not working
+" inoremap <expr><C-f>n coc#util#float_scroll(1)
+" inoremap <expr><C-f>p coc#util#float_scroll(0)
 " Visual mode ----------------------------------------
 vnoremap n %
 vnoremap z/ y/<C-r>"<CR>
@@ -116,24 +117,22 @@ nnoremap <Leader>md :e ~/dotfiles<CR>
 nnoremap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <Leader>st :source ~/.tmux.conf<CR>
 " coc ----------------------------------------
-nnoremap <Leader>pcld  :<C-u>CocList diagnostics<CR>
-nnoremap <Leader>pcle  :<C-u>CocList extensions<CR>
-nnoremap <Leader>pclc  :<C-u>CocList commands<CR>
-nnoremap <Leader>pclo  :<C-u>CocList outline<CR>
-nnoremap <Leader>pcls  :<C-u>CocList -I symbols<CR>
-nnoremap <Leader>pcc  :<C-u>CocCommand<CR>
-vnoremap <Leader>pcc  :<C-u>CocCommand<CR>
-nnoremap <Leader>pcn  :<C-u>CocNext<CR>
-nnoremap <Leader>pcp  :<C-u>CocPrev<CR>
-nnoremap <Leader>pcr  :<C-u>CocRestart<CR>
+nnoremap <Leader>pcld  :CocList diagnostics<CR>
+nnoremap <Leader>pcle  :CocList extensions<CR>
+nnoremap <Leader>pclc  :CocList commands<CR>
+nnoremap <Leader>pclo  :CocList outline<CR>
+nnoremap <Leader>pcls  :CocList -I symbols<CR>
+nnoremap <Leader>pcc  :CocCommand<CR>
+nnoremap <Leader>pcn  :CocNext<CR>
+nnoremap <Leader>pcp  :CocPrev<CR>
+nnoremap <Leader>pcr  :CocRestart<CR>
 nnoremap K :call ShowDocumentation()<CR>
 inoremap <expr> <TAB>
      \ pumvisible() ? "\<C-n>" :
      \ CheckBackSpace() ? "\<TAB>" :
      \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-" inoremap <expr> <C-m>m coc#refresh()
-" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+vnoremap <Leader>pcc  :'<,'>CocCommand<CR>
 nmap gd <Plug>(coc-definition)
 nmap gy <Plug>(coc-type-definition)
 nmap gi <Plug>(coc-implementation)

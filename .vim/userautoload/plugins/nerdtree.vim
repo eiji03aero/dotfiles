@@ -1,4 +1,4 @@
-let g:NERDTreeShowBookmarks=1
+let g:NERDTreeShowBookmarks=0
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 45
 let g:NERDTreeCascadeSingleChildDir = 0
@@ -8,13 +8,13 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
  exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
-call NERDTreeHighlightFile('sh',         '251',          'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('go',         '251',          'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('cpp',        '251',          'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('vim',        '251',          'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('Dockerfile', '251',          'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('lock',       '251',          'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('toml',       '251',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('sh',         '250',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('go',         '250',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('cpp',        '250',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('vim',        '250',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('Dockerfile', '250',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('lock',       '250',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('toml',       '250',          'none', 'yellow',  '#151515')
 
 call NERDTreeHighlightFile('hs',         '208',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('kt',         '208',          'none', 'yellow',  '#151515')

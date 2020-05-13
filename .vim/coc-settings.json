@@ -1,3 +1,4 @@
 {
+  "signature.maxWindowHeight": 8,
   "snippets.userSnippetsDirectory": "~/dotfiles/.vim/coc/snippets"
 }

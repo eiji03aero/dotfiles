@@ -3,19 +3,29 @@
 cmd="${1}"
 
 install-ranger () {
-  pip3 install ranger-fm
 }
 
 install-xquartz () {
-  brew update
-  brew cask install xquartz
-  sudo launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
+}
+
+install-universal-ctags () {
 }
 
 if [ $cmd = "ranger" ]; then
-  install-ranger
+  pip3 install ranger-fm
 
 elif [ $cmd = "xquartz" ]; then
-  install-xquartz
+  brew update
+  brew cask install xquartz
+  sudo launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
 
+elif [ $cmd = "ctags" ]; then
+  brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+
+elif [ $cmd = "tmux" ]; then
+  brew install tmux
+  brew install tmuxinator
+
+elif [ $cmd = "fzf" ]; then
+  brew install fzf
 fi

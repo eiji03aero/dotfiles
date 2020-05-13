@@ -2,11 +2,10 @@ version: '3.7'
 
 services:
   app:
-    container_name: app
     # image: local/node:12.7.0
     # volumes:
     #    - .:/projects
-    # image: local/golang:1.13.0
+    # image: local/golang:1.14.1
     # workingdir: /app
     # volumes:
     #    - .:/app
