@@ -1,4 +1,4 @@
 # dotfiles
 
 # Todo
-- none for now
+- create globally replace text function with fzf

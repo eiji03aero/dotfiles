@@ -1,11 +1,7 @@
-" Basics--------------------
+" Basics --------------------
 hi CursorLine   ctermfg = none     ctermbg = none cterm = underline
 hi CursorLineNr ctermfg = 214
 hi ColorColumn  ctermbg = 238
-hi DiffAdd      ctermbg = 22       cterm=NONE
-hi DiffChange   ctermbg = 22       cterm=NONE
-hi DiffDelete   ctermbg = 52       cterm=NONE
-hi DiffText     ctermbg = 23       cterm=NONE
 hi Directory    ctermfg = 33
 hi FoldColumn   ctermfg = white    ctermbg = black
 hi Folded       ctermfg = grey     ctermbg = none
@@ -29,7 +25,12 @@ hi Title        ctermfg = red
 hi VertSplit    ctermbg = 233      ctermfg = 233
 hi Visual       ctermbg = 240      cterm=NONE
 hi WildMenu     ctermfg = 255      ctermbg = 33
-" Syntax--------------------
+" Git --------------------
+hi DiffAdd    cterm=BOLD ctermbg=194
+hi DiffChange cterm=BOLD ctermbg=194
+hi DiffText   cterm=BOLD  ctermbg=156
+hi DiffDelete cterm=BOLD ctermbg=224 ctermfg=224
+" Syntax --------------------
 hi Comment    ctermfg = grey
 hi Constant   ctermfg = 10
 hi Delimiter  ctermfg = 9
