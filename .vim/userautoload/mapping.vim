@@ -132,7 +132,7 @@ inoremap <expr> <TAB>
      \ CheckBackSpace() ? "\<TAB>" :
      \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-vnoremap <Leader>pcc  :'<,'>CocCommand<CR>
+vnoremap <Leader>pcc  :CocCommand<CR>
 nmap gd <Plug>(coc-definition)
 nmap gy <Plug>(coc-type-definition)
 nmap gi <Plug>(coc-implementation)

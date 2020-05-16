@@ -2,15 +2,6 @@
 
 cmd="${1}"
 
-install-ranger () {
-}
-
-install-xquartz () {
-}
-
-install-universal-ctags () {
-}
-
 if [ $cmd = "ranger" ]; then
   pip3 install ranger-fm
 

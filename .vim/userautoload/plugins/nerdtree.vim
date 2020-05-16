@@ -29,10 +29,10 @@ call NERDTreeHighlightFile('html',       'white',        'none', 'yellow',  '#15
 call NERDTreeHighlightFile('styl',       'blue',         'none', 'cyan',    '#151515')
 call NERDTreeHighlightFile('sql',        'blue',         'none', 'cyan',    '#151515')
 
-call NERDTreeHighlightFile('md',         'darkblue',     'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('dart',       'darkblue',     'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('md',         'blue',     'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('dart',       'blue',     'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('py',         'blue',       'none', 'yellow',  '#151515')
 
-call NERDTreeHighlightFile('py',         'yellow',       'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('yml',        'yellow',       'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('config',     'yellow',       'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('conf',       'yellow',       'none', 'yellow',  '#151515')
