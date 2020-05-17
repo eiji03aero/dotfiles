@@ -26,14 +26,19 @@ hi VertSplit    ctermbg = 233      ctermfg = 233
 hi Visual       ctermbg = 240      cterm=NONE
 hi WildMenu     ctermfg = 255      ctermbg = 33
 " Git --------------------
+hi DiffAdd    cterm=NONE ctermbg=22
+hi DiffChange cterm=NONE ctermbg=236
+hi DiffText   cterm=NONE ctermbg=22
+hi DiffDelete cterm=NONE ctermbg=52
 " hi DiffAdd    cterm=BOLD ctermbg=194
-" hi DiffChange cterm=BOLD ctermbg=194
-" hi DiffText   cterm=BOLD ctermbg=156
+" hi DiffChange cterm=BOLD ctermbg=193
+" hi DiffText   cterm=BOLD ctermbg=118
 " hi DiffDelete cterm=BOLD ctermbg=224
-hi DiffAdd    ctermfg=236 ctermbg=194
-hi DiffChange ctermfg=236 ctermbg=194
-hi DiffText   ctermfg=236 ctermbg=156
-hi DiffDelete ctermfg=236 ctermbg=224
+" hi DiffAdd    ctermfg=236 ctermbg=194
+" hi DiffChange ctermfg=236 ctermbg=193
+" hi DiffText   ctermfg=236 ctermbg=156
+" hi DiffDelete ctermfg=236 ctermbg=224
+
 " Syntax --------------------
 hi Comment    ctermfg = grey
 hi Constant   ctermfg = 10

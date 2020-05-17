@@ -171,6 +171,7 @@ nnoremap <Leader>godc :GoDoc<Space>
 nnoremap <Leader>gol :GoLint<CR>
 nnoremap <Leader>gof :GoFmt<CR>
 nnoremap <Leader>gor :GoRename<CR>
+nnoremap <Leader>gotj :GoAddTags json<CR>
 " " Vim-splash ----------------------------------------
 " nnoremap <Leader>vsi :Splash ~/.vim/splash/vim_intro.txt<CR>
 " nnoremap <Leader>vsc :Splash ~/.vim/splash/conciergeu_logo.txt<CR>
@@ -189,13 +190,6 @@ nnoremap <C-t>t :TagbarToggle<CR>
 nnoremap <C-t>s :TagbarShowTag<CR>
 " EasyAlign ----------------------------------------
 vmap ga <Plug>(EasyAlign)
-" Deoplete ----------------------------------------
-" inoremap <expr><C-m> deoplete#refresh()
-" " Neosnippets ----------------------------------------
-" imap <C-i> <Plug>(neosnippet_expand_or_jump)
-" smap <C-i> <Plug>(neosnippet_expand_or_jump)
-" xmap <C-i> <Plug>(neosnippet_expand_target)
-" nnoremap <Leader>pse :NeoSnippetEdit<CR>
 " Prettier ----------------------------------------
 nnoremap <Leader>pp :PrettierAsync<CR>
 " Dart ----------------------------------------
