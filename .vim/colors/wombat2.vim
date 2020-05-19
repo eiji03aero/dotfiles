@@ -26,9 +26,9 @@ hi VertSplit    ctermbg = 233      ctermfg = 233
 hi Visual       ctermbg = 240      cterm=NONE
 hi WildMenu     ctermfg = 255      ctermbg = 33
 " Git --------------------
-hi DiffAdd    cterm=NONE ctermbg=22
-hi DiffChange cterm=NONE ctermbg=236
-hi DiffText   cterm=NONE ctermbg=22
+hi DiffAdd    cterm=NONE ctermbg=23
+hi DiffChange cterm=NONE ctermbg=234
+hi DiffText   cterm=NONE ctermbg=23
 hi DiffDelete cterm=NONE ctermbg=52
 " hi DiffAdd    cterm=BOLD ctermbg=194
 " hi DiffChange cterm=BOLD ctermbg=193

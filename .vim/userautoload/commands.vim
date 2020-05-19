@@ -82,7 +82,7 @@ function! s:fzf_directory()
         \ 'source': 'find ' . getcwd() . ' -type d',
         \ 'down': '40%',
         \ 'sink':   'e',
-        \ 'options': '-x +s'
+        \ 'options': ['-x', '--algo=v2', '--preview', 'ls -G {}'],
         \})
 endfunction
 
