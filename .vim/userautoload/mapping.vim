@@ -153,6 +153,16 @@ nnoremap ,r :History<CR>
 nnoremap ,c :Commits<CR>
 nnoremap ,s :GFiles?<CR>
 nnoremap ,d :Directories<CR>
+" any-jump ----------------------------------------
+nnoremap <Leader>jw :AnyJump<CR>
+vnoremap <Leader>jw :AnyJumpVisual<CR>
+vnoremap <Leader>jb :AnyJumpBack<CR>
+vnoremap <Leader>jl :AnyJumpLastResults<CR>
+" far ----------------------------------------
+nnoremap <silent><Leader>ff :Farf<CR>
+vnoremap <silent><Leader>ff :Farf<CR>
+nnoremap <silent><Leader>fr :Farr<CR>
+vnoremap <silent><Leader>fr :Farr<CR>
 " Git ----------------------------------------
 nnoremap <Leader>gis :Gstatus!<CR>
 nnoremap <Leader>gia :Gwrite<CR>

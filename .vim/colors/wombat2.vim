@@ -9,8 +9,8 @@ hi IncSearch    ctermfg = white    ctermbg = darkblue
 hi LineNr       ctermfg = darkgrey
 hi MatchParen   ctermfg = yellow   ctermbg = darkgrey
 hi NonText      ctermfg = darkgrey
-hi Pmenu        ctermfg = 253      ctermbg = 16
-hi PmenuSel     ctermfg = 255      ctermbg = 33
+hi Pmenu        ctermfg = 253      ctermbg = 232
+hi PmenuSel     ctermfg = 255      ctermbg = 4
 hi PmenuSbar    ctermfg = 233      ctermbg = 233
 hi PmenuThumb   ctermfg = 255      ctermbg = 255
 hi Search       ctermfg = black    ctermbg = yellow
@@ -30,14 +30,6 @@ hi DiffAdd    cterm=NONE ctermbg=23
 hi DiffChange cterm=NONE ctermbg=234
 hi DiffText   cterm=NONE ctermbg=23
 hi DiffDelete cterm=NONE ctermbg=52
-" hi DiffAdd    cterm=BOLD ctermbg=194
-" hi DiffChange cterm=BOLD ctermbg=193
-" hi DiffText   cterm=BOLD ctermbg=118
-" hi DiffDelete cterm=BOLD ctermbg=224
-" hi DiffAdd    ctermfg=236 ctermbg=194
-" hi DiffChange ctermfg=236 ctermbg=193
-" hi DiffText   ctermfg=236 ctermbg=156
-" hi DiffDelete ctermfg=236 ctermbg=224
 
 " Syntax --------------------
 hi Comment    ctermfg = grey

@@ -10,8 +10,7 @@ configurations=(
   "./Dockerfile.node-8.12.0 local/node:8.12.0"
   "./Dockerfile.node-cli local/node-cli"
   "./Dockerfile.python-3 local/python:3"
-  "./Dockerfile.ruby-2.5.0 local/ruby:2.5.0"
-  "./Dockerfile.ruby-2.6.5 local/ruby:2.6.5"
+  "./Dockerfile.ruby-2.7.1 local/ruby:2.7.1"
   "./Dockerfile.ruby-cli local/ruby-cli"
 )
 

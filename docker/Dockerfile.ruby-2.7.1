@@ -1,4 +1,4 @@
-FROM ruby:2.6.5-buster
+FROM ruby:2.7.1-buster
 
 ENV LANG C.UTF-8
 
@@ -8,8 +8,5 @@ RUN mkdir /app
 WORKDIR /app
 
 RUN apt-get update && apt-get upgrade -y
-
-RUN git config --global user.email "eiji03aero@gmail.com" \
-  && git config --global user.name "eiji03aero"
 
 CMD ["/bin/bash"]
