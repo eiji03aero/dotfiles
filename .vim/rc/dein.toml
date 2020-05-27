@@ -44,9 +44,6 @@ repo = 'tpope/vim-endwise'
 repo = 'eiji03aero/quick-notes'
 
 [[plugins]]
-repo = 'pechorin/any-jump.vim'
-
-[[plugins]]
 repo = 'brooth/far.vim'
 
 # ==================== Tag ====================

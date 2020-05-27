@@ -3,3 +3,6 @@
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 merged = 0
+
+[[plugins]]
+repo = 'pechorin/any-jump.vim'

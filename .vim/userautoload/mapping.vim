@@ -22,6 +22,7 @@ nnoremap <Leader>wa gg<S-v><S-g><CR>
 nnoremap <Leader>wl $
 nnoremap <Leader>wh 0
 nnoremap <Leader>wpc :ped %<CR>:wincmd P<CR>
+nnoremap <Leader>wd :exec "e ".fnamemodify(expand('%'), ':h')<CR>
 nnoremap <Leader>wo :on<CR>
 nnoremap <Leader>wq :q<CR>
 nnoremap <Leader>wQ :qa<CR>

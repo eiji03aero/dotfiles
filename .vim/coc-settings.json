@@ -1,4 +1,7 @@
 {
+  "codeLens.enable": true,
   "signature.maxWindowHeight": 8,
-  "snippets.userSnippetsDirectory": "~/dotfiles/.vim/coc/snippets"
+  "snippets.userSnippetsDirectory": "~/dotfiles/.vim/coc/snippets",
+
+  "solargraph.useBundler": true
 }
