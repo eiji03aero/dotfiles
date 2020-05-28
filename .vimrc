@@ -22,6 +22,9 @@ if dein#load_state(s:dein_dir)
     call dein#load_toml(expand('~/.vim/rc/dein_v7.toml'))
   endif
 
+  " commentout this line when need to deal with local plugin
+  " call dein#local('~/projects')
+
   call dein#end()
   call dein#save_state()
 endif

@@ -138,3 +138,12 @@ endfunction
 function! SearchTo(str)
   execute "normal! /" . a:str . "\<cr>"
 endfunction
+
+function! ShowHighlights()
+  redir => m | silent highlight | redir END | enew | put=m
+endfunction
+
+function! RefreshDeinCache()
+  call map(dein#check_clean(), "delete(v:val, 'rf')")
+  call dein#recache_runtimepath()
+endfunction

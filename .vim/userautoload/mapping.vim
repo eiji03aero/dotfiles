@@ -178,7 +178,6 @@ nnoremap <Leader>goia :GoImportAs<Space>
 nnoremap <Leader>goig :GoImport<Space>github.com/
 nnoremap <Leader>goii :GoImports<CR>
 nnoremap <Leader>godr :GoDrop<Space>
-nnoremap <Leader>godc :GoDoc<Space>
 nnoremap <Leader>gol :GoLint<CR>
 nnoremap <Leader>gof :GoFmt<CR>
 nnoremap <Leader>gor :GoRename<CR>
