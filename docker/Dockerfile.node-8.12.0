@@ -1,6 +1,6 @@
 FROM node:8.12.0-stretch
 
-WORKDIR /projects
+WORKDIR /app
 
 ENV YARN_VERSION 1.16.0
 

@@ -7,7 +7,7 @@ syntax enable
 " Basic config
 " ---------------------------------------
 set wildmenu
-set wildmode=list:full
+set wildmode=list
 set hidden
 set encoding=utf-8
 set fileencoding=utf-8
@@ -75,7 +75,7 @@ set signcolumn=yes
 " rtp related --------------------
 set rtp+=/usr/local/opt/fzf
 " dictionary --------------------
-set dictionary=/usr/share/dict/words
+set dictionary+=/usr/share/dict/words
 "----------------------------------------
 " Custom auro groups
 "----------------------------------------
@@ -96,3 +96,4 @@ augroup END
 colorscheme wombat2
 let g:jsx_ext_required = 0
 let g:vim_json_syntax_conceal = 0
+let g:gutentags_enabled = 0

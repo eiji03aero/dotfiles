@@ -19,6 +19,7 @@ if dein#load_state(s:dein_dir)
   if v:version > 800 || has('nvim')
     call dein#load_toml(expand('~/.vim/rc/dein_v8.toml'))
   else
+    echom 'hogeeee'
     call dein#load_toml(expand('~/.vim/rc/dein_v7.toml'))
   endif
 

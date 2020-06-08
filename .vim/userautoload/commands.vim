@@ -147,3 +147,13 @@ function! RefreshDeinCache()
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#recache_runtimepath()
 endfunction
+
+function! OpenURLUnderCursor() abort
+  let url = expand('<cWORD>')
+  if (url == '')
+    echoerr 'OpenURLUnderCursor: word not found under cursor'
+    return
+  endif
+
+  execute ':!open '.url
+endfunction

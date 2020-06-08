@@ -1,10 +1,10 @@
 version: '3.7'
 
 services:
-  app:
+  workspace:
     # image: local/node:12.7.0
     # volumes:
-    #    - .:/projects
+    #    - .:/app
     # image: local/golang:1.14.1
     # working_dir: /app
     # volumes:

@@ -7,6 +7,7 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
 nnoremap # #zz
+nnoremap gx :call OpenURLUnderCursor()<CR>
 nnoremap <C-]> g<C-]>
 " window
 nnoremap <Leader>wb :sp<CR>
@@ -37,7 +38,6 @@ nnoremap <Leader>to :tabo<CR>
 nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bp :bp<CR>
 nnoremap <Leader>bl :ls<CR>
-nnoremap <Leader>y :call YankPathToClip()<CR>
 nnoremap <Leader>jq :%!jq '.'<CR>
 nnoremap <Leader>ct :! ctags -R<CR>
 nnoremap <Leader>cp <C-w>}<CR>
@@ -51,7 +51,10 @@ nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 nnoremap <Leader>, :call JustAppend(',')<CR>
 nnoremap <Leader>; :call JustAppend(';')<CR>
 nnoremap <Leader>x :call JustTrimTail()<CR>
-nnoremap <Leader>ud :call OpenDoc()<CR>
+nnoremap <Leader>x :call JustTrimTail()<CR>
+" Yank utils
+nnoremap <Leader>y :call YankPathToClip()<CR>
+nnoremap <Leader>pi" vi"p
 " Print utils
 nnoremap <Leader>prc :echo expand('%:p')<CR>
 nnoremap <Leader>prgb :echo fugitive#head()<CR>
@@ -85,7 +88,6 @@ inoremap <C-f>a &
 inoremap <C-f>p %
 inoremap <C-f>l <C-o>$
 inoremap <C-f>o <C-o>O
-inoremap <expr><C-f>cr coc#refresh()
 " float scroll somehow not working
 " inoremap <expr><C-f>n coc#util#float_scroll(1)
 " inoremap <expr><C-f>p coc#util#float_scroll(0)
@@ -93,8 +95,6 @@ inoremap <expr><C-f>cr coc#refresh()
 vnoremap n %
 vnoremap z/ y/<C-r>"<CR>
 vnoremap z? y?<C-r>"<CR>
-" Operator ----------------------------------------
-onoremap in( :<c-u>normal! f(vi(<CR><LEFT><CR>
 " Fold function ----------------------------------------
 nnoremap <Leader>hi zi
 nnoremap <Leader>hf zf
@@ -117,6 +117,8 @@ nnoremap <Leader>mbr :e ~/.bashrc<CR>
 nnoremap <Leader>md :e ~/dotfiles<CR>
 nnoremap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <Leader>st :source ~/.tmux.conf<CR>
+" dein ----------------------------------------
+nnoremap <Leader>dr  :call RefreshDeinCache()<CR>
 " coc ----------------------------------------
 nnoremap <Leader>pcld  :CocList diagnostics<CR>
 nnoremap <Leader>pcle  :CocList extensions<CR>

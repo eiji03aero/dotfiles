@@ -39,9 +39,9 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents/pics/pic pic</string>
+	<string>~/Documents/pics/mikumiku</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{799, 448}</string>
+	<string>{1083, 594}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -84,9 +84,9 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>655 382 799 448 0 0 1680 1050 </string>
+	<string>513 236 1083 594 -1920 -30 1920 1080 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>-1160 683 400 129 -1920 -30 1920 1080 </string>
+	<string>-1160 683 400 129 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>-1270 486 620 392 -1920 -30 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
@@ -328,9 +328,9 @@
 				<real>0.094117647058823528</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/eijiosakabe/Documents/pics/pic pic/kali-linux-wallpaper-v6.png</string>
+			<string>/Users/eijiosakabe/Documents/pics/mikumiku/61747_vocaloid_hatsune_miku_s.jpg</string>
 			<key>Blend</key>
-			<real>0.18497100515463916</real>
+			<real>0.070639698775773238</real>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
@@ -1724,8 +1724,8 @@
 		<string>3.3.5</string>
 		<string>3.3.7</string>
 		<string>3.3.9</string>
-		<string>3.3.0</string>
 		<string>3.2.9</string>
+		<string>3.3.0</string>
 		<string>3.3.4</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
@@ -1744,7 +1744,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>78ADF3E2-A81E-44B6-9475-86FF9C2F56C0</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>297</integer>
+	<integer>309</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2523,7 +2523,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-28T05:39:08Z</date>
+	<date>2020-06-08T03:57:48Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>

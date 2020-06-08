@@ -36,14 +36,14 @@ let s:p.normal = {
   \ ],
   \ 'right': [
   \   s:set.blueBg,
-  \   [ '#abb2bf', '#3e4452', s:term_white, s:term_grey ],
+  \   [ s:term_white, s:term_grey ],
   \   s:set.white,
   \ ],
   \ 'error': [
-  \   [ '#292c33', '#e06c75', s:term_black, s:term_red ]
+  \   [ s:term_black, s:term_red ]
   \ ],
   \ 'warning': [
-  \   [ '#292c33', '#e5c07b', s:term_black, s:term_yellow ]
+  \   [ s:term_black, s:term_yellow ]
   \ ]
   \ }
 
@@ -54,7 +54,7 @@ let s:p.inactive = {
   \   s:set.modified
   \ ],
   \ 'right': [
-  \   [ '#abb2bf', '#3e4452', s:term_white, s:term_grey ],
+  \   [ s:term_white, s:term_grey ],
   \   s:set.white,
   \ ]
   \ }
@@ -84,7 +84,7 @@ let s:p.replace = {
   \ 'right': [
   \   s:set.purpleBg,
   \   s:p.normal.right[1],
-  \   [ '#e06c75', '#292c33', s:term_purple, s:term_black ]
+  \   [ s:term_purple, s:term_black ]
   \ ]
   \ }
 

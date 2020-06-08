@@ -1,12 +1,12 @@
 #!/bin/bash
 
 cmd=${1:-up}
-project_name="app"
-container_name="app"
+project_name="workspace"
+container_name="workspace"
 
 execute-docker-compose () {
   docker-compose \
-    # -p $project_name \
+    -p $project_name \
     -f 'docker-compose.yml' \
     $@
 }

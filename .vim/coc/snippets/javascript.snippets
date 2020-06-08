@@ -23,20 +23,45 @@
 #		endsnippet
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
-snippet component-single "<c />"
-<$1
-	$0
-/>
+
+snippet async-iife "(async () => {})()"
+(async () => {
+	${1}
+})()
 endsnippet
 
-snippet component-nested "<p><c /></p>"
-<$1>
-	$0
-</$1>
+snippet separator "// === title ==="
+// -------------------- ${1} --------------------
 endsnippet
 
-snippet ReactFragment "<React.Fragment></React.Fragment>"
-<React.Fragment>
-	$0
-</React.Fragment>
+snippet comment-jsx "{/* <c/> */}"
+{/*
+*/}
+endsnippet
+
+# -------------------- jest --------------------
+snippet mock-jest-module "import - from ''; jest.mock();"
+import $1 from '$2';
+jest.mock('$2', () => $3);
+endsnippet
+
+snippet expect-null "expect().toBeNull()"
+expect($0).toBeNull();
+endsnippet
+
+# -------------------- import --------------------
+snippet import-react "import React from 'react';"
+import React from 'react';
+endsnippet
+
+snippet import-react-dom "import ReactDOM from 'react-dom';"
+import ReactDOM from 'react-dom';
+endsnippet
+
+snippet import-rtl-react "import * as rtl from '@testing-library/react';"
+import * as rtl from '@testing-library/react';
+endsnippet
+
+snippet import-lodash "import _ from 'lodash';"
+import _ from 'lodash';
 endsnippet

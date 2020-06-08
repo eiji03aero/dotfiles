@@ -23,26 +23,53 @@
 #		endsnippet
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
-snippet async-iife "(async () => {})()"
-(async () => {
-	${1}
-})()
+
+extends javascript
+
+snippet component-single "<c />"
+<$1
+	$0
+/>
 endsnippet
 
-snippet separator "// === title ==="
-// ==================== ${1} ====================
+snippet component-nested "<p><c /></p>"
+<$1>
+	$0
+</$1>
 endsnippet
 
-snippet cmt-jsx "{/* <c/> */}"
-{/*
-*/}
+snippet ReactFragment "<React.Fragment></React.Fragment>"
+<React.Fragment>
+	$0
+</React.Fragment>
 endsnippet
 
-snippet compo-nested "<p>child</p>"
-<$0>
-</$0>
-endsnippet
+# -------------------- jest --------------------
+snippet component-test-rtl "component test skelton with rtl"
+import React from 'react';
+import * as rtl from '@testing-library/react';
 
-snippet expect-null "expect().toBeNull()"
-expect($0).toBeNull();
+import $1 from '$2';
+
+const defaultProps = {
+};
+
+const render = (props = {}) => {
+	const { container } = shared.render(
+		<$1
+			{ ...defaultProps }
+			{ ...props }
+		/>
+	);
+	return {
+		container,
+	};
+};
+
+describe('$1', () => {
+	it('renders', () => {
+		const { container } = render();
+		expect(container.outerHTML).toMatchSnapshot();
+	});
+});
 endsnippet

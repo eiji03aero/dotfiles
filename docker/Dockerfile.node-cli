@@ -1,6 +1,6 @@
 FROM node:12.7.0-buster
 
-WORKDIR /projects
+WORKDIR /app
 
 RUN apt-get update && apt-get upgrade -y
 
