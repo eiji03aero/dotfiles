@@ -59,7 +59,7 @@ set listchars=tab:>-,trail:.
 set autoread
 set showmatch matchtime=0
 set nofoldenable
-set number
+set number relativenumber
 set display=lastline
 set history=50
 set clipboard=unnamed
@@ -96,4 +96,4 @@ augroup END
 colorscheme wombat2
 let g:jsx_ext_required = 0
 let g:vim_json_syntax_conceal = 0
-let g:gutentags_enabled = 0
+let g:gutentags_enabled = 1

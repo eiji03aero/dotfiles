@@ -48,21 +48,18 @@ endsnippet
 snippet component-test-rtl "component test skelton with rtl"
 import React from 'react';
 import * as rtl from '@testing-library/react';
+import _ from 'lodash';
 
-import $1 from '$2';
+import ${1:component} from '$2';
 
 const defaultProps = {
 };
 
 const render = (props = {}) => {
-	const { container } = shared.render(
-		<$1
-			{ ...defaultProps }
-			{ ...props }
-		/>
-	);
+	const mergedProps = _.merge({}, defaultProps, props);
+	const renderer = rtl.render( <$1 { ...mergedProps } />);
 	return {
-		container,
+		...renderer,
 	};
 };
 

@@ -27,6 +27,7 @@ nnoremap <Leader>wd :exec "e ".fnamemodify(expand('%'), ':h')<CR>
 nnoremap <Leader>wo :on<CR>
 nnoremap <Leader>wq :q<CR>
 nnoremap <Leader>wQ :qa<CR>
+nnoremap <Leader>won :set relativenumber!<CR>
 " tab
 nnoremap <Leader>tn :tabn<CR>
 nnoremap <Leader>tp :tabp<CR>
@@ -55,6 +56,7 @@ nnoremap <Leader>x :call JustTrimTail()<CR>
 " Yank utils
 nnoremap <Leader>y :call YankPathToClip()<CR>
 nnoremap <Leader>pi" vi"p
+nnoremap <Leader>pi' vi'p
 " Print utils
 nnoremap <Leader>prc :echo expand('%:p')<CR>
 nnoremap <Leader>prgb :echo fugitive#head()<CR>
@@ -92,7 +94,6 @@ inoremap <C-f>o <C-o>O
 " inoremap <expr><C-f>n coc#util#float_scroll(1)
 " inoremap <expr><C-f>p coc#util#float_scroll(0)
 " Visual mode ----------------------------------------
-vnoremap n %
 vnoremap z/ y/<C-r>"<CR>
 vnoremap z? y?<C-r>"<CR>
 " Fold function ----------------------------------------
@@ -159,8 +160,8 @@ nnoremap ,d :Directories<CR>
 " any-jump ----------------------------------------
 nnoremap <Leader>jw :AnyJump<CR>
 vnoremap <Leader>jw :AnyJumpVisual<CR>
-vnoremap <Leader>jb :AnyJumpBack<CR>
-vnoremap <Leader>jl :AnyJumpLastResults<CR>
+nnoremap <Leader>jb :AnyJumpBack<CR>
+nnoremap <Leader>jl :AnyJumpLastResults<CR>
 " far ----------------------------------------
 nnoremap <silent><Leader>ff :Farf<CR>
 vnoremap <silent><Leader>ff :Farf<CR>
@@ -174,6 +175,7 @@ nnoremap <Leader>gic :Gcommit<CR>
 nnoremap <Leader>gib :Gblame<CR>
 nnoremap <Leader>gid :Gdiff<CR>
 nnoremap <Leader>gil :Glog<CR>
+nnoremap <Leader>giu :CocCommand git.copyUrl<CR>
 " Vim-go ----------------------------------------
 nnoremap <Leader>goim :GoImport<Space>
 nnoremap <Leader>goia :GoImportAs<Space>

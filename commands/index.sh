@@ -16,6 +16,13 @@ psgrep_kill () { psgrep $1 | awk '{print $2}' | xargs kill -9; }
 
 curl-head ()  { curl -D - -s -o /dev/null $1; }
 
+count-files () { find . | wc -l; }
+
+poll-file-count () {
+  threshold=${1}
+  while $([ $(count-files) -lt $1 ]); do echo mada desu $(count-files); sleep 2s; done; echo owarimashita
+}
+
 fmt-concat-bars () {
   echo "$@" | sed -e "s/[][, \/]/-/g" -e "s/[.]//g";
 }

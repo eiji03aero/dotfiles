@@ -30,7 +30,7 @@ snippet async-iife "(async () => {})()"
 })()
 endsnippet
 
-snippet separator "// === title ==="
+snippet separator "// --- title ---"
 // -------------------- ${1} --------------------
 endsnippet
 
@@ -47,6 +47,22 @@ endsnippet
 
 snippet expect-null "expect().toBeNull()"
 expect($0).toBeNull();
+endsnippet
+
+snippet import-mock "import; jest.mock;"
+import ${1:module} from '${2:module_path}';
+jest.mock('$2', ${3:mock_impl});
+endsnippet
+
+snippet import-mock-actual "import; jest.mock(with actual);"
+import ${1:module} from '${2:module_path}';
+jest.mock('$2', () => {
+	const actual = jest.requireActual(${2});
+	return {
+		...actual,
+		$0
+	};
+});
 endsnippet
 
 # -------------------- import --------------------

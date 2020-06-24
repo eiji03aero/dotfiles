@@ -1,15 +1,15 @@
 let g:coc_global_extensions = [
-  \ 'coc-git',
-  \ 'coc-snippets',
-  \ 'coc-tsserver',
-  "\ 'coc-flow',
-  \ 'coc-eslint',
-  \ 'coc-prettier',
-  \ 'coc-json',
-  \ 'coc-css',
-  \ 'coc-html',
-  \ 'coc-phpls',
-  \ ]
+ \ 'coc-git',
+ \ 'coc-snippets',
+ \ 'coc-tsserver',
+ \ 'coc-flow',
+ \ 'coc-eslint',
+ \ 'coc-prettier',
+ \ 'coc-json',
+ \ 'coc-css',
+ \ 'coc-html',
+ \ 'coc-phpls',
+ \ ]
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 

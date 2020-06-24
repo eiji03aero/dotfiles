@@ -4,11 +4,11 @@ services:
   workspace:
     # image: local/node:12.7.0
     # volumes:
-    #    - .:/app
+    #   - .:/app
     # image: local/golang:1.14.1
     # working_dir: /app
     # volumes:
-    #    - .:/app
+    #   - .:/app
     ports:
       - "8080:8080"
     tty: true
