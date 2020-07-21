@@ -174,7 +174,7 @@ nnoremap <Leader>gir :Gread<CR>
 nnoremap <Leader>gic :Gcommit<CR>
 nnoremap <Leader>gib :Gblame<CR>
 nnoremap <Leader>gid :Gdiff<CR>
-nnoremap <Leader>gil :Glog<CR>
+nnoremap <Leader>gil :%Glog<CR>
 nnoremap <Leader>giu :CocCommand git.copyUrl<CR>
 " Vim-go ----------------------------------------
 nnoremap <Leader>goim :GoImport<Space>
