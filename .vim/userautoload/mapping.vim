@@ -17,6 +17,7 @@ nnoremap <Leader>wN :call SplitWindowRight()<CR>
 nnoremap <Leader>wm :new<CR>
 nnoremap <Leader>wr :e!<CR>
 nnoremap <Leader>ww :w<CR>
+nnoremap <Leader>wW o<ESC>:w<CR>dd:w<CR>
 nnoremap <Leader>w- <C-w><Bar><C-w>_
 nnoremap <Leader>w= <C-w>=
 nnoremap <Leader>wa gg<S-v><S-g><CR>
@@ -121,22 +122,22 @@ nnoremap <Leader>st :source ~/.tmux.conf<CR>
 " dein ----------------------------------------
 nnoremap <Leader>dr  :call RefreshDeinCache()<CR>
 " coc ----------------------------------------
-nnoremap <Leader>pcld  :CocList diagnostics<CR>
-nnoremap <Leader>pcle  :CocList extensions<CR>
-nnoremap <Leader>pclc  :CocList commands<CR>
-nnoremap <Leader>pclo  :CocList outline<CR>
-nnoremap <Leader>pcls  :CocList -I symbols<CR>
-nnoremap <Leader>pcc  :CocCommand<CR>
-nnoremap <Leader>pcn  :CocNext<CR>
-nnoremap <Leader>pcp  :CocPrev<CR>
-nnoremap <Leader>pcr  :CocRestart<CR>
+nnoremap ,cld  :CocList diagnostics<CR>
+nnoremap ,cle  :CocList extensions<CR>
+nnoremap ,clc  :CocList commands<CR>
+nnoremap ,clo  :CocList outline<CR>
+nnoremap ,cls  :CocList -I symbols<CR>
+nnoremap ,cc  :CocCommand<CR>
+nnoremap ,cn  :CocNext<CR>
+nnoremap ,cp  :CocPrev<CR>
+nnoremap ,cr  :CocRestart<CR>
 nnoremap K :call ShowDocumentation()<CR>
 inoremap <expr> <TAB>
      \ pumvisible() ? "\<C-n>" :
      \ CheckBackSpace() ? "\<TAB>" :
      \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-vnoremap <Leader>pcc  :CocCommand<CR>
+vnoremap ,cc  :CocCommand<CR>
 nmap gd <Plug>(coc-definition)
 nmap gy <Plug>(coc-type-definition)
 nmap gi <Plug>(coc-implementation)
@@ -145,18 +146,15 @@ nmap gr <Plug>(coc-references)
 imap <C-i> <Plug>(coc-snippets-expand-jump)
 smap <C-i> <Plug>(coc-snippets-expand-jump)
 xmap <C-i> <Plug>(coc-snippets-expand-jump)
-nnoremap <Leader>pse :CocCommand snippets.editSnippets<CR>
-nnoremap <Leader>psf :CocCommand snippets.openSnippetFiles<CR>
+nnoremap <Leader>pcse :CocCommand snippets.editSnippets<CR>
+nnoremap <Leader>pcsf :CocCommand snippets.openSnippetFiles<CR>
 " fzf ----------------------------------------
-nnoremap ,b :Buffers<CR>
-nnoremap ,w :Windows<CR>
 nnoremap ,f :Files<CR>
-nnoremap ,t :Tags<CR>
 nnoremap ,g :Ag<CR>
 nnoremap ,r :History<CR>
-nnoremap ,c :Commits<CR>
 nnoremap ,s :GFiles?<CR>
 nnoremap ,d :Directories<CR>
+nnoremap ,c :Commits<CR>
 " any-jump ----------------------------------------
 nnoremap <Leader>jw :AnyJump<CR>
 vnoremap <Leader>jw :AnyJumpVisual<CR>

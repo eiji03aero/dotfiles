@@ -41,8 +41,8 @@ endsnippet
 
 # -------------------- jest --------------------
 snippet mock-jest-module "import - from ''; jest.mock();"
-import $1 from '$2';
-jest.mock('$2', () => $3);
+import $1 from "$2";
+jest.mock("$2", () => $3);
 endsnippet
 
 snippet expect-null "expect().toBeNull()"
@@ -50,13 +50,13 @@ expect($0).toBeNull();
 endsnippet
 
 snippet import-mock "import; jest.mock;"
-import ${1:module} from '${2:module_path}';
-jest.mock('$2', ${3:mock_impl});
+import ${1:module} from "${2:module_path}";
+jest.mock("$2", ${3:mock_impl});
 endsnippet
 
 snippet import-mock-actual "import; jest.mock(with actual);"
-import ${1:module} from '${2:module_path}';
-jest.mock('$2', () => {
+import ${1:module} from "${2:module_path}";
+jest.mock("$2", () => {
 	const actual = jest.requireActual(${2});
 	return {
 		...actual,
@@ -66,18 +66,22 @@ jest.mock('$2', () => {
 endsnippet
 
 # -------------------- import --------------------
+snippet import-compl "import { } from 'package';"
+import { $2 } from "$1";
+endsnippet
+
 snippet import-react "import React from 'react';"
-import React from 'react';
+import React from "react";
 endsnippet
 
 snippet import-react-dom "import ReactDOM from 'react-dom';"
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 endsnippet
 
 snippet import-rtl-react "import * as rtl from '@testing-library/react';"
-import * as rtl from '@testing-library/react';
+import * as rtl from "@testing-library/react";
 endsnippet
 
 snippet import-lodash "import _ from 'lodash';"
-import _ from 'lodash';
+import _ from "lodash";
 endsnippet

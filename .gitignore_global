@@ -1,7 +1,7 @@
 *~
-tags
-tags.lock
-tags.temp
+/tags
+/tags.lock
+/tags.temp
 
 .eiji03aero.local.*
 .eiji03aero.local/

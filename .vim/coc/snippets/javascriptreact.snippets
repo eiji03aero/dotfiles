@@ -33,7 +33,7 @@ snippet component-single "<c />"
 endsnippet
 
 snippet component-nested "<p><c /></p>"
-<$1>
+<$1 $2>
 	$0
 </$1>
 endsnippet
@@ -52,11 +52,11 @@ endsnippet
 
 # -------------------- jest --------------------
 snippet component-test-rtl "component test skelton with rtl"
-import React from 'react';
-import * as rtl from '@testing-library/react';
-import _ from 'lodash';
+import React from "react";
+import * as rtl from "@testing-library/react";
+import _ from "lodash";
 
-import ${1:component} from '$2';
+import ${1:component} from "$2";
 
 const defaultProps = {
 };
@@ -69,8 +69,8 @@ const render = (props = {}) => {
 	};
 };
 
-describe('$1', () => {
-	it('renders', () => {
+describe("$1", () => {
+	it("renders", () => {
 		const { container } = render();
 		expect(container.outerHTML).toMatchSnapshot();
 	});

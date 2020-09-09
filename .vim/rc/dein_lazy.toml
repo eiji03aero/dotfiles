@@ -9,7 +9,7 @@ on_ft = ['javascript', 'typescript', 'vue']
 
 [[plugins]]
 repo = 'maxmellon/vim-jsx-pretty'
-on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescript.jsx']
+on_ft = ['javascript', 'typescript']
 
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'

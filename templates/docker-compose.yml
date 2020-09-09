@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  workspace:
+  # workspace:
     # image: local/node:12.7.0
     # volumes:
     #   - .:/app

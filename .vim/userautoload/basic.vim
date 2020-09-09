@@ -87,13 +87,13 @@ augroup custom_augroup
   autocmd FileType vim setlocal foldmethod=indent
   autocmd FileType nerdtree setlocal signcolumn=no
   autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
-  autocmd BufRead,BufNewFile *.tsx set filetype=typescript.jsx
+  autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
   " autocmd FileType vue syntax sync fromstart
 augroup END
 "----------------------------------------
 " Extra config
 "----------------------------------------
 colorscheme wombat2
-let g:jsx_ext_required = 0
+" let g:jsx_ext_required = 0
 let g:vim_json_syntax_conceal = 0
 let g:gutentags_enabled = 0

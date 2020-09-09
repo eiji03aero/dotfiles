@@ -18,13 +18,6 @@ gicb () {
   git checkout -b $(fmt-concat-bars $@)
 }
 
-gicb-origin () {
-  origin_branch_name=$(git branch -r | fzf)
-  branch_name=$(echo $origin_branch_name | sed -E "s@.*origin/(.*)@\1@")
-
-  git checkout $branch_name
-}
-
 gim () {
   if [ $# -eq 0 ]; then
     branches=$(git branch -vv) &&
@@ -33,12 +26,6 @@ gim () {
   else
     git merge $1
   fi
-}
-
-gim-parent () {
-  parent_branch=$(gib-current \
-    | sed "s/\/[^/]*$/\/parent/")
-  git merge $parent_branch
 }
 
 gipl() {
@@ -55,10 +42,6 @@ gir () {
 
 gir-1 () {
   git reset HEAD~1
-}
-
-girh-origin () {
-  git reset --hard origin/$(gib-current)
 }
 
 gib-current () {

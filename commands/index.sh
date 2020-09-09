@@ -24,13 +24,48 @@ poll-file-count () {
 }
 
 fmt-concat-bars () {
-  echo "$@" | sed -e "s/[][, \/]/-/g" -e "s/[.]//g";
+  echo "$@" | sed -e "s/[.*#;:]//g" -e "s/[][(), \/]/-/g";
 }
 
 fd() {
   local dir
   dir=$(find ${1:-.} -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
+}
+
+await-nc () {
+  host="${1}"
+  port="${2}"
+  while ! nc -z $host $port; do
+    echo waiting for $host:$port ...
+    sleep 3s
+  done
+  echo done waiting $host:$port
+}
+
+await-curl () {
+  host="${1}"
+  port="${2}"
+  while ! curl -sf -o /dev/null $host:$port; do
+    echo waiting for $host:$port ...
+    sleep 3s
+  done
+  echo done waiting $host:$port
+}
+
+await-docker-container-cpu () {
+  container_name=$1
+
+  while [ $(docker stats --no-stream \
+    | grep $container_name \
+    | awk '{print $3}' \
+    | sed 's/%//g' \
+    | sed 's/^/0.10 > /' \
+    | bc) = 1 ]; do
+    echo "waiting for docker container $container_name to be stable ..."
+    sleep 1s
+  done
+  echo "done waiting for docker container $container_name"
 }
 
 # -------------------- vim --------------------

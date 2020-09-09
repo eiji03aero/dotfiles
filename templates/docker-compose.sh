@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "you need to configure [project_name] and [container_name]"
+exit 1
+
 cmd=${1:-up}
 project_name="workspace"
 container_name="workspace"
