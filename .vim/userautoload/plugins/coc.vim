@@ -9,6 +9,8 @@ let g:coc_global_extensions = [
  \ 'coc-css',
  \ 'coc-html',
  \ 'coc-phpls',
+ \ 'coc-clangd',
+ \ 'coc-cmake',
  \ ]
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}

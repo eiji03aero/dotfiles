@@ -11,6 +11,9 @@ repo = 'editorconfig/editorconfig-vim'
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
+repo = 'sodapopcan/vim-twiggy'
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
@@ -33,6 +36,9 @@ repo = 't9md/vim-textmanip'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'michaeljsmith/vim-indent-object'
 
 [[plugins]]
 repo = 'thinca/vim-splash'

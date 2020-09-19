@@ -96,6 +96,11 @@ dkc-attach() {
   docker attach $container_id
 }
 
+# -------------------- templates --------------------
+create-template-cpp () {
+  cp -r ~/dotfiles/templates/cpp/* ./
+}
+
 # -------------------- ngrok --------------------
 ngrok_init () {
   if [ $# -ne 2 ]; then

@@ -1,6 +1,6 @@
 let g:NERDTreeShowBookmarks=0
 let NERDTreeShowHidden = 1
-let g:NERDTreeWinSize = 45
+let g:NERDTreeWinSize = 50
 let g:NERDTreeCascadeSingleChildDir = 0
 
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -9,13 +9,14 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
   exec 'autocmd filetype nerdtree setlocal conceallevel=3'
 endfunction
 
-call NERDTreeHighlightFile('sh',         '250',          'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('go',         '250',          'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('cpp',        '250',          'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('vim',        '250',          'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('Dockerfile', '250',          'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('lock',       '250',          'none', 'yellow',  '#151515')
-call NERDTreeHighlightFile('toml',       '250',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('sh',         '248',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('go',         '248',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('cpp',        '248',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('cc',         '248',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('vim',        '248',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('Dockerfile',   '248',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('lock',       '248',          'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('toml',       '248',          'none', 'yellow',  '#151515')
 
 call NERDTreeHighlightFile('hs',         '208',          'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('kt',         '208',          'none', 'yellow',  '#151515')
@@ -39,6 +40,7 @@ call NERDTreeHighlightFile('config',     'yellow',       'none', 'yellow',  '#15
 call NERDTreeHighlightFile('conf',       'yellow',       'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('js',         'yellow',       'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('jsx',        'yellow',       'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('h',          'yellow',          'none', 'cyan',    '#151515')
 
 call NERDTreeHighlightFile('png',        'lightyellow',  'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('jpg',        'lightyellow',  'none', '#ff00ff', '#151515')

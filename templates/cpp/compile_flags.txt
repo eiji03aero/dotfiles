@@ -1,0 +1,5 @@
+-I./include
+-I./build/googletest-src/googletest/include
+-xc++
+-Wall
+-std=c++14

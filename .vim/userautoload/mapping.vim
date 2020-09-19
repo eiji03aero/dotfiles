@@ -174,6 +174,7 @@ nnoremap <Leader>gib :Gblame<CR>
 nnoremap <Leader>gid :Gdiff<CR>
 nnoremap <Leader>gil :%Glog<CR>
 nnoremap <Leader>giu :CocCommand git.copyUrl<CR>
+nnoremap <Leader>giu :CocCommand git.copyUrl<CR>
 " Vim-go ----------------------------------------
 nnoremap <Leader>goim :GoImport<Space>
 nnoremap <Leader>goia :GoImportAs<Space>
@@ -195,6 +196,7 @@ nnoremap <C-n>F :NERDTreeFind<Space>
 nnoremap <C-n>c :NERDTreeCWD<Space>
 nnoremap <C-n>b :NERDTreeFromBookmark<Space>
 nnoremap <C-n>m :NERDTreeMirror<CR>
+nnoremap <C-n>g :Twiggy<CR>
 " ranger ----------------------------------------
 nnoremap <C-n>r :Ranger<CR>
 " Tagbar ----------------------------------------

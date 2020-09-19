@@ -3,3 +3,5 @@
 	name = eiji03aero
 [core]
   excludesfile = /Users/eijiosakabe/.gitignore_global
+[pull]
+	rebase = false

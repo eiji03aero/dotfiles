@@ -83,11 +83,11 @@ hi hsOperator ctermfg=214
 '''
 
 # ==================== cpp ====================
-repo = 'justmao945/vim-clang'
-on_ft = ['cpp']
+# repo = 'justmao945/vim-clang'
+# on_ft = ['c', 'cpp', 'h', 'hpp']
 
 repo = 'octol/vim-cpp-enhanced-highlight'
-on_ft = ['cpp']
+on_ft = ['cpp', 'h', 'hpp']
 
 # ==================== go ====================
 [[plugins]]
