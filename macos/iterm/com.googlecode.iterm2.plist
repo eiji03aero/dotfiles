@@ -100,7 +100,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>0 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>650 330 620 398 0 0 1680 1050 </string>
+	<string>-1270 300 620 398 -1920 -30 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 1680 1027 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -334,7 +334,7 @@
 				<real>0.094117647058823528</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/eijiosakabe/Documents/pics/mikumiku/d2d84b18f5216aff9ceb9e09795ae60e-700.jpg</string>
+			<string>/Users/eijiosakabe/Documents/pics/mikumiku/61747_vocaloid_hatsune_miku_s.jpg</string>
 			<key>Blend</key>
 			<real>0.078769329896907214</real>
 			<key>Blinking Cursor</key>
@@ -1752,7 +1752,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>78ADF3E2-A81E-44B6-9475-86FF9C2F56C0</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>405</integer>
+	<integer>421</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2539,7 +2539,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-09-13T12:55:30Z</date>
+	<date>2020-09-28T01:06:55Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
