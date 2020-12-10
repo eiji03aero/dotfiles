@@ -1,13 +1,14 @@
 cmake_minimum_required(VERSION 3.13.4)
 enable_testing()
-
-project(template)
 set(CMAKE_CXX_STANDARD 14)
 
-file(GLOB SOURCES src/*.cpp)
+set(MAIN_NAME template)
+project(${MAIN_NAME})
+
+file(GLOB_RECURSE SOURCES src/*.cpp)
 
 include_directories(include)
-add_executable(template ${SOURCES})
+add_executable(${MAIN_NAME} ${SOURCES})
 
 # -------------------- gtest --------------------
 configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
@@ -30,7 +31,13 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
                  ${CMAKE_CURRENT_BINARY_DIR}/googletest-build
                  EXCLUDE_FROM_ALL)
 
-add_executable(sampletest test/test.cpp)
-target_link_libraries(sampletest gtest_main)
-add_test(NAME sampletest COMMAND sampletest)
-# -------------------- end gtest --------------------
+
+function(_test test_file)
+  get_filename_component(test_target_name ${test_file} NAME_WE)
+
+  add_executable(${test_target_name} ${test_file})
+  target_link_libraries(${test_target_name} gtest_main)
+  add_test(NAME ${test_target_name} COMMAND ${test_target_name})
+endfunction()
+
+_test("test/test.cpp")

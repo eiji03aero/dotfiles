@@ -1,27 +1,38 @@
 #!/bin/bash
 
-echo "you need to configure [project_name] and [container_name]"
-exit 1
-
 cmd=${1:-up}
-project_name="workspace"
+project_name=""
 container_name="workspace"
 
+has-docker-sync() {
+  command -v docker-sync 1>/dev/null
+}
+
 execute-docker-compose () {
-  docker-compose \
-    -p $project_name \
-    -f 'docker-compose.yml' \
-    $@
+  opts="-f docker-compose.yml"
+
+  if has-docker-sync; then
+    opts="$opts -f docker-compose-sync.yml"
+  fi
+
+  if [ -n "$project_name" ]; then
+    opts="$opts -p $project_name"
+  fi
+
+  docker-compose $opts $@
 }
 
 execute-docker-sync () {
-  docker-sync \
-    $@ \
-    -c 'docker-sync.yml'
+  if has-docker-sync; then
+    return 0
+  fi
+
+  opts="-c docker-sync.yml"
+  docker-sync $@ $opts
 }
 
 stop-docker-compose () {
-  # execute-docker-sync stop
+  execute-docker-sync stop
   execute-docker-compose stop
 }
 

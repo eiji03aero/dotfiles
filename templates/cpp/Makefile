@@ -1,9 +1,9 @@
 MAIN_NAME = template
 
 .PHONY: build
-build-cmake:
+build:
 	@cd build \
-		&& make
+		&& $(MAKE)
 
 .PHONY: build-cmake
 build-cmake:

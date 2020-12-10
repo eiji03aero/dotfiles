@@ -8,17 +8,17 @@ let g:fzf_action = {
 " let g:fzf_layout = { 'down': '~40%' }
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['fg', 'Normal'],
-  \ 'hl':      ['fg', 'Identifier'],
-  \ 'fg+':     ['fg', 'Normal'],
-  \ 'bg+':     ['fg', 'Normal'],
-  \ 'hl+':     ['fg', 'Identifier'],
-  \ 'info':    ['fg', 'Identifier'],
-  \ 'prompt':  ['fg', 'identifier'],
-  \ 'pointer': ['fg', 'CursorLineNr'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+ \ 'bg':      ['fg', 'VertSplit'],
+ \ 'hl':      ['fg', 'Identifier'],
+ \ 'fg+':     ['fg', 'Normal'],
+ \ 'bg+':     ['fg', 'Normal'],
+ \ 'hl+':     ['fg', 'Identifier'],
+ \ 'info':    ['fg', 'Identifier'],
+ \ 'prompt':  ['fg', 'identifier'],
+ \ 'pointer': ['fg', 'CursorLineNr'],
+ \ 'marker':  ['fg', 'Keyword'],
+ \ 'spinner': ['fg', 'Label'],
+ \ 'header':  ['fg', 'Comment'] }
 
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)

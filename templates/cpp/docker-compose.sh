@@ -1,7 +1,10 @@
 #!/bin/bash
 
+echo "configure docker-compose.sh first"
+exit 1
+
 cmd=${1:-up}
-container_name="template"
+container_name="workspace"
 
 execute-docker-compose () {
   docker-compose \

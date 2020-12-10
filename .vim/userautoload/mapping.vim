@@ -16,6 +16,7 @@ nnoremap <Leader>wn :vnew<CR>
 nnoremap <Leader>wN :call SplitWindowRight()<CR>
 nnoremap <Leader>wm :new<CR>
 nnoremap <Leader>wr :e!<CR>
+nnoremap <Leader>w. :e .<CR>
 nnoremap <Leader>ww :w<CR>
 nnoremap <Leader>wW o<ESC>:w<CR>dd:w<CR>
 nnoremap <Leader>w- <C-w><Bar><C-w>_
@@ -154,7 +155,7 @@ nnoremap ,g :Ag<CR>
 nnoremap ,r :History<CR>
 nnoremap ,s :GFiles?<CR>
 nnoremap ,d :Directories<CR>
-nnoremap ,c :Commits<CR>
+nnoremap ,l :Commits<CR>
 " any-jump ----------------------------------------
 nnoremap <Leader>jw :AnyJump<CR>
 vnoremap <Leader>jw :AnyJumpVisual<CR>
@@ -173,7 +174,6 @@ nnoremap <Leader>gic :Gcommit<CR>
 nnoremap <Leader>gib :Gblame<CR>
 nnoremap <Leader>gid :Gdiff<CR>
 nnoremap <Leader>gil :%Glog<CR>
-nnoremap <Leader>giu :CocCommand git.copyUrl<CR>
 nnoremap <Leader>giu :CocCommand git.copyUrl<CR>
 " Vim-go ----------------------------------------
 nnoremap <Leader>goim :GoImport<Space>
