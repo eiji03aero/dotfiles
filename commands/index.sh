@@ -1,9 +1,7 @@
 #!/bin/bash
 
 source ~/dotfiles/commands/git.sh
-source ~/dotfiles/commands/dkc-runner.sh
-source ~/dotfiles/commands/dkcom-create-template.sh
-source ~/dotfiles/commands/remove_duplicate_export_path.sh
+source ~/dotfiles/commands/docker.sh
 source ~/dotfiles/commands/bridge.sh
 
 ct () { ctags -R ; }
@@ -127,4 +125,25 @@ EOF
   echo $(curl -s $api_url \
     | grep -oE 'http://.{8}.ngrok.io')
   return 0;
+}
+
+remove_duplicate_export_path () {
+  _path=""
+  for _p in $(echo $PATH | tr ':' ' '); do
+    case ":${_path}:" in
+      *:"${_p}":* )
+        ;;
+      * )
+        if [ "$_path" ]; then
+          _path="$_path:$_p"
+        else
+          _path=$_p
+        fi
+        ;;
+    esac
+  done
+  PATH=$_path
+
+  unset _p
+  unset _path
 }

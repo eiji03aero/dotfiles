@@ -129,6 +129,6 @@ gi-install-prepare-commit-msg () {
   fi
 
   touch $file_path
-  cat ~/dotfiles/templates/prepare-commit-msg > $file_path
+  cat ~/dotfiles/templates/git/prepare-commit-msg > $file_path
   chmod +x $file_path
 }

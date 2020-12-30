@@ -10,6 +10,7 @@ let g:coc_global_extensions = [
  \ 'coc-html',
  \ 'coc-phpls',
  \ 'coc-clangd',
+ \ 'coc-angular',
  \ 'coc-cmake',
  \ ]
 

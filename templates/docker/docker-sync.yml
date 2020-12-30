@@ -2,7 +2,7 @@ version: "2"
 options:
   verbose: false
 syncs:
-  app:
+  {{sync_volume_name}}:
     src: '.'
     sync_excludes: ['.git']
     notify_terminal: false

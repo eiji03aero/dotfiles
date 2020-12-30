@@ -2,6 +2,7 @@
 
 cmd=${1:-up}
 project_name=""
+file_prefix="{{file_prefix}}"
 container_name="workspace"
 
 has-docker-sync() {
@@ -9,10 +10,10 @@ has-docker-sync() {
 }
 
 execute-docker-compose () {
-  opts="-f docker-compose.yml"
+  opts="-f ${file_prefix}docker-compose.yml"
 
   if has-docker-sync; then
-    opts="$opts -f docker-compose-sync.yml"
+    opts="$opts -f ${file_prefix}docker-compose-sync.yml"
   fi
 
   if [ -n "$project_name" ]; then
@@ -23,11 +24,11 @@ execute-docker-compose () {
 }
 
 execute-docker-sync () {
-  if has-docker-sync; then
+  if ! has-docker-sync; then
     return 0
   fi
 
-  opts="-c docker-sync.yml"
+  opts="-c ${file_prefix}docker-sync.yml"
   docker-sync $@ $opts
 }
 
