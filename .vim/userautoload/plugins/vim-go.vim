@@ -12,3 +12,6 @@ let g:go_jump_to_error = 1
 let g:go_template_autocreate = 0
 
 let g:go_rename_command = "gopls"
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'errcheck']
+" let g:go_metalinter_enabled = ['vet', 'errcheck']

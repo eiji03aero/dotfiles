@@ -156,6 +156,7 @@ nnoremap ,r :History<CR>
 nnoremap ,s :GFiles?<CR>
 nnoremap ,d :Directories<CR>
 nnoremap ,l :Commits<CR>
+nnoremap ,n :call QuickNotesFzf()<CR>
 " any-jump ----------------------------------------
 nnoremap <Leader>jw :AnyJump<CR>
 vnoremap <Leader>jw :AnyJumpVisual<CR>
@@ -185,6 +186,8 @@ nnoremap <Leader>gol :GoLint<CR>
 nnoremap <Leader>gof :GoFmt<CR>
 nnoremap <Leader>gor :GoRename<CR>
 nnoremap <Leader>gotj :GoAddTags json<CR>
+nnoremap <Leader>godb :GoDocBrowser<CR>
+nnoremap <Leader>godi :GoDiagnostics<CR>
 " " Vim-splash ----------------------------------------
 " nnoremap <Leader>vsi :Splash ~/.vim/splash/vim_intro.txt<CR>
 " nnoremap <Leader>vsc :Splash ~/.vim/splash/conciergeu_logo.txt<CR>
@@ -213,5 +216,5 @@ nnoremap <Leader>dj :Dart2Js<CR>
 " QuickNotes ----------------------------------------
 nnoremap <Leader>qnn :call QuickNotesNew()<CR>
 nnoremap <Leader>qnd :call QuickNotesNewDiary()<CR>
-nnoremap <Leader>qnln :call QuickNotesLsNotes()<CR>
+nnoremap <Leader>qnln :call QuickNodesLs()<CR>
 nnoremap <Leader>qnld :call QuickNotesLsDiary()<CR>

@@ -1,5 +1,13 @@
 #!/bin/bash
 
+dkc-stop () {
+  name="${1:-}"
+  docker container ls \
+    | grep "$name" \
+    | awk '{print $1}' \
+    | xargs docker container stop
+}
+
 dkc-runner() {
   args='run --rm -it'
 
@@ -80,9 +88,6 @@ dkcom-create-template() {
   sync_file_name="docker-sync.yml"
   file_prefix=""
   sync_volume_name="v-sync-$(cd $directory; pwd | xargs basename)"
-
-  echo "$(dirname $directory)"
-  echo "$(basename $directory)"
 
   if [ $arg_public = "private" ]; then
     sh_file_name="$private_prefix$sh_file_name"

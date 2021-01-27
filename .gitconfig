@@ -5,3 +5,5 @@
   excludesfile = /Users/eijiosakabe/.gitignore_global
 [pull]
 	rebase = false
+[init]
+	defaultBranch = main

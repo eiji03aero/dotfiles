@@ -4,5 +4,10 @@
   "signature.maxWindowHeight": 8,
   "snippets.userSnippetsDirectory": "~/dotfiles/.vim/coc/snippets",
 
+  "coc.preferences.jumpCommand": "split",
+
+  "angular.trace.server": "verbose",
+  "angular.log": "verbose",
+
   "solargraph.useBundler": true
 }
