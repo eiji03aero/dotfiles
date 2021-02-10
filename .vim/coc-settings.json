@@ -1,10 +1,10 @@
 {
+  "coc.preferences.jumpCommand": "split",
+
   "codeLens.enable": true,
   "suggest.fixInsertedWord": false,
   "signature.maxWindowHeight": 8,
   "snippets.userSnippetsDirectory": "~/dotfiles/.vim/coc/snippets",
-
-  "coc.preferences.jumpCommand": "split",
 
   "angular.trace.server": "verbose",
   "angular.log": "verbose",

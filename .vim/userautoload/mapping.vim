@@ -9,6 +9,12 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap gx :call OpenURLUnderCursor()<CR>
 nnoremap <C-]> g<C-]>
+
+nnoremap <expr><C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <expr><C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+inoremap <expr><C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<Right>"
+inoremap <expr><C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<Left>"
+
 " window
 nnoremap <Leader>wb :sp<CR>
 nnoremap <Leader>wv :vsp<CR>
@@ -92,9 +98,6 @@ inoremap <C-f>a &
 inoremap <C-f>p %
 inoremap <C-f>l <C-o>$
 inoremap <C-f>o <C-o>O
-" float scroll somehow not working
-" inoremap <expr><C-f>n coc#util#float_scroll(1)
-" inoremap <expr><C-f>p coc#util#float_scroll(0)
 " Visual mode ----------------------------------------
 vnoremap z/ y/<C-r>"<CR>
 vnoremap z? y?<C-r>"<CR>
@@ -129,6 +132,7 @@ nnoremap ,clc  :CocList commands<CR>
 nnoremap ,clo  :CocList outline<CR>
 nnoremap ,cls  :CocList -I symbols<CR>
 nnoremap ,cc  :CocCommand<CR>
+nnoremap ,ca  :CocAction<CR>
 nnoremap ,cn  :CocNext<CR>
 nnoremap ,cp  :CocPrev<CR>
 nnoremap ,cr  :CocRestart<CR>

@@ -3,6 +3,7 @@
 dkc-stop () {
   name="${1:-}"
   docker container ls \
+    | grep -v "CONTAINER ID" \
     | grep "$name" \
     | awk '{print $1}' \
     | xargs docker container stop
