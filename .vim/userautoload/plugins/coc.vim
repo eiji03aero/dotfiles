@@ -13,6 +13,7 @@ let g:coc_global_extensions = [
  \ 'coc-angular',
  \ 'coc-cmake',
  \ 'coc-go',
+ \ 'coc-omnisharp',
  \ ]
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}

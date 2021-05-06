@@ -62,7 +62,8 @@ nnoremap <Leader>; :call JustAppend(';')<CR>
 nnoremap <Leader>x :call JustTrimTail()<CR>
 nnoremap <Leader>x :call JustTrimTail()<CR>
 " Yank utils
-nnoremap <Leader>y :call YankPathToClip()<CR>
+nnoremap <Leader>yp :call YankPathToClip()<CR>
+nnoremap <Leader>yf :call YankFileNameToClip()<CR>
 nnoremap <Leader>pi" vi"p
 nnoremap <Leader>pi' vi'p
 " Print utils
@@ -179,7 +180,12 @@ nnoremap <Leader>gic :Gcommit<CR>
 nnoremap <Leader>gib :Gblame<CR>
 nnoremap <Leader>gid :Gdiff<CR>
 nnoremap <Leader>gil :%Glog<CR>
-nnoremap <Leader>giu :CocCommand git.copyUrl<CR>
+nnoremap <Leader>gicu :CocCommand git.chunkUndo<CR>
+nnoremap <Leader>gics :CocCommand git.chunkStage<CR>
+nmap <Leader>gicn <Plug>(coc-git-nextchunk)
+nmap <Leader>gicp <Plug>(coc-git-prevchunk)
+nnoremap <Leader>giyu :CocCommand git.copyUrl<CR>
+nnoremap <Leader>giyb :call YankCurrentBranchToClip()<CR>
 " Vim-go ----------------------------------------
 nnoremap <Leader>goim :GoImport<Space>
 nnoremap <Leader>goia :GoImportAs<Space>

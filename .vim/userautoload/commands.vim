@@ -20,8 +20,19 @@ function! OpenDoc()
 endfunction
 
 function! YankPathToClip ()
-  echo "Yanked the path to clipboard: " expand('%:p')
+  echo "Yanked the path to clipboard: ".expand('%:p')
   let @+ = expand('%:p')
+endfunction
+
+function! YankFileNameToClip ()
+  echo "Yanked the file name to clipboard: ".expand('%:t')
+  let @+ = expand('%:t')
+endfunction
+
+function! YankCurrentBranchToClip ()
+  let name = fugitive#head()
+  echo "Yanked the current branch name to clipboard: ".name
+  let @+ = name
 endfunction
 
 function! SplitWindowRight ()

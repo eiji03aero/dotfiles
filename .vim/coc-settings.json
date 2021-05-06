@@ -9,5 +9,7 @@
   "angular.trace.server": "verbose",
   "angular.log": "verbose",
 
+  "go.goplsOptions.gofumpt": true,
+
   "solargraph.useBundler": true
 }

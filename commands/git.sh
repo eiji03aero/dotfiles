@@ -36,6 +36,12 @@ gipl-f() {
   git pull --force origin $(gib-current)
 }
 
+gipl-r() {
+  b="$1"
+  git fetch origin $b
+  git checkout origin $b
+}
+
 gir () {
   git reset
 }

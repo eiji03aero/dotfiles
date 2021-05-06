@@ -2,13 +2,13 @@ version: '3.7'
 
 services:
   # workspace:
-    # image: local/node:12.7.0
+    # image: node:14.16.0-buster
     # volumes:
     #   - .:/app
-    # image: local/golang:1.14.1
-    # working_dir: /app
+    # image: golang:1.16.2-buster
     # volumes:
     #   - .:/app
+    working_dir: /app
     ports:
       - "8080:8080"
     tty: true

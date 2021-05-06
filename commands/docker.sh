@@ -9,6 +9,17 @@ dkc-stop () {
     | xargs docker container stop
 }
 
+dkc-attach() {
+  set -e
+  container_id=$(docker container ls \
+    | tail +2 \
+    | awk '{print $1 ":" $2}' \
+    | fzf --prompt "Select container: " \
+    | sed 's/:.*$//')
+
+  docker attach $container_id
+}
+
 dkc-runner() {
   args='run --rm -it'
 

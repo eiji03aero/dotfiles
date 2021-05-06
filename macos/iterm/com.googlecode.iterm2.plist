@@ -127,6 +127,10 @@
 	<true/>
 	<key>LeftTabBarWidth</key>
 	<real>50</real>
+	<key>NeverWarnAboutShortLivedSessions_A53F10E2-B613-4E5C-B3F6-705EAD7DDEEA</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_A53F10E2-B613-4E5C-B3F6-705EAD7DDEEA_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -358,9 +362,9 @@
 				<real>0.094117647058823528</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/eijiosakabe/Documents/pics/houkai/2020120211294385767.png</string>
+			<string>/Users/eijiosakabe/Documents/pics/houkai/thumb-1920-1036083.png</string>
 			<key>Blend</key>
-			<real>0.10771081668814433</real>
+			<real>0.11446822516420291</real>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>

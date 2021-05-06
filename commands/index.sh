@@ -22,7 +22,7 @@ poll-file-count () {
 }
 
 fmt-concat-bars () {
-  echo "$@" | sed -e "s/[.*#;:'\"]//g" -e "s/[][(), \/]/-/g";
+  echo "$@" | sed -e "s/[.*#;:'\"\`]//g" -e "s/[][(), \/]/-/g";
 }
 
 fd() {
@@ -78,20 +78,6 @@ tmes () {
     split-window -h -l 45 \; \
     select-pane -L \; \
     send-keys 'vim' Enter
-}
-
-# -------------------- docker --------------------
-dkc-stop-all () { docker container stop $(docker container ls -aq); }
-
-dkc-attach() {
-  set -e
-  container_id=$(docker container ls \
-    | tail +2 \
-    | awk '{print $1 ":" $2}' \
-    | fzf --prompt "Select container: " \
-    | sed 's/:.*$//')
-
-  docker attach $container_id
 }
 
 # -------------------- templates --------------------

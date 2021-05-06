@@ -3,3 +3,4 @@
 examples/
 .netrwhist
 logs
+.DS_Store
