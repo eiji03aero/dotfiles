@@ -8,6 +8,7 @@
 
   "angular.trace.server": "verbose",
   "angular.log": "verbose",
+  "angular.experimental-ivy": true,
 
   "go.goplsOptions.gofumpt": true,
 

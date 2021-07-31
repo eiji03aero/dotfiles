@@ -76,10 +76,18 @@ girb-h () {
 }
 
 git_remote_url () {
-  echo $(git remote -v \
+  url=$(git remote -v \
     | head -n 1 \
-    | awk '{print $2}' \
-    | sed -E 's@^[^:]*:(.*)\.git$@https://github.com/\1@')
+    | awk '{print $2}')
+
+  if [[ $url =~ "^git@github.com" ]]; then
+    url=$(echo $url | sed -E 's|^git@github.com:(.*).git$|https://github.com/\1|')
+  elif [[ $url =~ "^https://" ]]; then
+    url=$(echo $url | sed -E 's|^(.*).git$|\1|')
+  fi
+
+
+  echo $url
 }
 
 giopen () {

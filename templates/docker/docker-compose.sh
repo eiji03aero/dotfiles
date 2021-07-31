@@ -47,6 +47,10 @@ if [ $cmd = 'up' ] && [ $# -le 1 ]; then
   # execute-docker-compose exec $container_name /bin/bash
   # stop-docker-compose
 
+elif [ $cmd = 'sync-restart' ]; then
+  execute-docker-sync stop
+  execute-docker-sync start
+
 elif [ $cmd = 'stop' ]; then
   stop-docker-compose
 

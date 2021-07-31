@@ -39,6 +39,8 @@ nnoremap <Leader>won :set relativenumber!<CR>
 " tab
 nnoremap <Leader>tn :tabn<CR>
 nnoremap <Leader>tp :tabp<CR>
+nnoremap <Leader>tN :tabm +1<CR>
+nnoremap <Leader>tP :tabm -1<CR>
 nnoremap <Leader>ts :tab split<CR>
 nnoremap <Leader>te :tabe<CR>
 nnoremap <Leader>tc :tabc<CR>
@@ -127,7 +129,7 @@ nnoremap <Leader>st :source ~/.tmux.conf<CR>
 " dein ----------------------------------------
 nnoremap <Leader>dr  :call RefreshDeinCache()<CR>
 " coc ----------------------------------------
-nnoremap ,cld  :CocList diagnostics<CR>
+nnoremap ,cld  :CocDiagnostics<CR>
 nnoremap ,cle  :CocList extensions<CR>
 nnoremap ,clc  :CocList commands<CR>
 nnoremap ,clo  :CocList outline<CR>

@@ -90,8 +90,12 @@ repo = 'octol/vim-cpp-enhanced-highlight'
 on_ft = ['cpp', 'h', 'hpp']
 
 # ==================== go ====================
+# [[plugins]]
+# repo = 'fatih/vim-go'
+# on_ft = ['go']
+
 [[plugins]]
-repo = 'fatih/vim-go'
+repo = 'mattn/vim-goimports'
 on_ft = ['go']
 
 # ==================== python ====================
