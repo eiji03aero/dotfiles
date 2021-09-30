@@ -157,7 +157,8 @@ xmap <C-i> <Plug>(coc-snippets-expand-jump)
 nnoremap <Leader>pcse :CocCommand snippets.editSnippets<CR>
 nnoremap <Leader>pcsf :CocCommand snippets.openSnippetFiles<CR>
 " fzf ----------------------------------------
-nnoremap ,f :Files<CR>
+nnoremap ,a :Files<CR>
+nnoremap ,f :GFiles<CR>
 nnoremap ,g :Ag<CR>
 nnoremap ,r :History<CR>
 nnoremap ,s :GFiles?<CR>

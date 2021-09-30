@@ -1,5 +1,5 @@
 {
-  "coc.preferences.jumpCommand": "split",
+  "coc.preferences.jumpCommand": "edit",
 
   "codeLens.enable": true,
   "suggest.fixInsertedWord": false,
