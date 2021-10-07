@@ -22,7 +22,7 @@ poll-file-count () {
 }
 
 fmt-concat-bars () {
-  echo "$@" | sed -e "s/[.*#;:'\"\`]//g" -e "s/[][(), ]/-/g";
+  echo "$@" | sed -e "s/[.*;:'\"\`]//g" -e "s/[][(), ]/-/g";
 }
 
 fd() {
