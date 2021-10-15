@@ -147,7 +147,7 @@ nnoremap <Leader>pcse :CocCommand snippets.editSnippets<CR>
 nnoremap <Leader>pcsf :CocCommand snippets.openSnippetFiles<CR>
 " fzf ----------------------------------------
 nnoremap ,a :Files<CR>
-nnoremap ,f :GFiles<CR>
+nnoremap ,f :Files<CR>
 nnoremap ,g :Ag<CR>
 nnoremap ,r :History<CR>
 nnoremap ,s :GFiles?<CR>
