@@ -1,10 +1,17 @@
 {
   "coc.preferences.jumpCommand": "edit",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "go",
+    "javascript", "javascriptreact",
+    "typescript", "typescriptreact"
+  ],
 
   "codeLens.enable": true,
   "suggest.fixInsertedWord": false,
   "signature.maxWindowHeight": 8,
   "snippets.userSnippetsDirectory": "~/dotfiles/.vim/coc/snippets",
+
+  "prettier.requireConfig": true,
 
   "angular.trace.server": "verbose",
   "angular.log": "verbose",

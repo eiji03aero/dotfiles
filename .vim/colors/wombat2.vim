@@ -1,19 +1,20 @@
 " Basics --------------------
-hi ColorColumn  ctermbg = 238
-hi CursorLine   cterm = underline
-hi Directory    ctermfg = 33
-hi FoldColumn   ctermfg = white    ctermbg = black
-hi Folded       ctermfg = grey     ctermbg = none
-hi IncSearch    ctermfg = white    ctermbg = darkblue
-hi MatchParen   ctermfg = yellow   ctermbg = darkgrey
-hi NonText      ctermfg = darkgrey
-hi Search       ctermfg = black    ctermbg = yellow
-hi SpecialKey   ctermfg = darkgrey
-hi SpellRare    ctermfg = 255      ctermbg = 9
-hi SpellBad     ctermfg = 255      ctermbg = 9
-hi Terminal     ctermbg = black    ctermfg = white
-hi Title        ctermfg = red
-hi Visual       ctermbg = 240      cterm=NONE
+hi ColorColumn     ctermbg = 238
+hi CursorLine      cterm   = underline
+hi Directory       ctermfg = 33
+hi FoldColumn      ctermfg = white  ctermbg = black
+hi Folded          ctermfg = grey   ctermbg = none
+hi IncSearch       ctermfg = white  ctermbg = darkblue
+hi MatchParen      ctermfg = yellow ctermbg = darkgrey
+hi NonText         ctermfg = darkgrey
+hi Search          ctermfg = black  ctermbg = yellow
+hi SpecialKey      ctermfg = 236
+hi SpellRare       ctermfg = 255    ctermbg = 9
+hi SpellBad        ctermfg = 255    ctermbg = 9
+hi Terminal        ctermbg = black  ctermfg = white
+hi Title           ctermfg = red
+hi Visual          ctermbg = 240    cterm=NONE
+hi ExtraWhitespace ctermbg = 244
 
 " Menu --------------------
 hi Pmenu        ctermfg = 250      ctermbg = 232
@@ -48,3 +49,4 @@ hi Special    ctermfg = 9
 hi Statement  ctermfg = 11
 hi Type       ctermfg = 33
 hi Structure  ctermfg = 33
+hi Tab  ctermfg = 9

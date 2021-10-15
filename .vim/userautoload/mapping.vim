@@ -104,17 +104,6 @@ inoremap <C-f>o <C-o>O
 " Visual mode ----------------------------------------
 vnoremap z/ y/<C-r>"<CR>
 vnoremap z? y?<C-r>"<CR>
-" Fold function ----------------------------------------
-nnoremap <Leader>hi zi
-nnoremap <Leader>hf zf
-nnoremap <Leader>ha za
-nnoremap <Leader>hA zA
-nnoremap <Leader>hd zd
-nnoremap <Leader>hR zR
-nnoremap <Leader>hM zM
-nnoremap <Leader>ht vit zf
-nnoremap <Leader>ht vip zf
-vnoremap <Leader>hf zf
 " File-related shortcuts ----------------------------------------
 nnoremap <Leader>mvv :e ~/.vim<CR>
 nnoremap <Leader>mvm :e ~/.vim/userautoload/mapping.vim<CR>
