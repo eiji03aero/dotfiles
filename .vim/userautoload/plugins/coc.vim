@@ -5,6 +5,7 @@ let g:coc_global_extensions = [
  \ 'coc-flow',
  \ 'coc-eslint',
  \ 'coc-prettier',
+ \ 'coc-styled-components',
  \ 'coc-json',
  \ 'coc-css',
  \ 'coc-html',

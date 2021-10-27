@@ -38,11 +38,11 @@ hi DiffText   cterm=NONE ctermbg=237
 hi DiffDelete cterm=NONE ctermbg=52
 
 " Syntax --------------------
-hi Comment    ctermfg = grey
+hi Comment    ctermfg = 246
 hi Constant   ctermfg = 10
 hi Delimiter  ctermfg = 9
 hi Identifier ctermfg = 214
-hi Ignore     ctermfg = darkgrey
+hi Ignore     ctermfg = 242
 hi Keyword    ctermfg = 11
 hi PreProc    ctermfg = 39
 hi Special    ctermfg = 9
@@ -50,3 +50,7 @@ hi Statement  ctermfg = 11
 hi Type       ctermfg = 33
 hi Structure  ctermfg = 33
 hi Tab  ctermfg = 9
+
+" coc --------------------
+" :h coc-highlights
+hi CocUnusedHighlight ctermfg = 242
