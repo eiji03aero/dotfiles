@@ -65,6 +65,12 @@ jest.mock("$2", () => {
 });
 endsnippet
 
+snippet describe-template "describe('name', () => {})"
+describe("$1", () => {
+	$0
+});
+endsnippet
+
 # -------------------- import --------------------
 snippet import-compl "import { } from 'package';"
 import { $2 } from "$1";

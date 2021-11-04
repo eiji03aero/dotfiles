@@ -30,7 +30,7 @@ function! YankFileNameToClip ()
 endfunction
 
 function! YankCurrentBranchToClip ()
-  let name = fugitive#head()
+  let name = FugitiveHead()
   echo "Yanked the current branch name to clipboard: ".name
   let @+ = name
 endfunction
@@ -167,4 +167,11 @@ function! OpenURLUnderCursor() abort
   endif
 
   execute ':!open '.url
+endfunction
+
+function! CreateGitBranchNote()
+  let repository_path = fnamemodify(FugitiveGitDir(), ':h')
+  let repository_name = fnamemodify(repository_path, ':t')
+  let git_branch = FugitiveHead()
+  call quick_notes#new_by_path(repository_name . '/' . git_branch . '.md')
 endfunction
