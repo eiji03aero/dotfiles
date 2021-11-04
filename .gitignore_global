@@ -9,3 +9,5 @@
 
 .docker-sync/
 .netlify/
+
+.DS_Store

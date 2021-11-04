@@ -165,13 +165,13 @@ vnoremap <silent><Leader>ff :Farf<CR>
 nnoremap <silent><Leader>fr :Farr<CR>
 vnoremap <silent><Leader>fr :Farr<CR>
 " Git ----------------------------------------
-nnoremap <Leader>gis :Gstatus!<CR>
+nnoremap <Leader>gis :Git!<CR>
 nnoremap <Leader>gia :Gwrite<CR>
 nnoremap <Leader>gir :Gread<CR>
 nnoremap <Leader>gic :Gcommit<CR>
-nnoremap <Leader>gib :Gblame<CR>
+nnoremap <Leader>gib :Git blame<CR>
 nnoremap <Leader>gid :Gdiff<CR>
-nnoremap <Leader>gil :%Glog<CR>
+nnoremap <Leader>gil :%Gclog<CR>
 nnoremap <Leader>gicu :CocCommand git.chunkUndo<CR>
 nnoremap <Leader>gics :CocCommand git.chunkStage<CR>
 nmap <Leader>gicn <Plug>(coc-git-nextchunk)

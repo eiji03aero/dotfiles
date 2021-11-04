@@ -1,7 +1,10 @@
 # dotfiles
 
 # Todo
-- none for now
+- update dkc-create-template
+  - receive optional arguments
+    - one for private/public
+    - one for if it should use sync
 
 # Usage
 - install
