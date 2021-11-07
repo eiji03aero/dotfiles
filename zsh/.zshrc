@@ -13,6 +13,7 @@ fi
 # Customize to your needs...
 
 source ${HOME}/.bashrc
+source ${HOME}/dotfiles/commands/index.sh
 
 setopt prompt_subst
 setopt clobber

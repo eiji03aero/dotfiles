@@ -31,6 +31,10 @@ fd() {
   cd "$dir"
 }
 
+urlencode () {
+  echo "$1" | nkf -WwMQ | sed 's/=$//g' | tr = % | tr -d '\n'
+}
+
 await-nc () {
   host="${1}"
   port="${2}"

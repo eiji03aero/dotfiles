@@ -75,4 +75,3 @@ path+=('/usr/X11/bin')
 export IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
 
 source ~/dotfiles/zsh/.zprofile.local
-source ~/dotfiles/commands/index.sh
