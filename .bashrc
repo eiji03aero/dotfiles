@@ -41,7 +41,5 @@ alias dks='docker stats'
 # cds
 alias cd-mash='cd ~/projects/mash'
 alias cd-mskit='cd ~/projects/mskit'
-alias cd-cu='cd ~/projects/conciergeu'
-alias cd-cu-web='cd ~/projects/conciergeu/conciergeu_website'
 
 alias curl-json='curl -H "Content-Type: application/json" -H "Accept: application/json"'

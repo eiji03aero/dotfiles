@@ -10,6 +10,14 @@
   - coc action
     - the one that shown as system popup
       - should have good usage of it. learn it!
+- migrate to karabinar-elements from btt
+  - some keyboard shortcuts to support
+    - move window to other display
+    - maximize window
+    - fullscreen window
+- cleanup the mess around zsh config files
+  - do research on how it should really be used
+  - take care about init script
 
 # Usage
 - install
