@@ -36,5 +36,6 @@
   "[makefile]": {
     "editor.insertSpaces": false,
     "editor.detectIndentation": false
-  }
+  },
+  "workbench.iconTheme": "vscode-icons"
 }
