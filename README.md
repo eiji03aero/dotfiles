@@ -5,6 +5,11 @@
   - receive optional arguments
     - one for private/public
     - one for if it should use sync
+- learn about Twiggy
+- learn about coc
+  - coc action
+    - the one that shown as system popup
+      - should have good usage of it. learn it!
 
 # Usage
 - install
