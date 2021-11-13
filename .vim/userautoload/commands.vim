@@ -20,8 +20,9 @@ function! OpenDoc()
 endfunction
 
 function! YankPathToClip ()
-  echo "Yanked the path to clipboard: ".expand('%:p')
-  let @+ = expand('%:p')
+  let path = GetRelativePathToCwd()
+  echo "Yanked the path to clipboard: " . l:path
+  let @+ = l:path
 endfunction
 
 function! YankFileNameToClip ()
@@ -174,4 +175,9 @@ function! CreateGitBranchNote()
   let repository_name = fnamemodify(repository_path, ':t')
   let git_branch = FugitiveHead()
   call quick_notes#new_by_path(repository_name . '/' . git_branch . '.md')
+endfunction
+
+function! GetRelativePathToCwd()
+  let relative_path = substitute(expand('%'), getcwd() . "/", "", "")
+  return relative_path
 endfunction
