@@ -61,7 +61,7 @@ nnoremap <Leader>lp :lp<CR>
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 nnoremap <Leader>, :call JustAppend(',')<CR>
 nnoremap <Leader>; :call JustAppend(';')<CR>
-nnoremap <Leader>x :call JustTrimTail()<CR>
+nnoremap <Leader>. :call JustAppend('.')<CR>
 nnoremap <Leader>x :call JustTrimTail()<CR>
 " Yank utils
 nnoremap <Leader>yp :call YankPathToClip()<CR>
@@ -86,6 +86,7 @@ inoremap ` ``<LEFT>
 inoremap <expr>) OmitDuplicateCharacter(")")
 inoremap <expr>} OmitDuplicateCharacter("}")
 inoremap <expr>] OmitDuplicateCharacter("]")
+" Custom input
 inoremap <C-f>{ {
 inoremap <C-f>[ [
 inoremap <C-f>( (

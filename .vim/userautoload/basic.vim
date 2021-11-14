@@ -74,8 +74,9 @@ set shortmess+=c
 set signcolumn=yes
 " rtp related --------------------
 set rtp+=/usr/local/opt/fzf
-" dictionary --------------------
+" language --------------------
 set dictionary+=/usr/share/dict/words
+" set spell spelllang=en_us
 "----------------------------------------
 " Custom auro groups
 "----------------------------------------
