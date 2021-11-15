@@ -15,27 +15,30 @@ nnoremap <expr><C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 inoremap <expr><C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<Right>"
 inoremap <expr><C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<Left>"
 
-" window
+" window operation
 nnoremap <Leader>wb :sp<CR>
 nnoremap <Leader>wv :vsp<CR>
+nnoremap <Leader>wm :new<CR>
 nnoremap <Leader>wn :vnew<CR>
 nnoremap <Leader>wN :call SplitWindowRight()<CR>
-nnoremap <Leader>wm :new<CR>
-nnoremap <Leader>wr :e!<CR>
-nnoremap <Leader>w. :e .<CR>
-nnoremap <Leader>ww :w<CR>
-nnoremap <Leader>wW o<ESC>:w<CR>dd:w<CR>
+nnoremap <Leader>wpc :ped %<CR>:wincmd P<CR>
+nnoremap <Leader>wo :on<CR>
 nnoremap <Leader>w- <C-w><Bar><C-w>_
 nnoremap <Leader>w= <C-w>=
+" buffer operation
+nnoremap <Leader>ww :w<CR>
+nnoremap <Leader>wW o<ESC>:w<CR>dd:w<CR>
+" nnoremap <Leader>wnoa :noa w<CR> " this is for writing buffer without autocmd
+nnoremap <Leader>wr :e!<CR>
+nnoremap <Leader>wq :q<CR>
+nnoremap <Leader>wQ :qa<CR>
 nnoremap <Leader>wa gg<S-v><S-g><CR>
 nnoremap <Leader>wl $
 nnoremap <Leader>wh 0
-nnoremap <Leader>wpc :ped %<CR>:wincmd P<CR>
-nnoremap <Leader>wd :exec "e ".fnamemodify(expand('%'), ':h')<CR>
-nnoremap <Leader>wo :on<CR>
-nnoremap <Leader>wq :q<CR>
-nnoremap <Leader>wQ :qa<CR>
 nnoremap <Leader>won :set relativenumber!<CR>
+" window file explorer utils
+nnoremap <Leader>wd :exec "e ".fnamemodify(expand('%'), ':h')<CR>
+nnoremap <Leader>w. :e .<CR>
 " tab
 nnoremap <Leader>tn :tabn<CR>
 nnoremap <Leader>tp :tabp<CR>
@@ -177,6 +180,10 @@ nnoremap <Leader>gicu :CocCommand git.chunkUndo<CR>
 nnoremap <Leader>gics :CocCommand git.chunkStage<CR>
 nmap <Leader>gicn <Plug>(coc-git-nextchunk)
 nmap <Leader>gicp <Plug>(coc-git-prevchunk)
+nnoremap <Leader>gicons :call GitConflictShow()<CR>
+nnoremap <Leader>giconrf :call GitConflictResolveFst()<CR>
+nnoremap <Leader>giconrs :call GitConflictResolveSnd()<CR>
+nnoremap <Leader>giconk :call GitConflictKeepBoth()<CR>
 nnoremap <Leader>giyu :CocCommand git.copyUrl<CR>
 nnoremap <Leader>giyb :call YankCurrentBranchToClip()<CR>
 " Vim-go ----------------------------------------

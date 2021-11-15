@@ -124,26 +124,41 @@ function! GlobalReplace() abort
 endfunction
 
 " -------------------- git --------------------
+let s:git_keyword_patterns = {
+  \ "conflict_begin": "^<<<<<<< .*$",
+  \ "conflict_separator": "^=======$",
+  \ "conflict_end": "^>>>>>>> .*$",
+  \ }
+
 function! GitConflictResolveFst() abort
-  call SearchTo("<<<<")
+  call SearchTo(s:git_keyword_patterns["conflict_begin"])
   normal! dd
-  call SearchTo("====")
+  call SearchTo(s:git_keyword_patterns["conflict_separator"])
   normal! V
-  call SearchTo(">>>>")
+  call SearchTo(s:git_keyword_patterns["conflict_end"])
   normal! dd
 endfunction
 
 function! GitConflictResolveSnd() abort
-  call SearchTo("<<<<")
+  call SearchTo(s:git_keyword_patterns["conflict_begin"])
   normal! V
-  call SearchTo("====")
+  call SearchTo(s:git_keyword_patterns["conflict_separator"])
   normal! dd
-  call SearchTo(">>>>")
+  call SearchTo(s:git_keyword_patterns["conflict_end"])
+  normal! dd
+endfunction
+
+function! GitConflictKeepBoth() abort
+  call SearchTo(s:git_keyword_patterns["conflict_begin"])
+  normal! dd
+  call SearchTo(s:git_keyword_patterns["conflict_separator"])
+  normal! dd
+  call SearchTo(s:git_keyword_patterns["conflict_end"])
   normal! dd
 endfunction
 
 function! GitConflictShow()
-  call SearchTo("<<<<")
+  call SearchTo(s:git_keyword_patterns["conflict_begin"])
 endfunction
 
 " -------------------- utils --------------------
@@ -180,4 +195,7 @@ endfunction
 function! GetRelativePathToCwd()
   let relative_path = substitute(expand('%'), getcwd() . "/", "", "")
   return relative_path
+
+function! ShowHowConcealOptionsSet()
+  execute "verbose set conceallevel? concealcursor?"
 endfunction
