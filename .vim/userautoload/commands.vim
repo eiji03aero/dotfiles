@@ -195,6 +195,7 @@ endfunction
 function! GetRelativePathToCwd()
   let relative_path = substitute(expand('%'), getcwd() . "/", "", "")
   return relative_path
+endfunction
 
 function! ShowHowConcealOptionsSet()
   execute "verbose set conceallevel? concealcursor?"
