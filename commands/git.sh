@@ -54,6 +54,61 @@ gib-current () {
   echo $(git rev-parse --abbrev-ref HEAD)
 }
 
+gib-delete () {
+  target=${1}
+  inverse=${2}
+  if [ -z "$target" ] && [ -z "$inverse" ]; then
+    cat <<- EOF
+Error gib-delete: not enough arguments.
+Usage:
+  gib-delete [target] [inverse]
+    - target ... used to grep branches whose name include it
+    - inverse ... used to grep branches whoce name does not include it
+
+EOF
+    return 1
+  fi
+
+  whitelist='^(develop|origin|master|main)'
+  branches=$(
+    git branch \
+      | grep -v '\*' \
+      | sed -E 's/ +//' \
+      | grep -v -E "$whitelist"
+  )
+  if [ -n "$target" ]; then
+    branches=$(echo $branches | grep -E "$target")
+  fi
+  if [ -n "$inverse" ]; then
+    branches=$(echo $branches | grep -v -E "$inverse")
+  fi
+  if [ -z "$branches" ]; then
+    echo "Error gib-delete: no branch found"
+    return 1
+  fi
+
+  echo ""
+  echo $branches
+  echo ""
+  echo "Above is the branches to delete. Are you sure?"
+  read 'answer?Input [yes] to proceed > '
+  if [ "$answer" != "yes" ]; then
+    echo "Aborting gib-delete"
+    return 1
+  fi
+
+  git branch -D $(echo $branches | sed 's/\n/ /g')
+}
+
+gib-delete-merged () {
+  whitelist='^(develop|origin|master|main)'
+  git branch --merged \
+    | grep -v '\*' \
+    | sed -E 's/ +//' \
+    | grep -v -E $whitelist \
+    | xargs git branch -D
+}
+
 gips() {
   git push origin $(gib-current)
 }

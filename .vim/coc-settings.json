@@ -12,6 +12,7 @@
   "snippets.userSnippetsDirectory": "~/dotfiles/.vim/coc/snippets",
 
   "prettier.requireConfig": true,
+  "eslint.autoFixOnSave": true,
 
   "angular.trace.server": "verbose",
   "angular.log": "verbose",

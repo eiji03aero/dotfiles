@@ -159,6 +159,7 @@ nnoremap ,r :History<CR>
 nnoremap ,s :GFiles?<CR>
 nnoremap ,d :Directories<CR>
 nnoremap ,l :Commits<CR>
+nnoremap ,b :BCommits<CR>
 nnoremap ,n :call QuickNotesFzf()<CR>
 " any-jump ----------------------------------------
 nnoremap <Leader>jw :AnyJump<CR>
@@ -189,6 +190,9 @@ nnoremap <Leader>giconrs :call GitConflictResolveSnd()<CR>
 nnoremap <Leader>giconk :call GitConflictKeepBoth()<CR>
 nnoremap <Leader>giyu :CocCommand git.copyUrl<CR>
 nnoremap <Leader>giyb :call YankCurrentBranchToClip()<CR>
+nnoremap <Leader>gif :! git fetch -p<CR>
+nnoremap <Leader>girh :! git reset --hard<CR>
+nnoremap <Leader>gir1 :! git reset HEAD~1<CR>
 " Vim-go ----------------------------------------
 nnoremap <Leader>goim :GoImport<Space>
 nnoremap <Leader>goia :GoImportAs<Space>
