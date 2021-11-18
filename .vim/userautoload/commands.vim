@@ -200,3 +200,8 @@ endfunction
 function! ShowHowConcealOptionsSet()
   execute "verbose set conceallevel? concealcursor?"
 endfunction
+
+function! OpenHelpInNewTab()
+  let help_name = input('input name to search for help: ')
+  execute ":tab help " . l:help_name
+endfunction

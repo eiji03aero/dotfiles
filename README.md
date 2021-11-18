@@ -1,6 +1,9 @@
 # dotfiles
 
 # Todo
+- update open help command
+  - it should open help in current buffer if it is empty
+  - else it should open help in new tab, full window
 - update dkc-create-template
   - receive optional arguments
     - one for private/public

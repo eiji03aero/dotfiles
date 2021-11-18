@@ -25,7 +25,7 @@ nnoremap <Leader>wpc :ped %<CR>:wincmd P<CR>
 nnoremap <Leader>wo :on<CR>
 nnoremap <Leader>w- <C-w><Bar><C-w>_
 nnoremap <Leader>w= <C-w>=
-" buffer operation
+"   buffer operation
 nnoremap <Leader>ww :w<CR>
 nnoremap <Leader>wW o<ESC>:w<CR>dd:w<CR>
 " nnoremap <Leader>wnoa :noa w<CR> " this is for writing buffer without autocmd
@@ -36,7 +36,7 @@ nnoremap <Leader>wa gg<S-v><S-g><CR>
 nnoremap <Leader>wl $
 nnoremap <Leader>wh 0
 nnoremap <Leader>won :set relativenumber!<CR>
-" window file explorer utils
+"   window file explorer utils
 nnoremap <Leader>wd :exec "e ".fnamemodify(expand('%'), ':h')<CR>
 nnoremap <Leader>w. :e .<CR>
 " tab
@@ -48,6 +48,8 @@ nnoremap <Leader>ts :tab split<CR>
 nnoremap <Leader>te :tabe<CR>
 nnoremap <Leader>tc :tabc<CR>
 nnoremap <Leader>to :tabo<CR>
+" help
+nnoremap <Leader>ht :call OpenHelpInNewTab()<CR>
 " buffer
 nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bp :bp<CR>
@@ -168,6 +170,7 @@ nnoremap <silent><Leader>ff :Farf<CR>
 vnoremap <silent><Leader>ff :Farf<CR>
 nnoremap <silent><Leader>fr :Farr<CR>
 vnoremap <silent><Leader>fr :Farr<CR>
+vnoremap <silent><Leader>fre :Refar<CR>
 " Git ----------------------------------------
 nnoremap <Leader>gis :Git!<CR>
 nnoremap <Leader>gia :Gwrite<CR>
