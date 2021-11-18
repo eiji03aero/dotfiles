@@ -157,6 +157,7 @@ nnoremap ,r :History<CR>
 nnoremap ,s :GFiles?<CR>
 nnoremap ,d :Directories<CR>
 nnoremap ,l :Commits<CR>
+nnoremap ,b :BCommits<CR>
 nnoremap ,n :call QuickNotesFzf()<CR>
 " any-jump ----------------------------------------
 nnoremap <Leader>jw :AnyJump<CR>
