@@ -1,22 +1,45 @@
 #!/bin/bash
 
-cmd="${1}"
+cmd="${1:-all}"
 
-if [ $cmd = "ranger" ]; then
-  pip3 install ranger-fm
+install-brew () {
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
 
-elif [ $cmd = "xquartz" ]; then
-  brew update
-  brew cask install xquartz
-  sudo launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
+install-git () {
+  brew install git
+}
 
-elif [ $cmd = "ctags" ]; then
-  brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-
-elif [ $cmd = "tmux" ]; then
+install-tmux () {
   brew install tmux
   brew install tmuxinator
+}
 
-elif [ $cmd = "fzf" ]; then
+install-fzf () {
   brew install fzf
+}
+
+install-ranger () {
+  pip3 install ranger-fm
+}
+
+install-universal-ctags () {
+  brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+}
+
+install-xquartz () {
+  brew cask install xquartz
+  sudo launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
+}
+
+if [ $cmd = "all" ]; then
+  "in"
+  install-brew
+
+  install-git
+  install-tmux
+  install-fzf
+  install-ranger
+  install-universal-ctags
+  install-xquartz
 fi

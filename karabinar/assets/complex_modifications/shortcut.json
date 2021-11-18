@@ -1,0 +1,39 @@
+{
+  "title": "Shortcut",
+  "rules": [
+    {
+      "description": "select En profile",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "japanese_eisuu",
+            "modifiers": { "mandatory": [ "left_shift", "left_control" ] }
+          },
+          "to": [
+            {
+              "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'En profile'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "select Ja profile",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "japanese_kana",
+            "modifiers": { "mandatory": [ "left_shift", "left_control" ] }
+          },
+          "to": [
+            {
+              "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'Ja profile'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

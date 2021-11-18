@@ -1,0 +1,58 @@
+{
+  "title": "Cursor delete",
+  "rules": [
+    {
+      "description": "delete one",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": { "mandatory": [ "left_control" ] }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "delete one word",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": { "mandatory": [ "left_control", "left_option" ] }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [ "left_option" ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "delete to left most",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": { "mandatory": [ "left_control", "left_command" ] }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [ "left_command" ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

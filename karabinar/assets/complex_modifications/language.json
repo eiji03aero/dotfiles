@@ -1,0 +1,39 @@
+{
+  "title": "Language",
+  "rules": [
+    {
+      "description": "eisuu key",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "up_arrow",
+            "modifiers": { "mandatory": [ "left_command", "left_shift", "left_option", "left_control" ] }
+          },
+          "to": [
+            {
+              "key_code": "japanese_eisuu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "kana key",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "down_arrow",
+            "modifiers": { "mandatory": [ "left_command", "left_shift", "left_option", "left_control" ] }
+          },
+          "to": [
+            {
+              "key_code": "japanese_kana"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
