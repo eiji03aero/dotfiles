@@ -1,18 +1,11 @@
-#!/bin/bash
+#!/bin/zsh
 
+source ~/dotfiles/commands/utils.sh
 source ~/dotfiles/commands/git.sh
 source ~/dotfiles/commands/docker.sh
 source ~/dotfiles/commands/bridge.sh
 
 ct () { ctags -R ; }
-
-mkdircd () { mkdir -p "$@" && cd "$_"; }
-
-psgrep () { ps aux | grep "$1"; }
-
-psgrep_kill () { psgrep $1 | awk '{print $2}' | xargs kill -9; }
-
-curl-head ()  { curl -D - -s -o /dev/null $1; }
 
 count-files () { find . | wc -l; }
 
@@ -23,51 +16,6 @@ poll-file-count () {
 
 fmt-concat-bars () {
   echo "$@" | sed -e "s/[.*;:'\"\`]//g" -e "s/[][(), ]/-/g";
-}
-
-fd() {
-  local dir
-  dir=$(find ${1:-.} -type d -print 2> /dev/null | fzf +m) &&
-  cd "$dir"
-}
-
-urlencode () {
-  echo "$1" | nkf -WwMQ | sed 's/=$//g' | tr = % | tr -d '\n'
-}
-
-await-nc () {
-  host="${1}"
-  port="${2}"
-  while ! nc -z $host $port; do
-    echo waiting for $host:$port ...
-    sleep 3s
-  done
-  echo done waiting $host:$port
-}
-
-await-curl () {
-  host="${1}"
-  port="${2}"
-  while ! curl -sf -o /dev/null $host:$port; do
-    echo waiting for $host:$port ...
-    sleep 3s
-  done
-  echo done waiting $host:$port
-}
-
-await-docker-container-cpu () {
-  container_name=$1
-
-  while [ $(docker stats --no-stream \
-    | grep $container_name \
-    | awk '{print $3}' \
-    | sed 's/%//g' \
-    | sed 's/^/0.10 > /' \
-    | bc) = 1 ]; do
-    echo "waiting for docker container $container_name to be stable ..."
-    sleep 1s
-  done
-  echo "done waiting for docker container $container_name"
 }
 
 # -------------------- vim --------------------
@@ -90,7 +38,7 @@ create-template-cpp () {
 }
 
 # -------------------- ngrok --------------------
-ngrok_init () {
+ngrok-init () {
   if [ $# -ne 2 ]; then
     cat <<- EOF
     ngrok_init: error

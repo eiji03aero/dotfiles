@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 bridge-is-zsh () {
   if [ $(echo "$ZSH_EVAL_CONTEXT" | grep -e 'toplevel') ]; then

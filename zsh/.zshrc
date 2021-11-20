@@ -12,8 +12,11 @@ fi
 
 # Customize to your needs...
 
-source ${HOME}/.bashrc
-source ${HOME}/dotfiles/commands/index.sh
+source ~/.bashrc
+source ~/dotfiles/commands/index.sh
+source $(brew --prefix)/opt/git/etc/bash_completion.d/git-prompt.sh
+
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 
 setopt prompt_subst
 setopt clobber

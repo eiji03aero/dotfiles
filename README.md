@@ -1,6 +1,24 @@
 # dotfiles
 
+# Installation (and initial setup for machine)
+- Install applications
+  - Chrome
+  - Alfred
+  - Karabinar elements
+  - Iterm
+  - Docker(and rosetta for m1 chip)
+- Clone this repository and run initialization script.
+  - Update the init script to add necessary configuration
+
+```sh
+cd ~
+git clone https://github.com/eiji03aero/dotfiles.git
+~/dotfiles/bin/init-macos.sh
+```
+
 # Todo
+- update install-lib.sh to install vim from brew
+- update init script to add git completion stuff to profile file
 - update open help command
   - it should open help in current buffer if it is empty
   - else it should open help in new tab, full window
@@ -15,6 +33,7 @@
       - should have good usage of it. learn it!
 - migrate to karabinar-elements from btt
   - some keyboard shortcuts to support
+
     - move window to other display
     - maximize window
     - fullscreen window
@@ -22,13 +41,8 @@
   - do research on how it should really be used
   - take care about init script
 
-# Usage
-- install
+# Scribbles
+- set brew zsh as login shell
 ```sh
-$ cd $HOME
-$ git clone git@github.com:eiji03aero/dotfiles.git
-
-# initial full install
-$ cd ./dotfiles
-$ ./bin/init.sh
+sudo dscl . -create /Users/eijiosakabe UserShell /usr/local/bin/zsh
 ```

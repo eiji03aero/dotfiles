@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/zsh
+
+source ~/dotfiles/commands/utils.sh
 
 cmd="${1:-all}"
 
@@ -8,6 +10,12 @@ install-brew () {
 
 install-git () {
   brew install git
+  curl -o ~/.zsh/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+  curl -o ~/.zsh/_git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
+}
+
+install-languages () {
+  brew install node
 }
 
 install-tmux () {
@@ -16,6 +24,10 @@ install-tmux () {
 }
 
 install-fzf () {
+  brew install fzf
+}
+
+install-ag () {
   brew install fzf
 }
 
@@ -32,14 +44,26 @@ install-xquartz () {
   sudo launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
 }
 
+echo install-lib.sh: Starting
+
 if [ $cmd = "all" ]; then
-  "in"
+  cat <<-EOF
+install-lib.sh:
+  Installing all the goodies ...
+
+$(cat ~/dotfiles/aa/text/install-lib-sh.txt)
+
+EOF
+
   install-brew
 
   install-git
+  install-languages
   install-tmux
   install-fzf
   install-ranger
   install-universal-ctags
   install-xquartz
+
+  echo "install-lib.sh: Completed installation!"
 fi

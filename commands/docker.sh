@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 dkc-stop () {
   name="${1:-}"
