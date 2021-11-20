@@ -36,4 +36,5 @@ endif
 runtime! userautoload/*vim
 runtime! userautoload/plugins/*vim
 
-set rtp+=/usr/local/opt/fzf
+" set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf

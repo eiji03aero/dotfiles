@@ -6,7 +6,12 @@
   - Alfred
   - Karabinar elements
   - Iterm
-  - Docker(and rosetta for m1 chip)
+  - Docker (and rosetta for m1 chip)
+  - CopyClip2
+    - Make sure to enable Advanced > Paste directly
+  - bettersnaptool
+  - wally
+  - vim (should replace the system one with homebrew-ed one)
 - Clone this repository and run initialization script.
   - Update the init script to add necessary configuration
 
@@ -17,8 +22,6 @@ git clone https://github.com/eiji03aero/dotfiles.git
 ```
 
 # Todo
-- update install-lib.sh to install vim from brew
-- update init script to add git completion stuff to profile file
 - update open help command
   - it should open help in current buffer if it is empty
   - else it should open help in new tab, full window
