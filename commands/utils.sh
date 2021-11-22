@@ -54,9 +54,9 @@ exit-shell () {
 func-name() {
   idx=${1:-1}
   shell=$(current-shell)
-  if [[ $shell == 'bash' ]]; then
+  if [[ $shell =~ 'bash' ]]; then
     echo ${FUNCNAME[$idx]}
-  elif [[ $shell == 'zsh' ]]; then
+  elif [[ $shell =~ 'zsh' ]]; then
     echo $funcstack[$((idx+1))]
   else
     log-func-error "not supported shell: $shell"

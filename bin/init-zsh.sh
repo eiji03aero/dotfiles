@@ -1,6 +1,13 @@
 #!/bin/sh
 
-echo "init-zsh.sh: Starting initialization of zsh ..."
+cat <<-EOF
+
+init-zsh.sh:
+  Starting initialization of zsh ...
+
+$(cat ~/dotfiles/aa/text/init-zsh-sh.txt)
+
+EOF
 
 touch ~/dotfiles/zsh/.zprofile.local
 
@@ -13,4 +20,10 @@ ln -sf ~/dotfiles/zsh/.zpreztorc ~/.zpreztorc
 ln -sf ~/dotfiles/zsh/.zshenv ~/.zshenv
 ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
 
-echo "init-zsh.sh: Completed initialization!"
+
+cat <<-EOF
+
+init-zsh.sh:
+  Completed initialization!
+
+EOF

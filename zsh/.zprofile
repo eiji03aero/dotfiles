@@ -72,7 +72,7 @@ fi
 #
 # fzf
 #
-export FZF_DEFAULT_COMMAND='ag -l --hidden -g ""'
+export FZF_DEFAULT_COMMAND='ag -l --hidden'
 
 #
 # X11

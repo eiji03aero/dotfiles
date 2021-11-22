@@ -6,7 +6,7 @@ cat <<-EOF
 init-unix.sh:
   Starting initialization for unix system ...
 
-$(cat ~/dotfiles/text/init-unix-sh.txt)
+$(cat ~/dotfiles/aa/text/init-unix-sh.txt)
 
 EOF
 
