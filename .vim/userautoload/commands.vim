@@ -124,6 +124,13 @@ function! GlobalReplace() abort
 endfunction
 
 " -------------------- git --------------------
+
+function! GitEditInteractive()
+  " retrieve branch name through fzf
+  " retrieve file name through fzf
+  " :Gedit feature/refactoring/project_list_page:react/deneb/src/views/ProjectList/components/Search.tsx
+endfunction
+
 let s:git_keyword_patterns = {
   \ "conflict_begin": "^<<<<<<< .*$",
   \ "conflict_separator": "^=======$",
