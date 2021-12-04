@@ -4,6 +4,7 @@
 - Install applications
   - Chrome
   - Alfred
+    - Make sure to update permission to full extent
   - Karabinar elements
   - Iterm
   - Docker (and rosetta for m1 chip)
