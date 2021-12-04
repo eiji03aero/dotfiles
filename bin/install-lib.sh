@@ -18,6 +18,10 @@ install-languages () {
   brew install node
 }
 
+install-vim () {
+  brew install vim
+}
+
 install-tmux () {
   brew install tmux
   brew install tmuxinator
@@ -59,6 +63,7 @@ EOF
 
   install-git
   install-languages
+  install-vim
   install-tmux
   install-fzf
   install-ranger
