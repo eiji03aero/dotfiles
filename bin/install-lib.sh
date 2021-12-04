@@ -10,6 +10,7 @@ install-brew () {
 
 install-git () {
   brew install git
+  ensure-directory-existence $HOME/.zsh
   curl -o ~/.zsh/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
   curl -o ~/.zsh/_git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
 }
@@ -48,16 +49,15 @@ install-xquartz () {
   sudo launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
 }
 
-echo install-lib.sh: Starting
-
-if [ $cmd = "all" ]; then
-  cat <<-EOF
-install-lib.sh:
-  Installing all the goodies ...
+cat <<-EOF
+install-lib.sh: install-lib.sh: Starting ...
 
 $(cat ~/dotfiles/aa/text/install-lib-sh.txt)
 
 EOF
+
+if [ $cmd = "all" ]; then
+  echo install-lib.sh: Installing all the goodies ...
 
   install-brew
 
@@ -71,4 +71,8 @@ EOF
   install-xquartz
 
   echo "install-lib.sh: Completed installation!"
+
+elif [ $cmd = "git" ]; then
+  echo install-lib.sh: Installing git ...
+  install-git
 fi
