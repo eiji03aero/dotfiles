@@ -19,13 +19,9 @@ tell application "System Events"
 			delay 0.6
 		end tell
 	end tell
-	tell window "Keyboard Setup Assistant" of process "Keyboard Setup Assistant"
-		click button "Continue"
-		repeat 3 times
-			tell application "System Events" to keystroke "return" using command down
-			delay 0.6
-		end repeat
-	end tell
 end tell
 
-tell application "System Preferences" to quit
+tell application "System Preferences"
+	activate
+	set current pane to pane "com.apple.preference.keyboard"
+end tell
