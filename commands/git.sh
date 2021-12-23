@@ -37,9 +37,7 @@ gipl-f() {
 }
 
 gipl-r() {
-  b="$1"
-  git fetch origin $b
-  git checkout origin $b
+  git pull --rebase origin $(gib-current)
 }
 
 gir () {

@@ -32,9 +32,9 @@ hi LineNr       ctermfg = 240 ctermbg = none
 hi CursorLineNr ctermfg = 214 ctermbg = none
 
 " Git --------------------
-hi DiffAdd    cterm=NONE ctermbg=237
+hi DiffAdd    cterm=NONE ctermbg=238
 hi DiffChange cterm=NONE ctermbg=16
-hi DiffText   cterm=NONE ctermbg=237
+hi DiffText   cterm=NONE ctermbg=238
 hi DiffDelete cterm=NONE ctermbg=52
 
 " Syntax --------------------
