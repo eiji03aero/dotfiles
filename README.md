@@ -24,7 +24,6 @@
       - should have good usage of it. learn it!
 - [ ] migrate to karabinar-elements from btt
   - some keyboard shortcuts to support
-
     - move window to other display
     - maximize window
     - fullscreen window
@@ -50,6 +49,9 @@
   - Docker (and rosetta for m1 chip)
   - vim (should replace the system one with homebrew-ed one)
 - Clone repo and run initialization script
+
+## Macos setup tips
+- []
 
 ```sh
 cd ~
