@@ -234,6 +234,6 @@ nnoremap <Leader>dj :Dart2Js<CR>
 " QuickNotes ----------------------------------------
 nnoremap <Leader>qnn :call QuickNotesNew()<CR>
 nnoremap <Leader>qnd :call QuickNotesNewDiary()<CR>
-nnoremap <Leader>qngb :call CreateGitBranchNote()<CR>
+nnoremap <Leader>qngb :call QuickNotesNewGitBranch()<CR>
 nnoremap <Leader>qnln :call QuickNodesLs()<CR>
 nnoremap <Leader>qnld :call QuickNotesLsDiary()<CR>
