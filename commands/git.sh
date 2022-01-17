@@ -18,6 +18,18 @@ gicb () {
   git checkout -b $(fmt-concat-bars $@)
 }
 
+gic-remote () {
+  local remote_name=${1:-origin}
+
+  git fetch -p
+
+  local branch=$(git branch -r \
+    | sed "s@^[ \t]*$remote_name/@@" \
+    | fzf +m)
+
+  git checkout $branch
+}
+
 gim () {
   if [ $# -eq 0 ]; then
     branches=$(git branch -vv) &&
