@@ -179,6 +179,7 @@ nnoremap <Leader>gir :Gread<CR>
 nnoremap <Leader>gic :Gcommit<CR>
 nnoremap <Leader>gib :Git blame<CR>
 nnoremap <Leader>gid :Gdiff<CR>
+" nnoremap <Leader>gid :Gdiff develop
 nnoremap <Leader>gil :%Gclog<CR>
 nnoremap <Leader>gicu :CocCommand git.chunkUndo<CR>
 nnoremap <Leader>gics :CocCommand git.chunkStage<CR>
