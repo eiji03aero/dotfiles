@@ -147,6 +147,8 @@ git_remote_url () {
 
   if [[ $url =~ "^git@github.com" ]]; then
     url=$(echo $url | sed -E 's|^git@github.com:(.*).git$|https://github.com/\1|')
+  elif [[ $url =~ "^git@gitlab.com" ]]; then
+    url=$(echo $url | sed -E 's|^.*gitlab.com:([^.]*)\.git.*$|https://gitlab.com/\1|')
   elif [[ $url =~ "^https://" ]]; then
     url=$(echo $url | sed -E 's|^(.*).git$|\1|')
   fi
@@ -156,15 +158,23 @@ git_remote_url () {
 }
 
 giopen () {
-  remote_url="$(git_remote_url)"
   command=${1}
+  remote_url="$(git_remote_url)"
 
   [ ! "$remote_url" ] && return 1;
 
-  if [ "$command" = 'new' ]; then
-    open $remote_url/pull/new/$(gib-current)
-  elif [ "$command" = 'pr' ]; then
-    open $remote_url/pull/$(gib-current)
+  # For github
+  if [[ $remote_url =~ "github.com" ]]; then
+    if [ "$command" = 'new' ]; then
+      open $remote_url/pull/new/$(gib-current)
+    elif [ "$command" = 'pr' ]; then
+      open $remote_url/pull/$(gib-current)
+    fi
+  # For gitlab
+  elif [[ $remote_url =~ "gitlab.com" ]]; then
+    params="merge_request%5Bsource_branch%5D=$(urlencode $(gib-current))"
+    # open "$remote_url/-/merge_requests/new?$params"
+    echo "$remote_url/-/merge_requests/new?$params"
   else
     open $remote_url
   fi
