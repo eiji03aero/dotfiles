@@ -173,8 +173,7 @@ giopen () {
   # For gitlab
   elif [[ $remote_url =~ "gitlab.com" ]]; then
     params="merge_request%5Bsource_branch%5D=$(urlencode $(gib-current))"
-    # open "$remote_url/-/merge_requests/new?$params"
-    echo "$remote_url/-/merge_requests/new?$params"
+    open "$remote_url/-/merge_requests/new?$params"
   else
     open $remote_url
   fi
