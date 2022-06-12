@@ -5,7 +5,7 @@ services:
     # image: node:16.6.1-buster
     # volumes:
     #   - .:/app
-    # image: golang:1.16.2-buster
+    # image: golang:1.18.3-bullseye
     # volumes:
     #   - .:/app
     working_dir: /app
