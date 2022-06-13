@@ -45,7 +45,8 @@ gipl() {
 }
 
 gipl-f() {
-  git pull --force origin $(gib-current)
+  gif
+  git reset --hard origin/$(gib-current)
 }
 
 gipl-r() {
