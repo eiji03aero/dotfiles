@@ -61,7 +61,16 @@ repo = 'majutsushi/tagbar'
 
 # ==================== File explorer ====================
 [[plugins]]
-repo = 'scrooloose/nerdtree'
+repo = 'lambdalisue/fern.vim'
+
+[[plugins]]
+repo = 'yuki-yano/fern-preview.vim'
+
+[[plugins]]
+repo = 'lambdalisue/fern-git-status.vim'
+
+[[plugins]]
+repo = 'lambdalisue/fern-hijack.vim'
 
 [[plugins]]
 repo = 'francoiscabrol/ranger.vim'

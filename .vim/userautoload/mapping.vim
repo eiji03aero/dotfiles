@@ -209,14 +209,8 @@ nnoremap <Leader>godi :GoDiagnostics<CR>
 " " Vim-splash ----------------------------------------
 " nnoremap <Leader>vsi :Splash ~/.vim/splash/vim_intro.txt<CR>
 " nnoremap <Leader>vsc :Splash ~/.vim/splash/conciergeu_logo.txt<CR>
-" NERD-tree ----------------------------------------
-nnoremap <C-n>t :NERDTreeToggle<CR>
-nnoremap <C-n>g :NERDTreeFocus<CR>
-nnoremap <C-n>f :NERDTreeFind<CR>
-nnoremap <C-n>F :NERDTreeFind<Space>
-nnoremap <C-n>c :NERDTreeCWD<Space>
-nnoremap <C-n>b :NERDTreeFromBookmark<Space>
-nnoremap <C-n>m :NERDTreeMirror<CR>
+" filer ----------------------------------------
+nnoremap <C-n>t :Fern . -drawer -width=50<CR>
 nnoremap <C-n>g :Twiggy<CR>
 " ranger ----------------------------------------
 nnoremap <C-n>r :Ranger<CR>
