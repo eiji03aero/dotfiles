@@ -1024,7 +1024,7 @@
             "selected": true,
             "simple_modifications": [],
             "virtual_hid_keyboard": {
-                "country_code": 44,
+                "country_code": 1,
                 "indicate_sticky_modifier_keys_state": true,
                 "mouse_key_xy_scale": 100
             }

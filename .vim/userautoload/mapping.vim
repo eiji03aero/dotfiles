@@ -210,7 +210,7 @@ nnoremap <Leader>godi :GoDiagnostics<CR>
 " nnoremap <Leader>vsi :Splash ~/.vim/splash/vim_intro.txt<CR>
 " nnoremap <Leader>vsc :Splash ~/.vim/splash/conciergeu_logo.txt<CR>
 " filer ----------------------------------------
-nnoremap <C-n>t :Fern . -drawer -width=50<CR>
+nnoremap <C-n>t :Fern . -drawer -toggle -width=50<CR>
 nnoremap <C-n>g :Twiggy<CR>
 " ranger ----------------------------------------
 nnoremap <C-n>r :Ranger<CR>
