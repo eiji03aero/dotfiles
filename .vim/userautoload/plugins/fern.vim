@@ -4,11 +4,13 @@ function! s:fern_settings() abort
   nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
   nmap <silent> <buffer> s     <Plug>(fern-action-open:side)
   nmap <silent> <buffer> r     <Plug>(fern-action-reload)
+  nmap <silent> <buffer> u     <Space>wd<CR>
   nmap <silent> <buffer> ma     <Plug>(fern-action-new-path)
   nmap <silent> <buffer> mm     <Plug>(fern-action-move)
   nmap <silent> <buffer> md     <Plug>(fern-action-remove)
   unmap <silent> <buffer> N
   unmap <silent> <buffer> K
+  unmap <silent> <buffer> e
 
   " nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)
   " nmap <silent> <buffer> <C-d> <Plug>(fern-action-preview:scroll:down:half)
