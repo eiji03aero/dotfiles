@@ -20,8 +20,3 @@ tell application "System Events"
 		end tell
 	end tell
 end tell
-
-tell application "System Preferences"
-	activate
-	set current pane to pane "com.apple.preference.keyboard"
-end tell
