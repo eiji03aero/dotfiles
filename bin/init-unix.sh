@@ -14,7 +14,6 @@ ensure-file-existence ~/dotfiles/.bash_profile.local
 ensure-directory-existence ~/.config
 ensure-directory-existence ~/.zsh
 
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.bash_profile ~/.bash_profile

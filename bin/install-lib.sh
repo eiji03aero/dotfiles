@@ -16,7 +16,14 @@ install-git () {
 }
 
 install-languages () {
+  # node
   brew install node
+
+  # rust
+  # brew install rustup
+  # # required by coc-rls
+  # rustup-init
+  # rustup component add rls rust-analysis rust-src
 }
 
 install-vim () {

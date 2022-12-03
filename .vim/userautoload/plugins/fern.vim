@@ -53,6 +53,7 @@ call s:fernHighlight('ts',         '208',          'none')
 call s:fernHighlight('tsx',        '208',          'none')
 call s:fernHighlight('json',       '208',          'none')
 call s:fernHighlight('css',        '208',          'none')
+call s:fernHighlight('rs',         '208',          'none')
 
 call s:fernHighlight('html',       'white',        'none')
 

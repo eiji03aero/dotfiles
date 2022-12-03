@@ -3,7 +3,8 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "go",
     "javascript", "javascriptreact",
-    "typescript", "typescriptreact"
+    "typescript", "typescriptreact",
+    "rust"
   ],
 
   "codeLens.enable": true,

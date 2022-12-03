@@ -15,6 +15,7 @@ let g:coc_global_extensions = [
  \ 'coc-cmake',
  \ 'coc-go',
  \ 'coc-omnisharp',
+ \ 'coc-rust-analyzer',
  \ ]
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
