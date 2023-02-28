@@ -28,7 +28,7 @@ hi StatusLineNC ctermfg = 250      ctermbg = 232
 " Buffer columns --------------------
 hi VertSplit    ctermbg = 233      ctermfg = 233 cterm = NONE
 hi SignColumn   ctermbg = none
-hi LineNr       ctermfg = 240 ctermbg = none
+hi LineNr       ctermfg = 241 ctermbg = none
 hi CursorLineNr ctermfg = 214 ctermbg = none
 
 " Git --------------------

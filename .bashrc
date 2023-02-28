@@ -43,4 +43,3 @@ alias cd-mash='cd ~/projects/mash'
 alias cd-mskit='cd ~/projects/mskit'
 
 alias curl-json='curl -H "Content-Type: application/json" -H "Accept: application/json"'
-. "$HOME/.cargo/env"

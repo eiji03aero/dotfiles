@@ -15,4 +15,3 @@ export LC_ALL=en_US.UTF-8
 stty stop undef # to enable history back on [reverse-i-search]
 
 remove_duplicate_export_path
-. "$HOME/.cargo/env"
