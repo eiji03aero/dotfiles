@@ -10,7 +10,7 @@ let g:lightline = {
   \   'fileencoding': 'LightlineFileencoding',
   \   'fileformat': 'LightlineFileformat',
   \   'filename': 'LightlineFilename',
-  \   'gitbranch': 'fugitive#head',
+  \   'gitbranch': 'FugitiveHead',
   \ },
   \ 'active': {
   \   'left': [
