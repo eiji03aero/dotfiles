@@ -7,6 +7,7 @@ function! s:fern_settings() abort
   nmap <silent> <buffer> u     <Space>wd<CR>
   nmap <silent> <buffer> ma     <Plug>(fern-action-new-path)
   nmap <silent> <buffer> mm     <Plug>(fern-action-move)
+  nmap <silent> <buffer> mc     <Plug>(fern-action-copy)
   nmap <silent> <buffer> md     <Plug>(fern-action-remove)
   unmap <silent> <buffer> N
   unmap <silent> <buffer> K

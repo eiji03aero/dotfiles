@@ -21,5 +21,7 @@
 
   "go.goplsOptions.gofumpt": true,
 
+  "rust-analyzer.lens.run.enable": false,
+
   "solargraph.useBundler": true
 }

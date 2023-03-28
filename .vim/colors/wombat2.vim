@@ -53,4 +53,6 @@ hi Tab  ctermfg = 9
 
 " coc --------------------
 " :h coc-highlights
+hi CocMenuSel ctermbg = 236
 hi CocUnusedHighlight ctermfg = 243
+hi CocInlayHint ctermfg = 248
