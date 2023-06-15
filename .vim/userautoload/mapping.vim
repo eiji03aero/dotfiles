@@ -139,6 +139,7 @@ inoremap <expr> <TAB>
      \ pumvisible() ? "\<C-n>" :
      \ CheckBackSpace() ? "\<TAB>" :
      \ coc#refresh()
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 vnoremap ,cc  :CocCommand<CR>
 nmap gd <Plug>(coc-definition)
