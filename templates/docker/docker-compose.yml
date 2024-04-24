@@ -2,10 +2,10 @@ version: '3.8'
 
 services:
   # workspace:
-    # image: node:16.6.1-buster
+    # image: node:20.12.0-bookworm
     # volumes:
     #   - .:/app
-    # image: golang:1.18.3-bullseye
+    # image: golang:1.22.2-bookworm
     # volumes:
     #   - .:/app
     working_dir: /app

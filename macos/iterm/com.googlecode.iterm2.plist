@@ -4,6 +4,8 @@
 <dict>
 	<key>AllowClipboardAccess</key>
 	<true/>
+	<key>Command</key>
+	<string></string>
 	<key>Default Bookmark Guid</key>
 	<string>A53F10E2-B613-4E5C-B3F6-705EAD7DDEEA</string>
 	<key>DimBackgroundWindows</key>
@@ -362,9 +364,11 @@
 				<real>0.094117647058823528</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/eijiosakabe/Documents/pics/houkai/2021083115184558458.png</string>
+			<string>/Users/eijiosakabe/Desktop/images/nikke/wallpaperflare.com_wallpaper.jpg</string>
+			<key>Background Image Mode</key>
+			<integer>3</integer>
 			<key>Blend</key>
-			<real>0.054848102072010733</real>
+			<real>0.099999999999999992</real>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
@@ -391,7 +395,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/bin/zsh</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Color</key>
@@ -1785,6 +1789,10 @@
 	</dict>
 	<key>Print In Black And White</key>
 	<true/>
+	<key>PromptOnQuitEvenIfThereAreNoWindows</key>
+	<true/>
+	<key>QuitWhenAllWindowsClosed</key>
+	<false/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>

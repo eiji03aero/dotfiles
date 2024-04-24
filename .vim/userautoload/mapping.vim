@@ -77,7 +77,7 @@ nnoremap <Leader>pi' vi'p
 nnoremap <Leader>prc :echo expand('%:p')<CR>
 nnoremap <Leader>prgb :echo fugitive#head()<CR>
 " Insert mode ----------------------------------------
-inoremap <C-C> <ESC>
+inoremap <C-x><C-x> <C-o>:call popup_clear()<CR>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>

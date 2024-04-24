@@ -3,7 +3,7 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "go",
     "javascript", "javascriptreact",
-    "typescript", "typescriptreact",
+    "typescript", "typescriptreact", "typescript.tsx",
     "rust"
   ],
 
