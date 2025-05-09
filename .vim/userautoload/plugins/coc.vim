@@ -6,7 +6,6 @@ let g:coc_global_extensions = [
  \ 'coc-eslint',
  \ 'coc-prettier',
  \ 'coc-styled-components',
- \ 'coc-json',
  \ 'coc-css',
  \ 'coc-html',
  \ 'coc-phpls',
@@ -16,6 +15,7 @@ let g:coc_global_extensions = [
  \ 'coc-go',
  \ 'coc-omnisharp',
  \ 'coc-rust-analyzer',
+ \ 'coc-flutter',
  \ ]
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}

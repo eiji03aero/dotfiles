@@ -13,7 +13,8 @@
   "snippets.userSnippetsDirectory": "~/dotfiles/.vim/coc/snippets",
 
   "prettier.requireConfig": true,
-  "eslint.autoFixOnSave": true,
+  "eslint.autoFixOnSave": false,
+  "eslint.nodePath": "/opt/homebrew/Cellar/node@18/18.20.2/bin/node",
 
   "angular.trace.server": "verbose",
   "angular.log": "verbose",
@@ -22,6 +23,9 @@
   "go.goplsOptions.gofumpt": true,
 
   "rust-analyzer.lens.enable": false,
+
+  "flutter.lsp.initialization.closingLabels": true,
+  "flutter.provider.hot-reload": true,
 
   "solargraph.useBundler": true
 }

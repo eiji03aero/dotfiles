@@ -50,6 +50,7 @@ hi Statement  ctermfg = 11
 hi Type       ctermfg = 33
 hi Structure  ctermfg = 33
 hi Tab  ctermfg = 9
+hi typescriptMember ctermfg = 11
 
 " coc --------------------
 " :h coc-highlights

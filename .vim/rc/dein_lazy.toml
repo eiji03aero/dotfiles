@@ -1,11 +1,7 @@
 # ==================== javascript ====================
-[[plugins]]
-repo = 'othree/yajs.vim'
-on_ft = ['javascript', 'typescript', 'html', 'vue']
-
-[[plugins]]
-repo = 'othree/es.next.syntax.vim'
-on_ft = ['javascript', 'typescript', 'vue']
+# [[plugins]]
+# repo = 'pangloss/vim-javascript'
+# on_ft = ['javascript', 'typescript', 'vue']
 
 [[plugins]]
 repo = 'maxmellon/vim-jsx-pretty'
@@ -14,10 +10,6 @@ on_ft = ['javascript', 'typescript']
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'
 on_ft = ['coffee']
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-on_ft = ['typescript']
 
 [[plugins]]
 repo = 'jparise/vim-graphql'
@@ -44,9 +36,9 @@ on_ft = ['javascript', 'typescript', 'css', 'scss', 'json', 'graphql', 'markdown
 repo = 'dart-lang/dart-vim-plugin'
 on_ft = ['dart']
 
-[[plugins]]
-repo = 'reisub0/hot-reload.vim' # hot-reload for flutter
-on_ft = ['dart']
+# [[plugins]]
+# repo = 'reisub0/hot-reload.vim' # hot-reload for flutter
+# on_ft = ['dart']
 
 # ==================== html ====================
 [[plugins]]
@@ -117,10 +109,6 @@ on_ft = ['sql']
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
-
-[[plugins]]
-repo = 'elzr/vim-json'
-on_ft = ['json']
 
 [[plugins]]
 repo = 'uarun/vim-protobuf'

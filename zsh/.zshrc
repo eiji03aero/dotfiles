@@ -16,6 +16,9 @@ source ~/.bashrc
 source ~/dotfiles/commands/index.sh
 source $(brew --prefix)/opt/git/etc/bash_completion.d/git-prompt.sh
 
+# Need this for roo cline
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 
 setopt prompt_subst
