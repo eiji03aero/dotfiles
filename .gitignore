@@ -1,6 +1,7 @@
 *.local
 
-.vim/dein/
+.vim/autoload/plug.vim
+.vim/plugged/
 .netrwhist
 karabiner/automatic_backups/*
 logs

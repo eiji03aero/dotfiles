@@ -11,7 +11,7 @@ hi Search          ctermfg = black  ctermbg = yellow
 hi SpecialKey      ctermfg = 236
 hi SpellRare       ctermfg = 255    ctermbg = 9
 hi SpellBad        ctermfg = 255    ctermbg = 9
-hi Terminal        ctermbg = black  ctermfg = white
+hi Terminal        ctermbg = 232  ctermfg = 255
 hi Title           ctermfg = red
 hi Visual          ctermbg = 240    cterm=NONE
 hi ExtraWhitespace ctermbg = 244

@@ -1,9 +1,0 @@
-# ==================== deoplete ====================
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-rev = 'release'
-merged = 0
-
-[[plugins]]
-# repo = 'pechorin/any-jump.vim'
-repo = 'eiji03aero/any-jump.vim'

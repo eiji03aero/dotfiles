@@ -232,3 +232,8 @@ nnoremap <Leader>qnd :call QuickNotesNewDiary()<CR>
 nnoremap <Leader>qngb :call QuickNotesNewGitBranch()<CR>
 nnoremap <Leader>qnln :call QuickNodesLs()<CR>
 nnoremap <Leader>qnld :call QuickNotesLsDiary()<CR>
+" claudecode ----------------------------------------
+nnoremap <Leader>ccs :ClaudeCode<CR>
+nnoremap <Leader>ccq :ClaudeCodeQuit<CR>
+nnoremap <Leader>cc@ :call ClaudeCodeSendBuffer()<CR>
+vnoremap <Leader>cc@ :call ClaudeCodeSendSelection()<CR>

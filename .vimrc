@@ -1,40 +1,82 @@
 set nocompatible
 
-let s:dein_dir = expand('~/.cache/dein')
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-
-if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-  endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+" -------------------- Plugins --------------------
+if !filereadable(expand('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
+call plug#begin()
 
-  call dein#load_toml(expand('~/.vim/rc/dein.toml'),      {'lazy': 0})
-  call dein#load_toml(expand('~/.vim/rc/dein_lazy.toml'), {'lazy': 1})
+Plug '/Users/eijiosakabe/Projects/claudecode.vim', { 'do': 'cd mcp-server && npm install' }
+Plug 'honza/vim-snippets'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'sodapopcan/vim-twiggy'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'mattn/emmet-vim'
+Plug 'tyru/caw.vim'
+Plug 'tpope/vim-surround'
+Plug 't9md/vim-textmanip'
+Plug 'Yggdroot/indentLine'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'thinca/vim-splash'
+Plug 'tpope/vim-endwise'
+Plug 'eiji03aero/quick-notes'
+Plug 'brooth/far.vim'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
+Plug 'lambdalisue/fern.vim'
+Plug 'yuki-yano/fern-preview.vim'
+Plug 'lambdalisue/fern-git-status.vim'
+Plug 'lambdalisue/fern-hijack.vim'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'neoclide/coc.nvim'
+Plug 'eiji03aero/any-jump.vim'
 
-  if v:version > 800 || has('nvim')
-    call dein#load_toml(expand('~/.vim/rc/dein_v8.toml'))
-  else
-    call dein#load_toml(expand('~/.vim/rc/dein_v7.toml'))
-  endif
+" -------------------- javascript --------------------
+Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'typescript'] }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'jparise/vim-graphql', { 'for': 'graphql' }
+Plug 'elmcast/elm-vim', { 'for': 'elm' }
+Plug 'posva/vim-vue', { 'for': 'vue' }
+Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
+Plug 'prettier/vim-prettier', { 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+" -------------------- dart --------------------
+Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
+" -------------------- html --------------------
+Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'slim-template/vim-slim', { 'for': 'slim' }
+Plug 'digitaltoad/vim-pug', { 'for': ['pug', 'vue'] }
+Plug 'lepture/vim-jinja', { 'for': ['html', 'jinja2', 'jinja', 'njk'] }
+Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
+Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+" -------------------- haskell --------------------
+Plug 'dag/vim2hs', { 'for': 'haskell' }
+" -------------------- cpp --------------------
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['cpp', 'h', 'hpp'] }
+" -------------------- go --------------------
+Plug 'mattn/vim-goimports', { 'for': 'go' }
+" -------------------- python --------------------
+Plug 'hdima/python-syntax', { 'for': 'python' }
+" -------------------- kotlin --------------------
+Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
+" -------------------- sql --------------------
+Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
+" -------------------- config --------------------
+Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'uarun/vim-protobuf', { 'for': 'proto' }
 
-  " commentout this line when need to deal with local plugin
-  " call dein#local('~/projects')
+call plug#end()
 
-  call dein#end()
-  call dein#save_state()
+if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  PlugInstall --sync | q
+  call coc#util#install()
 endif
 
-if dein#check_install()
-  call dein#install()
-endif
-
+" -------------------- Other settings --------------------
 runtime! userautoload/*vim
 runtime! userautoload/plugins/*vim
 
-" set rtp+=/usr/local/opt/fzf
 set rtp+=/opt/homebrew/opt/fzf
