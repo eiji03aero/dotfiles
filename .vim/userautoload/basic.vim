@@ -93,6 +93,8 @@ augroup custom_augroup
 augroup END
 
 autocmd Filetype json let g:indentLine_setConceal = 0
+
+au FocusGained,BufEnter * :silent! checktime
 "----------------------------------------
 " Extra config
 "----------------------------------------
