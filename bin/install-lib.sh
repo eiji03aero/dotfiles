@@ -39,8 +39,8 @@ install-fzf () {
   brew install fzf
 }
 
-install-ag () {
-  brew install fzf
+install-luarocks () {
+  brew install luarocks
 }
 
 install-ranger () {
@@ -73,6 +73,7 @@ if [ $cmd = "all" ]; then
   install-vim
   install-tmux
   install-fzf
+  install-luarocks
   install-ranger
   install-universal-ctags
   install-xquartz

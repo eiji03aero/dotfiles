@@ -16,6 +16,7 @@ let g:coc_global_extensions = [
  \ 'coc-omnisharp',
  \ 'coc-rust-analyzer',
  \ 'coc-flutter',
+ \ 'coc-lua',
  \ ]
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
