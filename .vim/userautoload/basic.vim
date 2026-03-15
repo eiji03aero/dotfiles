@@ -18,6 +18,7 @@ set nobackup
 set ttyfast
 set updatetime=2000
 set lazyredraw
+set splitright
 if v:version > 800
   set belloff=all
   set completeopt=menu,noselect

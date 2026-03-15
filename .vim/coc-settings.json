@@ -4,7 +4,7 @@
     "go",
     "javascript", "javascriptreact",
     "typescript", "typescriptreact", "typescript.tsx",
-    "rust"
+    "rust", "lua"
   ],
 
   "codeLens.enable": true,
@@ -26,6 +26,12 @@
 
   "flutter.lsp.initialization.closingLabels": true,
   "flutter.provider.hot-reload": true,
+
+  "Lua.format.enable": true,
+  "Lua.format.defaultConfig": {
+    "indent_style": "space",
+    "indent_size": "2"
+  },
 
   "solargraph.useBundler": true
 }

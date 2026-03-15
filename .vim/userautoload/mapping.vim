@@ -20,7 +20,6 @@ nnoremap <Leader>wb :sp<CR>
 nnoremap <Leader>wv :vsp<CR>
 nnoremap <Leader>wm :new<CR>
 nnoremap <Leader>wn :vnew<CR>
-nnoremap <Leader>wN :call SplitWindowRight()<CR>
 nnoremap <Leader>wpc :ped %<CR>:wincmd P<CR>
 nnoremap <Leader>wo :on<CR>
 nnoremap <Leader>w- <C-w><Bar><C-w>_
