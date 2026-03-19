@@ -1,0 +1,22 @@
+{
+  "name": "osdf",
+  "description": "OpenSpec-based development workflow with interactive project bootstrapping",
+  "version": "0.1.3",
+  "author": {
+    "name": "eiji03aero"
+  },
+  "keywords": ["openspec", "devflow", "workflow", "bootstrap"],
+  "skills": "./skills/",
+  "commands": [
+    "./commands/openspec/apply.md",
+    "./commands/openspec/propose.md",
+    "./commands/openspec/archive.md",
+    "./commands/openspec/explore.md",
+    "./commands/core/init.md",
+    "./commands/core/start.md",
+    "./commands/core/complete.md",
+    "./commands/core/discuss.md",
+    "./commands/core/apply.md",
+    "./commands/core/request.md"
+  ]
+}

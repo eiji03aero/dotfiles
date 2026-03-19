@@ -1,0 +1,46 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "enabledPlugins": {
+    "osdf@eiji03aero-plugins": true
+  },
+  "extraKnownMarketplaces": {
+    "eiji03aero-plugins": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/eijiosakabe/dotfiles/claudecode"
+      }
+    }
+  },
+  "permissions": {
+    "deny": [
+      "Read(.env)",
+      "Read(**/.env)",
+      "Read(.env.*)",
+      "Read(**/.env.*)"
+    ],
+    "allow": [
+      "Bash(mkdir *)",
+      "mcp__chrome-devtools__*",
+      "Bash(echo:*)",
+      "Bash(find:*)",
+      "Bash(curl:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(test:*)",
+      "Bash(ls *)",
+      "Bash(openspec new *)",
+      "Bash(openspec status *)",
+      "Bash(openspec list *)",
+      "Bash(openspec instructions *)",
+      "Bash(docker compose ps)",
+      "Bash(docker compose up *)",
+      "Bash(docker compose exec *)",
+      "Bash(docker compose restart *)",
+      "Bash(docker compose down *)",
+      "Bash(docker compose run *)",
+      "Bash(docker compose logs *)"
+    ]
+  },
+  "teammateMode": "tmux"
+}

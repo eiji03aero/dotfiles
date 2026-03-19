@@ -1,0 +1,18 @@
+{
+  "name": "eiji03aero-plugins",
+  "owner": {
+    "name": "eiji03aero"
+  },
+  "plugins": [
+    {
+      "name": "osdf",
+      "source": "./plugins/osdf",
+      "description": "OpenSpec-based development workflow with interactive project bootstrapping"
+    },
+    {
+      "name": "ext-git",
+      "source": "./plugins/ext-git",
+      "description": "Extended git utilities for Claude Code"
+    }
+  ]
+}

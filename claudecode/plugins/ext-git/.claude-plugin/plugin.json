@@ -1,0 +1,10 @@
+{
+  "name": "ext-git",
+  "description": "Extended git utilities for Claude Code",
+  "version": "0.1.0",
+  "author": {
+    "name": "eiji03aero"
+  },
+  "keywords": ["git", "utilities"],
+  "skills": "./skills/"
+}

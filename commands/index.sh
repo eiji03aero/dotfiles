@@ -4,6 +4,7 @@ source ~/dotfiles/commands/utils.sh
 source ~/dotfiles/commands/git.sh
 source ~/dotfiles/commands/docker.sh
 source ~/dotfiles/commands/bridge.sh
+source ~/dotfiles/commands/claudecode.sh
 
 ct () { ctags -R ; }
 

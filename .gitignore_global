@@ -9,5 +9,6 @@
 
 .docker-sync/
 .netlify/
+.ai-tmp/
 
 .DS_Store
