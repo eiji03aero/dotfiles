@@ -1,7 +1,7 @@
 {
   "name": "osdf",
   "description": "OpenSpec-based development workflow with interactive project bootstrapping",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": {
     "name": "eiji03aero"
   },
@@ -17,6 +17,7 @@
     "./commands/core/complete.md",
     "./commands/core/discuss.md",
     "./commands/core/apply.md",
-    "./commands/core/request.md"
+    "./commands/core/request.md",
+    "./commands/core/autorun.md"
   ]
 }
