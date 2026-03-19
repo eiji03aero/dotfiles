@@ -8,7 +8,6 @@
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.colorTheme": "Sapphire",
   "workbench.editor.showTabs": true,
   "workbench.icontheme": "vscode-icons",
 
@@ -37,5 +36,6 @@
     "editor.insertSpaces": false,
     "editor.detectIndentation": false
   },
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  "claudeCode.preferredLocation": "panel"
 }
